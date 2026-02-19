@@ -1,162 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>CHL Constructora | Tramitación profesional de mano de obra española para Suiza</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CHL Constructora gestiona la incorporación de profesionales españoles cualificados en empresas suizas. Tramitación de contratos, permisos y asesoramiento integral.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHL Constructora | Tramitación en Suiza</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-        header {
-            background-color: #0f172a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        nav {
-            background-color: #1e293b;
-            padding: 10px;
-            text-align: center;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f8f8;
+    color: #1a1a1a;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+nav h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
 
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+nav a {
+    text-decoration: none;
+    color: #1a1a1a;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-        h2 {
-            color: #0f172a;
-            margin-bottom: 20px;
-        }
+nav a:hover {
+    opacity: 0.6;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
 
-        footer {
-            background-color: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+.hero-content {
+    color: white;
+    animation: fadeIn 1.5s ease forwards;
+}
 
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-        }
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
 
-        .btn-whatsapp:hover {
-            opacity: 0.9;
-        }
-    </style>
+.hero p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+/* SECTION */
+.section {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.fade-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>CHL Constructora</h1>
-    <p>Tramitación profesional de mano de obra española para Suiza</p>
-</header>
-
 <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#quienes">Quiénes somos</a>
-    <a href="#contacto">Contacto</a>
+    <h1>CHL Constructora 🇨🇭</h1>
+    <div>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </div>
 </nav>
 
-<section id="inicio">
-    <h2>Bienvenidos</h2>
-    <p>
-        En CHL Constructora facilitamos la incorporación de profesionales españoles cualificados
-        al mercado laboral suizo, gestionando contratos, permisos y todo el proceso administrativo
-        conforme a la normativa vigente.
-    </p>
-    <p>
-        Garantizamos un servicio transparente, eficiente y seguro tanto para empresas como para trabajadores.
-    </p>
-</section>
-
-<section id="servicios">
-    <h2>Servicios</h2>
-
-    <div class="card">
-        <h3>Gestión de contratos laborales</h3>
-        <p>Coordinamos la formalización de contratos conforme a la legislación suiza, asegurando claridad y cumplimiento normativo.</p>
-    </div>
-
-    <div class="card">
-        <h3>Tramitación de permisos de trabajo</h3>
-        <p>Gestionamos toda la documentación necesaria para la incorporación legal de profesionales en Suiza.</p>
-    </div>
-
-    <div class="card">
-        <h3>Selección de personal cualificado</h3>
-        <p>Identificamos perfiles profesionales adaptados a las necesidades específicas de cada empresa.</p>
-    </div>
-
-    <div class="card">
-        <h3>Asesoramiento integral</h3>
-        <p>Ofrecemos acompañamiento administrativo y laboral durante todo el proceso de incorporación.</p>
+<section class="hero">
+    <div class="hero-content">
+        <h2>Construcción & Tramitación en Suiza</h2>
+        <p>Gestión integral de proyectos, permisos y ejecución de obras con precisión suiza y excelencia profesional.</p>
+        <a href="#contacto" class="btn">Solicitar Información</a>
     </div>
 </section>
 
-<section id="quienes">
-    <h2>Quiénes somos</h2>
-    <p>
-        Somos una empresa especializada en la gestión y tramitación de profesionales españoles
-        para empresas en Suiza.
-    </p>
-    <p>
-        Trabajamos con seriedad, organización y compromiso profesional, garantizando procesos
-        claros, eficientes y conformes a la normativa vigente.
-    </p>
+<section id="servicios" class="section fade-scroll">
+    <h3>Servicios</h3>
+    <p>Tramitación de permisos, dirección de obra, reformas integrales y asesoramiento técnico especializado en normativa suiza.</p>
 </section>
 
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p><strong>Teléfono / WhatsApp:</strong> +41 76 740 15 41</p>
-    <p><strong>Email:</strong> contacto@chlconstructora.com</p>
-    <p><strong>Ubicación:</strong> España – Suiza</p>
-
-    <a class="btn-whatsapp" href="https://wa.me/41767401541" target="_blank">
-        Contactar por WhatsApp
-    </a>
+<section id="sobre" class="section fade-scroll">
+    <h3>Sobre Nosotros</h3>
+    <p>Empresa especializada en construcción y gestión administrativa en Suiza. Profesionalidad, transparencia y resultados de alta calidad.</p>
 </section>
 
-<footer>
-    <p>© 2026 - CHL Constructora | Todos los derechos reservados</p>
-</footer>
+<section id="contacto" class="section fade-scroll">
+    <h3>Contacto</h3>
+    <p>Email: contacto@chlconstructora.ch<br>Tel: +41 00 000 00 00</p>
+</section>
+
+<script>
+const elements = document.querySelectorAll('.fade-scroll');
+
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+        if(position < screenHeight - 100){
+            el.classList.add('visible');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
