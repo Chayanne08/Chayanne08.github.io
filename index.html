@@ -5,183 +5,282 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL Constructora | Tramitación en Suiza</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f8f8;
-    color: #1a1a1a;
+body{
+font-family:'Inter',sans-serif;
+background:#f8f8f8;
+color:#1a1a1a;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(10px);
-    padding: 20px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    transition: 0.3s ease;
+nav{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+z-index:1000;
+transition:all .4s ease;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(12px);
 }
 
-nav h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    letter-spacing: 1px;
+nav.scrolled{
+background:#ffffff;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+padding:15px 10%;
 }
 
-nav a {
-    text-decoration: none;
-    color: #1a1a1a;
-    margin-left: 25px;
-    font-weight: 500;
-    transition: 0.3s;
+.logo{
+font-family:'Playfair Display',serif;
+font-size:20px;
 }
 
-nav a:hover {
-    opacity: 0.6;
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#1a1a1a;
+font-weight:500;
+position:relative;
+}
+
+.nav-links a::after{
+content:'';
+position:absolute;
+bottom:-5px;
+left:0;
+width:0;
+height:1px;
+background:#000;
+transition:.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+/* HAMBURGER */
+.hamburger{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+}
+
+.hamburger span{
+width:25px;
+height:2px;
+background:#000;
+transition:.3s;
 }
 
 /* HERO */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+animation:zoomHero 8s ease-in-out infinite alternate;
 }
 
-.hero-content {
-    color: white;
-    animation: fadeIn 1.5s ease forwards;
+@keyframes zoomHero{
+from{background-size:100%;}
+to{background-size:110%;}
 }
 
-.hero h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    margin-bottom: 20px;
+.hero-content{
+color:white;
+max-width:800px;
+animation:fadeUp 1.2s ease forwards;
 }
 
-.hero p {
-    font-size: 18px;
-    font-weight: 300;
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 30px;
+.hero h2{
+font-family:'Playfair Display',serif;
+font-size:52px;
+margin-bottom:20px;
 }
 
-.btn {
-    padding: 12px 28px;
-    border: 1px solid white;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s ease;
+.hero p{
+font-weight:300;
+margin-bottom:35px;
+line-height:1.6;
 }
 
-.btn:hover {
-    background: white;
-    color: black;
+.btn{
+padding:14px 32px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+transition:.3s ease;
+position:relative;
+overflow:hidden;
 }
 
-/* SECTION */
-.section {
-    padding: 120px 10%;
-    text-align: center;
+.btn:hover{
+background:white;
+color:black;
+transform:translateY(-3px);
 }
 
-.section h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    margin-bottom: 20px;
+/* SERVICES CARDS */
+.services{
+padding:120px 10%;
+background:white;
+text-align:center;
 }
 
-.section p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.7;
-    font-weight: 300;
+.services h3{
+font-family:'Playfair Display',serif;
+font-size:32px;
+margin-bottom:60px;
 }
 
-/* ANIMACIONES */
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.fade-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+.card{
+padding:40px;
+background:#fafafa;
+border-radius:8px;
+transition:.4s ease;
+box-shadow:0 5px 20px rgba(0,0,0,0.03);
 }
 
-.fade-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
+
+.card h4{
+margin-bottom:15px;
+font-weight:600;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.nav-links{
+position:absolute;
+top:70px;
+right:0;
+background:white;
+flex-direction:column;
+width:200px;
+padding:20px;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hamburger{
+display:flex;
+}
+
+.hero h2{
+font-size:36px;
+}
+
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
 </style>
 </head>
-
 <body>
 
-<nav>
-    <h1>CHL Constructora 🇨🇭</h1>
-    <div>
-        <a href="#servicios">Servicios</a>
-        <a href="#sobre">Sobre Nosotros</a>
-        <a href="#contacto">Contacto</a>
-    </div>
+<nav id="navbar">
+<div class="logo">CHL Constructora 🇨🇭</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
 </nav>
 
 <section class="hero">
-    <div class="hero-content">
-        <h2>Construcción & Tramitación en Suiza</h2>
-        <p>Gestión integral de proyectos, permisos y ejecución de obras con precisión suiza y excelencia profesional.</p>
-        <a href="#contacto" class="btn">Solicitar Información</a>
-    </div>
+<div class="hero-content">
+<h2>Construcción & Tramitación en Suiza</h2>
+<p>Gestión integral de proyectos, permisos y ejecución de obras con precisión suiza y excelencia profesional.</p>
+<a href="#contacto" class="btn">Solicitar Información</a>
+</div>
 </section>
 
-<section id="servicios" class="section fade-scroll">
-    <h3>Servicios</h3>
-    <p>Tramitación de permisos, dirección de obra, reformas integrales y asesoramiento técnico especializado en normativa suiza.</p>
+<section class="services" id="servicios">
+<h3>Nuestros Servicios</h3>
+<div class="cards">
+<div class="card">
+<h4>Tramitación de Permisos</h4>
+<p>Gestión completa ante autoridades suizas con precisión y rapidez.</p>
+</div>
+<div class="card">
+<h4>Dirección de Obra</h4>
+<p>Supervisión técnica profesional garantizando calidad y cumplimiento.</p>
+</div>
+<div class="card">
+<h4>Reformas Integrales</h4>
+<p>Transformación de espacios con altos estándares constructivos.</p>
+</div>
+</div>
 </section>
 
-<section id="sobre" class="section fade-scroll">
-    <h3>Sobre Nosotros</h3>
-    <p>Empresa especializada en construcción y gestión administrativa en Suiza. Profesionalidad, transparencia y resultados de alta calidad.</p>
-</section>
-
-<section id="contacto" class="section fade-scroll">
-    <h3>Contacto</h3>
-    <p>Email: contacto@chlconstructora.ch<br>Tel: +41 00 000 00 00</p>
+<section style="padding:100px 10%;text-align:center;" id="contacto">
+<h3 style="font-family:'Playfair Display',serif;margin-bottom:20px;">Contacto</h3>
+<p>Email: contacto@chlconstructora.ch<br>Tel: +41 00 000 00 00</p>
 </section>
 
 <script>
-const elements = document.querySelectorAll('.fade-scroll');
 
-window.addEventListener('scroll', () => {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
-        if(position < screenHeight - 100){
-            el.classList.add('visible');
-        }
-    });
+/* NAV SCROLL EFFECT */
+window.addEventListener("scroll", function(){
+document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
+
+/* HAMBURGER */
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click",()=>{
+navLinks.classList.toggle("active");
+});
+
 </script>
 
 </body>
