@@ -3,84 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHL Constructora</title>
+<title>CHL Constructora | Tramitación Laboral España–Suiza</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Inter',sans-serif;
-background:#000;
-color:#fff;
-scroll-behavior:smooth;
+background:#0c0c0c;
+color:white;
 }
-
-/* ANIMACIÓN SCROLL */
-
-.fade-up{
-opacity:0;
-transform:translateY(40px);
-transition:all 0.9s ease;
-}
-
-.fade-up.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* HEADER */
 
 header{
 position:fixed;
-top:0;
 width:100%;
-padding:20px 8%;
+top:0;
+left:0;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 40px;
 background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 .logo{
 font-family:'Playfair Display',serif;
-font-size:22px;
+font-size:26px;
 letter-spacing:1px;
 }
 
-.menu{
+.menu-toggle{
 font-size:28px;
 cursor:pointer;
 }
-
-nav{
-position:fixed;
-top:0;
-right:-100%;
-width:260px;
-height:100vh;
-background:#111;
-padding:100px 30px;
-transition:0.4s ease;
-}
-
-nav a{
-display:block;
-color:#fff;
-text-decoration:none;
-margin-bottom:25px;
-font-size:15px;
-letter-spacing:1px;
-}
-
-nav.active{
-right:0;
-}
-
-/* HERO */
 
 .hero{
 height:100vh;
@@ -90,158 +54,131 @@ url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=c
 background-size:cover;
 background-position:center;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:0 20px;
+padding:20px;
 }
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:46px;
-margin-bottom:25px;
+font-size:48px;
+margin-bottom:20px;
 }
 
 .hero p{
-max-width:720px;
 font-size:18px;
-line-height:1.8;
-opacity:0.95;
-margin-bottom:45px;
+max-width:700px;
+margin:auto;
+opacity:0.9;
 }
 
-.btn{
-padding:14px 45px;
-border:1px solid #fff;
-background:transparent;
-color:#fff;
-letter-spacing:2px;
-text-transform:uppercase;
-cursor:pointer;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#fff;
-color:#000;
-}
-
-/* SERVICES */
-
-.services{
-padding:110px 8%;
-background:#0a0a0a;
+section{
+padding:100px 20px;
 text-align:center;
 }
 
-.services h2{
+h2{
 font-family:'Playfair Display',serif;
-font-size:36px;
-margin-bottom:70px;
-}
-
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:50px;
-}
-
-.service{
-padding:40px;
-border:1px solid rgba(255,255,255,0.08);
-transition:0.3s;
-}
-
-.service:hover{
-border-color:#fff;
-transform:translateY(-6px);
-}
-
-.service h3{
-font-family:'Playfair Display',serif;
-margin-bottom:18px;
-font-size:20px;
-}
-
-.service p{
-font-size:15px;
-opacity:0.85;
-line-height:1.7;
-}
-
-/* WHY */
-
-.why{
-padding:110px 8%;
-background:#000;
-text-align:center;
-}
-
-.why h2{
-font-family:'Playfair Display',serif;
-font-size:34px;
-margin-bottom:60px;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:50px;
-}
-
-.why-item{
-padding:30px;
-}
-
-/* CONTACT */
-
-.contact{
-padding:110px 8%;
-background:#0a0a0a;
-text-align:center;
-}
-
-.contact h2{
-font-family:'Playfair Display',serif;
-font-size:34px;
+font-size:40px;
 margin-bottom:40px;
 }
 
-.contact p{
-margin-bottom:12px;
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:#151515;
+padding:30px;
+border-radius:10px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:translateY(-8px);
+border:1px solid #1db954;
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:20px;
+}
+
+.contact{
+background:#111;
+}
+
+.contact-box{
+max-width:700px;
+margin:auto;
+padding:50px 40px;
+border:1px solid rgba(255,255,255,0.08);
+border-radius:12px;
+background:linear-gradient(145deg,#141414,#0f0f0f);
+box-shadow:0 0 40px rgba(0,0,0,0.6);
+position:relative;
+}
+
+.contact-box::before{
+content:"";
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+width:80px;
+height:2px;
+background:#1db954;
+}
+
+.contact-info{
+margin:30px 0;
 font-size:18px;
+line-height:1.8;
+}
+
+.contact-info strong{
+color:#1db954;
+font-weight:600;
 }
 
 .whatsapp-btn{
 display:inline-block;
 margin-top:25px;
-padding:14px 40px;
-border:1px solid #25D366;
-color:#25D366;
+padding:16px 40px;
+border:1px solid #1db954;
+color:#1db954;
 text-decoration:none;
+font-weight:500;
 letter-spacing:1px;
 transition:0.3s;
+border-radius:4px;
 }
 
 .whatsapp-btn:hover{
-background:#25D366;
-color:#000;
+background:#1db954;
+color:black;
 }
 
-/* FOOTER */
-
 footer{
-padding:40px 8%;
 text-align:center;
+padding:30px;
+background:#0a0a0a;
 font-size:14px;
-opacity:0.6;
-background:#000;
+opacity:0.7;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:32px;}
+.hero h1{
+font-size:34px;
 }
+}
+
 </style>
 </head>
 
@@ -249,118 +186,59 @@ background:#000;
 
 <header>
 <div class="logo">CHL Constructora 🇨🇭 🇪🇸</div>
-<div class="menu" onclick="toggleMenu()">☰</div>
+<div class="menu-toggle">☰</div>
 </header>
 
-<nav id="menu">
-<a href="#hero" onclick="toggleMenu()">Inicio</a>
-<a href="#servicios" onclick="toggleMenu()">Servicios</a>
-<a href="#why" onclick="toggleMenu()">Por qué CHL</a>
-<a href="#contacto" onclick="toggleMenu()">Contacto</a>
-</nav>
-
-<section class="hero" id="hero">
-<h1>Tramitación Laboral España – Suiza</h1>
-<p>
-Procedimiento estructurado para la incorporación legal de trabajadores españoles en el mercado laboral suizo.
-Gestión documental completa, adaptación profesional y supervisión conforme a normativa federal vigente.
-</p>
-<button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
-Solicitar Información
-</button>
+<section class="hero">
+<div>
+<h1>Tramitación Laboral España–Suiza</h1>
+<p>Gestionamos todo el proceso para que trabajadores españoles puedan ejercer legalmente en Suiza.</p>
+</div>
 </section>
 
-<section class="services fade-up" id="servicios">
-<h2>Servicios Especializados en Suiza</h2>
+<section>
+<h2>Servicios</h2>
+<div class="services">
 
-<div class="service-grid">
-
-<div class="service fade-up">
-<h3>Permisos de Trabajo en Suiza</h3>
-<p>Tramitación oficial conforme a requisitos cantonales y federales suizos.</p>
+<div class="card">
+<h3>Permiso de trabajo</h3>
+<p>Gestión completa de permisos laborales en Suiza.</p>
 </div>
 
-<div class="service fade-up">
-<h3>Adaptación al Mercado Laboral Suizo</h3>
-<p>Optimización estratégica del perfil profesional bajo estándares suizos.</p>
+<div class="card">
+<h3>Traducción y adaptación</h3>
+<p>Traducción profesional y adaptación de currículum al mercado suizo.</p>
 </div>
 
-<div class="service fade-up">
-<h3>Gestión Documental España – Suiza</h3>
-<p>Supervisión integral de contratos y requisitos administrativos.</p>
-</div>
-
-<div class="service fade-up">
-<h3>Asesoramiento de Establecimiento</h3>
-<p>Orientación inicial para residencia y registro previo a la incorporación.</p>
+<div class="card">
+<h3>Asesoramiento laboral</h3>
+<p>Orientación personalizada para integrarse legalmente en Suiza.</p>
 </div>
 
 </div>
 </section>
 
-<section class="why fade-up" id="why">
-<h2>¿Por qué CHL?</h2>
-
-<div class="why-grid">
-
-<div class="why-item fade-up">
-<h3>Especialización Exclusiva en Suiza</h3>
-<p>Enfoque específico en el mercado laboral suizo.</p>
-</div>
-
-<div class="why-item fade-up">
-<h3>Procedimiento Legal Estructurado</h3>
-<p>Metodología clara conforme a normativa vigente.</p>
-</div>
-
-<div class="why-item fade-up">
-<h3>Acompañamiento Integral</h3>
-<p>Seguimiento profesional hasta incorporación efectiva en Suiza.</p>
-</div>
-
-</div>
-</section>
-
-<section class="contact fade-up" id="contacto">
+<section class="contact">
 <h2>Contacto Directo</h2>
-<p><strong>📞 Atención directa:</strong> +41 76 740 1541</p>
-<p><strong>✉ Comunicación oficial:</strong> info@chlconstructora.com</p>
+
+<div class="contact-box">
+
+<div class="contact-info">
+📞 <strong>Atención directa:</strong> +41 76 740 1541<br><br>
+✉ <strong>Comunicación oficial:</strong><br>
+info@chlconstructora.com
+</div>
 
 <a class="whatsapp-btn" href="https://wa.me/41767401541" target="_blank">
 Iniciar conversación por WhatsApp
 </a>
+
+</div>
 </section>
 
 <footer>
 © 2026 CHL Constructora — Especialización laboral España–Suiza
 </footer>
-
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-
-const faders = document.querySelectorAll('.fade-up');
-
-const appearOptions = {
-threshold: 0.2
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-entries.forEach(entry=>{
-if(!entry.isIntersecting){
-return;
-}else{
-entry.target.classList.add('show');
-observer.unobserve(entry.target);
-}
-});
-}, appearOptions);
-
-faders.forEach(fader=>{
-appearOnScroll.observe(fader);
-});
-</script>
 
 </body>
 </html>
