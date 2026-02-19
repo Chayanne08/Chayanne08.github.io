@@ -3,205 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHL Constructora</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>CHL Constructora | Tramitación Laboral España – Suiza</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:'Inter',sans-serif;
-background:#000;
-color:#fff;
-scroll-behavior:smooth;
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #000;
+    color: #fff;
 }
 
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.65);
-backdrop-filter:blur(6px);
-z-index:1000;
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
 }
 
-.logo{
-font-family:'Playfair Display',serif;
-font-size:22px;
-letter-spacing:1px;
+header h1 {
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
 
-.menu{
-font-size:28px;
-cursor:pointer;
+.menu {
+    font-size: 28px;
+    cursor: pointer;
 }
 
-nav{
-position:fixed;
-top:0;
-right:-100%;
-width:260px;
-height:100vh;
-background:#111;
-padding:100px 30px;
-transition:0.4s ease;
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+                url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
-nav a{
-display:block;
-color:#fff;
-text-decoration:none;
-margin-bottom:25px;
-font-size:16px;
-letter-spacing:1px;
+.hero h2 {
+    font-size: 48px;
+    max-width: 900px;
+    margin-bottom: 30px;
 }
 
-nav.active{
-right:0;
+.hero p {
+    font-size: 20px;
+    max-width: 750px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #ddd;
 }
 
-/* HERO */
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
-url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1950&q=80');
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:0 20px;
+.hero a {
+    padding: 15px 40px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
 }
 
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:48px;
-margin-bottom:20px;
+.hero a:hover {
+    background-color: #fff;
+    color: #000;
 }
 
-.hero p{
-max-width:750px;
-font-size:18px;
-line-height:1.7;
-opacity:0.9;
-margin-bottom:40px;
+section {
+    padding: 100px 20px;
+    text-align: center;
 }
 
-.btn{
-padding:14px 40px;
-border:1px solid #fff;
-background:transparent;
-color:#fff;
-letter-spacing:2px;
-text-transform:uppercase;
-cursor:pointer;
-transition:0.3s;
+.divider {
+    width: 60px;
+    height: 2px;
+    background: #25D366;
+    margin: 0 auto 50px auto;
 }
 
-.btn:hover{
-background:#fff;
-color:#000;
+.contact-box {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-/* SERVICES */
-
-.services{
-padding:100px 8%;
-background:#0a0a0a;
-text-align:center;
+.contact-box p.label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 5px;
 }
 
-.services h2{
-font-family:'Playfair Display',serif;
-font-size:36px;
-margin-bottom:60px;
+.contact-box p.info {
+    font-size: 22px;
+    margin-bottom: 30px;
 }
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    border: 1px solid #25D366;
+    color: #25D366;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-.service{
-padding:35px;
-border:1px solid rgba(255,255,255,0.1);
-transition:0.3s;
+.whatsapp-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #25D366;
 }
 
-.service:hover{
-border-color:#fff;
-transform:translateY(-6px);
+.whatsapp-btn:hover {
+    background-color: #25D366;
+    color: #000;
+    transform: translateY(-3px);
 }
 
-.service h3{
-font-family:'Playfair Display',serif;
-margin-bottom:15px;
-font-size:20px;
+.whatsapp-btn:hover svg {
+    fill: #000;
 }
 
-.service p{
-font-size:15px;
-opacity:0.85;
-line-height:1.6;
-}
-
-/* CONTACT */
-
-.contact{
-padding:100px 8%;
-background:#000;
-text-align:center;
-}
-
-.contact h2{
-font-family:'Playfair Display',serif;
-font-size:36px;
-margin-bottom:40px;
-}
-
-.contact p{
-margin-bottom:15px;
-font-size:18px;
-}
-
-.whatsapp-btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 35px;
-border:1px solid #25D366;
-color:#25D366;
-text-decoration:none;
-letter-spacing:1px;
-transition:0.3s;
-}
-
-.whatsapp-btn:hover{
-background:#25D366;
-color:#000;
-}
-
-/* FOOTER */
-
-footer{
-padding:40px 8%;
-text-align:center;
-font-size:14px;
-opacity:0.6;
-background:#000;
-}
-
-@media(max-width:768px){
-.hero h1{font-size:34px;}
+footer {
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #222;
 }
 </style>
 </head>
@@ -209,80 +148,49 @@ background:#000;
 <body>
 
 <header>
-<div class="logo">CHL Constructora 🇨🇭 🇪🇸</div>
-<div class="menu" onclick="toggleMenu()">☰</div>
+    <h1>CHL Constructora 🇨🇭 🇪🇸</h1>
+    <div class="menu">☰</div>
 </header>
 
-<nav id="menu">
-<a href="#hero" onclick="toggleMenu()">Inicio</a>
-<a href="#servicios" onclick="toggleMenu()">Servicios</a>
-<a href="#contacto" onclick="toggleMenu()">Contacto</a>
-</nav>
-
-<section class="hero" id="hero">
-<h1>Tramitación Laboral España – Suiza</h1>
-<p>
-Formalizamos y gestionamos el proceso completo para que trabajadores españoles ejerzan legalmente en Suiza.
-Permisos de trabajo, documentación oficial, adaptación profesional y acompañamiento administrativo con rigor y precisión.
-</p>
-<button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
-Solicitar Información
-</button>
-</section>
-
-<section class="services" id="servicios">
-<h2>Servicios de Gestión Laboral Internacional</h2>
-
-<div class="service-grid">
-
-<div class="service">
-<h3>Tramitación Oficial de Permisos de Trabajo</h3>
-<p>Gestión integral y formalización legal para ejercer actividad laboral en Suiza conforme a la normativa vigente.</p>
+<div class="hero">
+    <h2>Tramitación Laboral España – Suiza</h2>
+    <p>
+        Formalizamos y gestionamos el proceso completo para que trabajadores españoles
+        ejerzan legalmente en Suiza. Permisos de trabajo, documentación oficial,
+        adaptación profesional y acompañamiento administrativo con rigor y precisión.
+    </p>
+    <a href="#contacto">SOLICITAR INFORMACIÓN</a>
 </div>
 
-<div class="service">
-<h3>Adaptación Profesional al Mercado Suizo</h3>
-<p>Traducción y adecuación estratégica de currículum bajo estándares laborales suizos.</p>
-</div>
+<section id="contacto">
+    <h2 style="font-size:42px; letter-spacing:2px;">CONTACTO</h2>
+    <div class="divider"></div>
 
-<div class="service">
-<h3>Gestión de Establecimiento Inicial</h3>
-<p>Coordinación de alojamiento y organización previa a la incorporación profesional.</p>
-</div>
+    <p style="color:#aaa; margin-bottom:60px;">
+        Inicie su proceso de tramitación laboral con asesoramiento directo y profesional.
+    </p>
 
-<div class="service">
-<h3>Asesoramiento Administrativo y Legal</h3>
-<p>Supervisión completa de procesos documentales y cumplimiento normativo.</p>
-</div>
+    <div class="contact-box">
+        <p class="label">📞 ATENCIÓN DIRECTA</p>
+        <p class="info">+41 76 740 1541</p>
 
-<div class="service">
-<h3>Coordinación España – Suiza</h3>
-<p>Estructuración y seguimiento profesional del proceso de transición laboral entre ambos países.</p>
-</div>
+        <p class="label">✉ COMUNICACIÓN OFICIAL</p>
+        <p class="info">info@chlconstructora.com</p>
 
-</div>
-</section>
-
-<section class="contact" id="contacto">
-<h2>Contacto</h2>
-<p><strong>Teléfono:</strong> +41 76 740 1541</p>
-<p><strong>Email:</strong> info@chlconstructora.com</p>
-
-<a class="whatsapp-btn" href="https://wa.me/41767401541" target="_blank">
-Contactar por WhatsApp
-</a>
-
+        <div style="text-align:center; margin-top:40px;">
+            <a href="https://wa.me/41767401541" target="_blank" class="whatsapp-btn">
+                <svg viewBox="0 0 32 32">
+                    <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2.1 7.7L.2 31.8l8.3-2.2c2.2 1.2 4.7 1.8 7.5 1.8 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.6c-2.4 0-4.6-.6-6.5-1.7l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.2-1.9-1.8-4.1-1.8-6.6C3.3 8.3 8.3 3.3 16 3.3S28.7 8.3 28.7 16 23.7 29 16 29zm7.4-10.7c-.4-.2-2.3-1.1-2.7-1.2-.4-.2-.7-.2-1 .2s-1.1 1.2-1.4 1.4c-.2.2-.5.3-.9.1-2.6-1.3-4.2-2.3-5.9-5.2-.5-.8.5-.7 1.4-2.4.1-.2 0-.4 0-.6s-1-2.4-1.4-3.3c-.4-.9-.8-.8-1-.8h-.9c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.2s1.3 3.7 1.5 4c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.3 2.4.2.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
+                </svg>
+                INICIAR CONVERSACIÓN POR WHATSAPP
+            </a>
+        </div>
+    </div>
 </section>
 
 <footer>
-© 2026 CHL Constructora — Gestión profesional España–Suiza
+    © 2026 CHL Constructora — Gestión profesional España–Suiza
 </footer>
-
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
