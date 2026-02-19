@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL Constructora</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -14,16 +14,12 @@ body{
 font-family:'Inter',sans-serif;
 background:#000;
 color:#fff;
-overflow-x:hidden;
 scroll-behavior:smooth;
 }
-
-/* HEADER */
 
 header{
 position:fixed;
 top:0;
-left:0;
 width:100%;
 padding:20px 8%;
 display:flex;
@@ -45,8 +41,6 @@ font-size:28px;
 cursor:pointer;
 }
 
-/* MOBILE MENU */
-
 nav{
 position:fixed;
 top:0;
@@ -56,7 +50,6 @@ height:100vh;
 background:#111;
 padding:100px 30px;
 transition:0.4s ease;
-z-index:999;
 }
 
 nav a{
@@ -91,19 +84,16 @@ padding:0 20px;
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:46px;
-line-height:1.2;
+font-size:48px;
 margin-bottom:20px;
-font-weight:600;
 }
 
 .hero p{
-max-width:700px;
+max-width:750px;
 font-size:18px;
-font-weight:300;
-line-height:1.6;
-margin-bottom:40px;
+line-height:1.7;
 opacity:0.9;
+margin-bottom:40px;
 }
 
 .btn{
@@ -111,7 +101,6 @@ padding:14px 40px;
 border:1px solid #fff;
 background:transparent;
 color:#fff;
-font-size:14px;
 letter-spacing:2px;
 text-transform:uppercase;
 cursor:pointer;
@@ -133,7 +122,7 @@ text-align:center;
 
 .services h2{
 font-family:'Playfair Display',serif;
-font-size:34px;
+font-size:36px;
 margin-bottom:60px;
 }
 
@@ -144,14 +133,14 @@ gap:40px;
 }
 
 .service{
-padding:30px;
+padding:35px;
 border:1px solid rgba(255,255,255,0.1);
 transition:0.3s;
 }
 
 .service:hover{
 border-color:#fff;
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .service h3{
@@ -162,7 +151,7 @@ font-size:20px;
 
 .service p{
 font-size:15px;
-opacity:0.8;
+opacity:0.85;
 line-height:1.6;
 }
 
@@ -176,13 +165,29 @@ text-align:center;
 
 .contact h2{
 font-family:'Playfair Display',serif;
-font-size:34px;
+font-size:36px;
 margin-bottom:40px;
 }
 
 .contact p{
-font-size:18px;
 margin-bottom:15px;
+font-size:18px;
+}
+
+.whatsapp-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 35px;
+border:1px solid #25D366;
+color:#25D366;
+text-decoration:none;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+background:#25D366;
+color:#000;
 }
 
 /* FOOTER */
@@ -198,7 +203,6 @@ background:#000;
 @media(max-width:768px){
 .hero h1{font-size:34px;}
 }
-
 </style>
 </head>
 
@@ -216,12 +220,10 @@ background:#000;
 </nav>
 
 <section class="hero" id="hero">
-<h1>Tramitación & Gestión Profesional en Suiza</h1>
+<h1>Tramitación Laboral España – Suiza</h1>
 <p>
-Ofrecemos gestión integral para trabajadores en Suiza:
-tramitación laboral, traducción profesional de currículum,
-gestión de alojamiento y acompañamiento legal completo.
-Precisión suiza y atención personalizada en cada proceso.
+Formalizamos y gestionamos el proceso completo para que trabajadores españoles ejerzan legalmente en Suiza.
+Permisos de trabajo, documentación oficial, adaptación profesional y acompañamiento administrativo con rigor y precisión.
 </p>
 <button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
 Solicitar Información
@@ -229,28 +231,35 @@ Solicitar Información
 </section>
 
 <section class="services" id="servicios">
-<h2>Nuestros Servicios</h2>
+<h2>Servicios de Gestión Laboral Internacional</h2>
 
 <div class="service-grid">
+
 <div class="service">
-<h3>Tramitación de Trabajo</h3>
-<p>Gestión completa de permisos y documentación necesaria para trabajar legalmente en Suiza.</p>
+<h3>Tramitación Oficial de Permisos de Trabajo</h3>
+<p>Gestión integral y formalización legal para ejercer actividad laboral en Suiza conforme a la normativa vigente.</p>
 </div>
 
 <div class="service">
-<h3>Traducción Profesional de CV</h3>
-<p>Adaptamos y traducimos tu currículum al estándar suizo.</p>
+<h3>Adaptación Profesional al Mercado Suizo</h3>
+<p>Traducción y adecuación estratégica de currículum bajo estándares laborales suizos.</p>
 </div>
 
 <div class="service">
-<h3>Gestión de Alojamiento</h3>
-<p>Te ayudamos a conseguir habitación o vivienda en Suiza.</p>
+<h3>Gestión de Establecimiento Inicial</h3>
+<p>Coordinación de alojamiento y organización previa a la incorporación profesional.</p>
 </div>
 
 <div class="service">
-<h3>Acompañamiento Legal</h3>
-<p>Asesoramiento integral en todos los trámites administrativos en Suiza.</p>
+<h3>Asesoramiento Administrativo y Legal</h3>
+<p>Supervisión completa de procesos documentales y cumplimiento normativo.</p>
 </div>
+
+<div class="service">
+<h3>Coordinación España – Suiza</h3>
+<p>Estructuración y seguimiento profesional del proceso de transición laboral entre ambos países.</p>
+</div>
+
 </div>
 </section>
 
@@ -258,10 +267,15 @@ Solicitar Información
 <h2>Contacto</h2>
 <p><strong>Teléfono:</strong> +41 76 740 1541</p>
 <p><strong>Email:</strong> info@chlconstructora.com</p>
+
+<a class="whatsapp-btn" href="https://wa.me/41767401541" target="_blank">
+Contactar por WhatsApp
+</a>
+
 </section>
 
 <footer>
-© 2026 CHL Constructora — Gestión profesional en Suiza
+© 2026 CHL Constructora — Gestión profesional España–Suiza
 </footer>
 
 <script>
