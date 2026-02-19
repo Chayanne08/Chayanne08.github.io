@@ -205,18 +205,19 @@ text-align:center;
 .contact h2{
 font-family:'Playfair Display',serif;
 font-size:34px;
-margin-bottom:30px;
+margin-bottom:20px; /* AJUSTE 1 */
 }
 
 .flags{
-margin-bottom:40px;
-font-size:28px;
-letter-spacing:10px;
+margin-bottom:25px; /* AJUSTE 2 */
+font-size:22px;
+letter-spacing:6px;
+opacity:0.8;
 }
 
 .contact-box{
 max-width:650px;
-margin:0 auto;
+margin:20px auto 0; /* AJUSTE 3 */
 padding:50px 40px;
 border:1px solid rgba(255,255,255,0.08);
 background:linear-gradient(145deg,#111,#0a0a0a);
@@ -298,71 +299,54 @@ Solicitar Información
 
 <section class="services fade-up" id="servicios">
 <h2>Servicios Especializados en Suiza</h2>
-
 <div class="service-grid">
-
 <div class="service fade-up">
 <h3>Permisos de Trabajo en Suiza</h3>
 <p>Tramitación oficial conforme a requisitos cantonales y federales suizos.</p>
 </div>
-
 <div class="service fade-up">
 <h3>Adaptación al Mercado Laboral Suizo</h3>
 <p>Optimización estratégica del perfil profesional bajo estándares suizos.</p>
 </div>
-
 <div class="service fade-up">
 <h3>Gestión Documental España – Suiza</h3>
 <p>Supervisión integral de contratos y requisitos administrativos.</p>
 </div>
-
 <div class="service fade-up">
 <h3>Asesoramiento de Establecimiento</h3>
 <p>Orientación inicial para residencia y registro previo a la incorporación.</p>
 </div>
-
 </div>
 </section>
 
 <section class="why fade-up" id="why">
 <h2>¿Por qué CHL?</h2>
-
 <div class="why-grid">
-
 <div class="why-item fade-up">
 <h3>Especialización Exclusiva en Suiza</h3>
 <p>Enfoque específico en el mercado laboral suizo.</p>
 </div>
-
 <div class="why-item fade-up">
 <h3>Procedimiento Legal Estructurado</h3>
 <p>Metodología clara conforme a normativa vigente.</p>
 </div>
-
 <div class="why-item fade-up">
 <h3>Acompañamiento Integral</h3>
 <p>Seguimiento profesional hasta incorporación efectiva en Suiza.</p>
 </div>
-
 </div>
 </section>
 
 <section class="contact fade-up" id="contacto">
 <h2>Contacto Directo</h2>
-
-<div class="flags">
-🇨🇭 🇪🇸
-</div>
-
+<div class="flags">🇨🇭 🇪🇸</div>
 <div class="contact-box">
 <p><strong>📞 Atención directa:</strong> +41 76 740 1541</p>
 <p><strong>✉ Comunicación oficial:</strong> info@chlconstructora.com</p>
-
 <a class="whatsapp-btn" href="https://wa.me/41767401541" target="_blank">
 Iniciar conversación por WhatsApp
 </a>
 </div>
-
 </section>
 
 <footer>
@@ -375,19 +359,13 @@ document.getElementById("menu").classList.toggle("active");
 }
 
 const faders = document.querySelectorAll('.fade-up');
-
-const appearOptions = {
-threshold: 0.2
-};
+const appearOptions = { threshold: 0.2 };
 
 const appearOnScroll = new IntersectionObserver(function(entries, observer){
 entries.forEach(entry=>{
-if(!entry.isIntersecting){
-return;
-}else{
+if(!entry.isIntersecting){ return; }
 entry.target.classList.add('show');
 observer.unobserve(entry.target);
-}
 });
 }, appearOptions);
 
