@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
@@ -16,6 +15,7 @@ font-family:'Inter',sans-serif;
 background:#000;
 color:#fff;
 overflow-x:hidden;
+scroll-behavior:smooth;
 }
 
 /* HEADER */
@@ -29,7 +29,7 @@ padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.65);
 backdrop-filter:blur(6px);
 z-index:1000;
 }
@@ -38,7 +38,6 @@ z-index:1000;
 font-family:'Playfair Display',serif;
 font-size:22px;
 letter-spacing:1px;
-font-weight:500;
 }
 
 .menu{
@@ -46,15 +45,18 @@ font-size:28px;
 cursor:pointer;
 }
 
+/* MOBILE MENU */
+
 nav{
 position:fixed;
 top:0;
 right:-100%;
-height:100vh;
 width:260px;
+height:100vh;
 background:#111;
 padding:100px 30px;
 transition:0.4s ease;
+z-index:999;
 }
 
 nav a{
@@ -110,7 +112,7 @@ border:1px solid #fff;
 background:transparent;
 color:#fff;
 font-size:14px;
-letter-spacing:1px;
+letter-spacing:2px;
 text-transform:uppercase;
 cursor:pointer;
 transition:0.3s;
@@ -121,23 +123,66 @@ background:#fff;
 color:#000;
 }
 
-/* SECCIONES */
+/* SERVICES */
 
-.section{
+.services{
 padding:100px 8%;
 background:#0a0a0a;
 text-align:center;
 }
 
-.section h2{
+.services h2{
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:60px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.service{
+padding:30px;
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.service:hover{
+border-color:#fff;
+transform:translateY(-5px);
+}
+
+.service h3{
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
+font-size:20px;
+}
+
+.service p{
+font-size:15px;
+opacity:0.8;
+line-height:1.6;
+}
+
+/* CONTACT */
+
+.contact{
+padding:100px 8%;
+background:#000;
+text-align:center;
+}
+
+.contact h2{
 font-family:'Playfair Display',serif;
 font-size:34px;
 margin-bottom:40px;
 }
 
 .contact p{
-margin-bottom:15px;
 font-size:18px;
+margin-bottom:15px;
 }
 
 /* FOOTER */
@@ -166,6 +211,7 @@ background:#000;
 
 <nav id="menu">
 <a href="#hero" onclick="toggleMenu()">Inicio</a>
+<a href="#servicios" onclick="toggleMenu()">Servicios</a>
 <a href="#contacto" onclick="toggleMenu()">Contacto</a>
 </nav>
 
@@ -182,7 +228,33 @@ Solicitar Información
 </button>
 </section>
 
-<section class="section contact" id="contacto">
+<section class="services" id="servicios">
+<h2>Nuestros Servicios</h2>
+
+<div class="service-grid">
+<div class="service">
+<h3>Tramitación de Trabajo</h3>
+<p>Gestión completa de permisos y documentación necesaria para trabajar legalmente en Suiza.</p>
+</div>
+
+<div class="service">
+<h3>Traducción Profesional de CV</h3>
+<p>Adaptamos y traducimos tu currículum al estándar suizo.</p>
+</div>
+
+<div class="service">
+<h3>Gestión de Alojamiento</h3>
+<p>Te ayudamos a conseguir habitación o vivienda en Suiza.</p>
+</div>
+
+<div class="service">
+<h3>Acompañamiento Legal</h3>
+<p>Asesoramiento integral en todos los trámites administrativos en Suiza.</p>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contacto">
 <h2>Contacto</h2>
 <p><strong>Teléfono:</strong> +41 76 740 1541</p>
 <p><strong>Email:</strong> info@chlconstructora.com</p>
