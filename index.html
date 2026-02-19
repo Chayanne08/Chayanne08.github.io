@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL Constructora | Gestión España – Suiza</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,12 +13,11 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 }
 
 body{
 font-family:'Poppins',sans-serif;
-background:#0b0f19;
+background:#000;
 color:white;
 }
 
@@ -32,20 +31,20 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 8%;
+padding:30px 8%;
 z-index:1000;
-transition:0.4s ease;
+transition:0.4s;
 }
 
 header.scrolled{
-background:rgba(10,15,25,0.95);
-backdrop-filter:blur(8px);
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(6px);
 }
 
 .logo{
-font-size:22px;
-font-weight:300;
-letter-spacing:1px;
+font-size:24px;
+font-weight:200;
+letter-spacing:2px;
 }
 
 nav ul{
@@ -57,12 +56,8 @@ list-style:none;
 nav a{
 color:white;
 text-decoration:none;
-font-weight:300;
-transition:0.3s;
-}
-
-nav a:hover{
-opacity:0.6;
+font-weight:200;
+letter-spacing:1px;
 }
 
 .menu-toggle{
@@ -76,7 +71,7 @@ cursor:pointer;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
 url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
@@ -89,54 +84,51 @@ padding:0 20px;
 }
 
 .hero h1{
-font-size:64px;
+font-size:68px;
 font-weight:200;
-line-height:1.15;
-letter-spacing:1px;
+line-height:1.1;
+letter-spacing:2px;
 margin-bottom:25px;
 }
 
 .hero p{
-max-width:700px;
-font-size:19px;
-font-weight:300;
+max-width:750px;
+font-size:20px;
+font-weight:200;
 opacity:0.85;
-margin-bottom:45px;
+margin-bottom:50px;
 }
 
 .btn{
-padding:14px 45px;
-border:1px solid white;
+padding:14px 50px;
+border:1px solid rgba(255,255,255,0.6);
 background:transparent;
 color:white;
 cursor:pointer;
-transition:0.4s ease;
-letter-spacing:1px;
-font-weight:300;
+letter-spacing:2px;
+font-weight:200;
+transition:0.4s;
 }
 
 .btn:hover{
 background:white;
 color:black;
-transform:translateY(-4px);
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:46px;
+font-size:50px;
 }
 
 nav ul{
 position:absolute;
-top:90px;
-right:0;
-background:#0e1422;
+top:100px;
+right:8%;
 flex-direction:column;
-width:220px;
-padding:25px;
+gap:25px;
 display:none;
 }
 
@@ -174,16 +166,12 @@ display:block;
 </section>
 
 <script>
-
 window.addEventListener("scroll",function(){
-const navbar=document.getElementById("navbar");
-navbar.classList.toggle("scrolled",window.scrollY>50);
+document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>50);
 });
-
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
-
 </script>
 
 </body>
