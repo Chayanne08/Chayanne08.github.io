@@ -1,133 +1,270 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>CHL | Gestión Laboral España – Suiza</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gestión exclusiva de tramitación laboral entre España y Suiza.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHL Constructora | Gestión España – Suiza</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: white;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-        header {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            padding: 80px 20px;
-            text-align: center;
-        }
+<style>
 
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-        header p {
-            font-size: 18px;
-            color: #cbd5e1;
-        }
+body{
+font-family:'Inter',sans-serif;
+background:#0b0f19;
+color:white;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
+/* NAVBAR */
 
-        .servicios {
-            padding: 80px 20px;
-            background-color: #111827;
-            text-align: center;
-        }
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+z-index:1000;
+transition:0.4s ease;
+}
 
-        .servicios h2 {
-            font-size: 30px;
-            margin-bottom: 50px;
-            letter-spacing: 2px;
-        }
+header.scrolled{
+background:rgba(10,15,25,0.95);
+backdrop-filter:blur(10px);
+}
 
-        .servicios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
+.logo{
+font-size:22px;
+font-weight:300;
+letter-spacing:1px;
+}
 
-        .servicio-card {
-            background-color: #1e293b;
-            padding: 30px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+nav ul{
+display:flex;
+gap:40px;
+list-style:none;
+}
 
-        .servicio-card:hover {
-            transform: translateY(-5px);
-            background-color: #334155;
-        }
+nav a{
+color:white;
+text-decoration:none;
+font-weight:300;
+transition:0.3s;
+}
 
-        .servicio-card h3 {
-            margin-bottom: 15px;
-            font-size: 18px;
-            letter-spacing: 1px;
-        }
+nav a:hover{
+opacity:0.6;
+}
 
-        .servicio-card p {
-            font-size: 15px;
-            color: #cbd5e1;
-        }
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
 
-        footer {
-            background-color: #0f172a;
-            text-align: center;
-            padding: 30px;
-            font-size: 14px;
-            color: #94a3b8;
-        }
-    </style>
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero h1{
+font-size:58px;
+font-weight:300;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+opacity:0.85;
+margin-bottom:40px;
+font-size:18px;
+}
+
+.btn{
+padding:15px 45px;
+border:1px solid white;
+background:transparent;
+color:white;
+cursor:pointer;
+transition:0.4s ease;
+letter-spacing:1px;
+}
+
+.btn:hover{
+background:white;
+color:black;
+transform:translateY(-4px);
+}
+
+/* SERVICIOS */
+
+.servicios{
+padding:120px 8%;
+background:#0e1422;
+text-align:center;
+}
+
+.servicios h2{
+font-size:38px;
+font-weight:300;
+margin-bottom:80px;
+letter-spacing:2px;
+}
+
+.servicios-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.servicio-card{
+background:#131a2c;
+padding:40px 30px;
+border-radius:10px;
+transition:0.4s ease;
+}
+
+.servicio-card:hover{
+transform:translateY(-10px);
+background:#1a2338;
+}
+
+.servicio-card h3{
+margin-bottom:20px;
+font-weight:400;
+font-size:18px;
+}
+
+.servicio-card p{
+opacity:0.75;
+line-height:1.6;
+font-size:15px;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+text-align:center;
+background:#0b0f19;
+opacity:0.6;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+nav ul{
+position:absolute;
+top:80px;
+right:0;
+background:#0e1422;
+flex-direction:column;
+width:220px;
+padding:25px;
+display:none;
+}
+
+nav ul.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>GESTIÓN LABORAL INTERNACIONAL 🇨🇭 🇪🇸</h1>
-    <p>TRAMITACIÓN EXCLUSIVA Y ACOMPAÑAMIENTO PROFESIONAL PARA TRABAJAR EN SUIZA</p>
+<header id="navbar">
+<div class="logo">CHL Constructora 🇨🇭 🇪🇸</div>
+
+<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul id="menu">
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#">Contacto</a></li>
+</ul>
+</nav>
 </header>
 
+<section class="hero">
+<h1>Construcción & Tramitación en Suiza</h1>
+<p>Gestión exclusiva y acompañamiento profesional para trabajar legalmente en Suiza con precisión y excelencia.</p>
+<button class="btn">Solicitar Información</button>
+</section>
+
 <section id="servicios" class="servicios">
-    <div class="container">
-        <h2>SERVICIOS EXCLUSIVOS 🇨🇭 🇪🇸</h2>
+<h2>SERVICIOS EXCLUSIVOS 🇨🇭 🇪🇸</h2>
 
-        <div class="servicios-grid">
+<div class="servicios-grid">
 
-            <div class="servicio-card">
-                <h3>TRADUCCIÓN Y ADAPTACIÓN DE CURRÍCULUM</h3>
-                <p>Traducción profesional y optimización del currículum conforme a los estándares del mercado laboral suizo.</p>
-            </div>
+<div class="servicio-card">
+<h3>TRADUCCIÓN Y ADAPTACIÓN DE CURRÍCULUM</h3>
+<p>Traducción profesional y optimización del currículum conforme a los estándares del mercado laboral suizo.</p>
+</div>
 
-            <div class="servicio-card">
-                <h3>GESTIÓN DE PERMISO DE TRABAJO</h3>
-                <p>Tramitación completa de la documentación necesaria para trabajar legalmente en Suiza.</p>
-            </div>
+<div class="servicio-card">
+<h3>GESTIÓN DE PERMISO DE TRABAJO</h3>
+<p>Tramitación completa de la documentación necesaria para trabajar legalmente en Suiza.</p>
+</div>
 
-            <div class="servicio-card">
-                <h3>ACOMPAÑAMIENTO LEGAL INTEGRAL</h3>
-                <p>Asesoramiento y seguimiento durante todo el proceso administrativo en Suiza.</p>
-            </div>
+<div class="servicio-card">
+<h3>ACOMPAÑAMIENTO LEGAL INTEGRAL</h3>
+<p>Asesoramiento y seguimiento durante todo el proceso administrativo en Suiza.</p>
+</div>
 
-            <div class="servicio-card">
-                <h3>GESTIÓN DE ALOJAMIENTO</h3>
-                <p>Apoyo en la búsqueda de habitación para garantizar una llegada organizada y segura.</p>
-            </div>
+<div class="servicio-card">
+<h3>GESTIÓN DE ALOJAMIENTO</h3>
+<p>Apoyo en la búsqueda de habitación para garantizar una llegada organizada y segura.</p>
+</div>
 
-        </div>
-    </div>
+</div>
 </section>
 
 <footer>
-    © 2026 CHL | GESTIÓN LABORAL ESPAÑA – SUIZA 🇨🇭 🇪🇸 | TODOS LOS DERECHOS RESERVADOS
+© 2026 CHL Constructora | España – Suiza 🇨🇭 🇪🇸
 </footer>
+
+<script>
+
+window.addEventListener("scroll",function(){
+const navbar=document.getElementById("navbar");
+navbar.classList.toggle("scrolled",window.scrollY>50);
+});
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
