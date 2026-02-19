@@ -17,19 +17,6 @@ color:#fff;
 scroll-behavior:smooth;
 }
 
-/* ANIMACIÓN SCROLL */
-
-.fade-up{
-opacity:0;
-transform:translateY(40px);
-transition:all 0.9s ease;
-}
-
-.fade-up.show{
-opacity:1;
-transform:translateY(0);
-}
-
 /* HEADER */
 
 header{
@@ -99,23 +86,16 @@ padding:0 20px;
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:46px;
-margin-bottom:25px;
+font-size:38px;
+margin-bottom:20px;
 }
 
 .hero p{
 max-width:720px;
-font-size:18px;
+font-size:17px;
 line-height:1.8;
-opacity:0.95;
-margin-bottom:25px;
-}
-
-.hero .subtext{
-max-width:720px;
-font-size:15px;
-opacity:0.75;
-margin-bottom:45px;
+opacity:0.9;
+margin-bottom:40px;
 }
 
 .btn{
@@ -144,8 +124,8 @@ text-align:center;
 
 .services h2{
 font-family:'Playfair Display',serif;
-font-size:36px;
-margin-bottom:70px;
+font-size:34px;
+margin-bottom:60px;
 }
 
 .service-grid{
@@ -167,7 +147,7 @@ transform:translateY(-6px);
 
 .service h3{
 font-family:'Playfair Display',serif;
-margin-bottom:18px;
+margin-bottom:15px;
 font-size:20px;
 }
 
@@ -187,8 +167,8 @@ text-align:center;
 
 .why h2{
 font-family:'Playfair Display',serif;
-font-size:34px;
-margin-bottom:60px;
+font-size:32px;
+margin-bottom:50px;
 }
 
 .why-grid{
@@ -201,7 +181,7 @@ gap:50px;
 padding:30px;
 }
 
-/* CONTACT */
+/* INFORMATION SECTION */
 
 .contact{
 padding:110px 8%;
@@ -211,20 +191,13 @@ text-align:center;
 
 .contact h2{
 font-family:'Playfair Display',serif;
-font-size:34px;
-margin-bottom:20px;
-}
-
-.flags{
-margin-bottom:25px;
-font-size:22px;
-letter-spacing:6px;
-opacity:0.8;
+font-size:32px;
+margin-bottom:40px;
 }
 
 .contact-box{
-max-width:650px;
-margin:20px auto 0;
+max-width:600px;
+margin:0 auto;
 padding:50px 40px;
 border:1px solid rgba(255,255,255,0.08);
 background:linear-gradient(145deg,#111,#0a0a0a);
@@ -237,29 +210,30 @@ position:absolute;
 top:0;
 left:50%;
 transform:translateX(-50%);
-width:90px;
+width:70px;
 height:2px;
-background:#25D366;
+background:#fff;
+opacity:0.4;
 }
 
 .contact-box p{
-margin-bottom:20px;
-font-size:18px;
+margin-bottom:25px;
+font-size:17px;
 }
 
 .whatsapp-btn{
 display:inline-block;
-margin-top:25px;
+margin-top:20px;
 padding:14px 40px;
-border:1px solid #25D366;
-color:#25D366;
+border:1px solid #fff;
+color:#fff;
 text-decoration:none;
 letter-spacing:1px;
 transition:0.3s;
 }
 
 .whatsapp-btn:hover{
-background:#25D366;
+background:#fff;
 color:#000;
 }
 
@@ -274,7 +248,7 @@ background:#000;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:32px;}
+.hero h1{font-size:28px;}
 }
 </style>
 </head>
@@ -290,7 +264,7 @@ background:#000;
 <a href="#hero" onclick="toggleMenu()">Inicio</a>
 <a href="#servicios" onclick="toggleMenu()">Servicios</a>
 <a href="#why" onclick="toggleMenu()">Por qué CHL</a>
-<a href="#contacto" onclick="toggleMenu()">Contacto</a>
+<a href="#contacto" onclick="toggleMenu()">Información</a>
 </nav>
 
 <section class="hero" id="hero">
@@ -299,36 +273,32 @@ background:#000;
 Procedimiento organizado para la integración profesional en el mercado laboral suizo, conforme a normativa federal vigente y requisitos cantonales aplicables.
 </p>
 
-<p class="subtext">
-Empresa española especializada en la coordinación y supervisión de procesos de incorporación profesional en Suiza.
-</p>
-
 <button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
 Solicitar Información
 </button>
 </section>
 
-<section class="services fade-up" id="servicios">
-<h2>Servicios Especializados en Mercado Suizo</h2>
+<section class="services" id="servicios">
+<h2>Servicios Especializados</h2>
 
 <div class="service-grid">
 
-<div class="service fade-up">
-<h3>Evaluación y Adaptación Profesional</h3>
-<p>Análisis estructurado del perfil profesional conforme a estándares del mercado suizo.</p>
+<div class="service">
+<h3>Evaluación Profesional</h3>
+<p>Análisis estructurado del perfil conforme a estándares del mercado suizo.</p>
 </div>
 
-<div class="service fade-up">
+<div class="service">
 <h3>Coordinación Documental</h3>
-<p>Supervisión integral de documentación y requisitos administrativos aplicables.</p>
+<p>Supervisión integral de documentación y requisitos administrativos.</p>
 </div>
 
-<div class="service fade-up">
+<div class="service">
 <h3>Gestión de Incorporación</h3>
-<p>Organización del proceso de incorporación laboral bajo marco normativo vigente.</p>
+<p>Organización del proceso bajo marco normativo vigente.</p>
 </div>
 
-<div class="service fade-up">
+<div class="service">
 <h3>Supervisión Operativa</h3>
 <p>Intervención directa cuando la estructura del proyecto lo requiera.</p>
 </div>
@@ -336,22 +306,22 @@ Solicitar Información
 </div>
 </section>
 
-<section class="why fade-up" id="why">
+<section class="why" id="why">
 <h2>¿Por qué CHL?</h2>
 
 <div class="why-grid">
 
-<div class="why-item fade-up">
-<h3>Especialización Exclusiva en Suiza</h3>
-<p>Enfoque específico y conocimiento técnico del entorno laboral suizo.</p>
+<div class="why-item">
+<h3>Especialización en Suiza</h3>
+<p>Conocimiento técnico del entorno laboral suizo.</p>
 </div>
 
-<div class="why-item fade-up">
+<div class="why-item">
 <h3>Procedimiento Estructurado</h3>
-<p>Metodología organizada con seguimiento continuo en cada fase del proceso.</p>
+<p>Metodología organizada con seguimiento continuo.</p>
 </div>
 
-<div class="why-item fade-up">
+<div class="why-item">
 <h3>Operativa Conforme a Normativa</h3>
 <p>Actuación alineada con requisitos federales y cantonales vigentes.</p>
 </div>
@@ -359,19 +329,18 @@ Solicitar Información
 </div>
 </section>
 
-<section class="contact fade-up" id="contacto">
-<h2>Contacto Directo</h2>
-
-<div class="flags">
-🇪🇸 🇨🇭
-</div>
+<section class="contact" id="contacto">
+<h2>Información</h2>
 
 <div class="contact-box">
-<p><strong>📞 Atención directa:</strong> +41 76 740 1541</p>
-<p><strong>✉ Comunicación oficial:</strong> info@chlconstructora.com</p>
+<p><strong>Atención telefónica</strong><br>
++41 76 740 1541</p>
+
+<p><strong>Correo electrónico oficial</strong><br>
+info@chlconstructora.com</p>
 
 <a class="whatsapp-btn" href="https://wa.me/41767401541" target="_blank">
-Iniciar conversación por WhatsApp
+Solicitar información por WhatsApp
 </a>
 </div>
 
@@ -385,21 +354,6 @@ Iniciar conversación por WhatsApp
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
-
-const faders = document.querySelectorAll('.fade-up');
-const appearOptions = { threshold: 0.2 };
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-entries.forEach(entry=>{
-if(!entry.isIntersecting){ return; }
-entry.target.classList.add('show');
-observer.unobserve(entry.target);
-});
-}, appearOptions);
-
-faders.forEach(fader=>{
-appearOnScroll.observe(fader);
-});
 </script>
 
 </body>
