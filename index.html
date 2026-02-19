@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHL Constructora | Gestión España – Suiza</title>
+<title>CHL Constructora</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,52 +16,36 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Poppins',sans-serif;
+font-family:'Inter',sans-serif;
 background:#000;
-color:white;
+color:#fff;
+overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* HEADER */
 
 header{
 position:fixed;
 top:0;
 left:0;
 width:100%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:30px 8%;
-z-index:1000;
-transition:0.4s;
-}
-
-header.scrolled{
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(6px);
+z-index:1000;
 }
 
 .logo{
-font-size:24px;
-font-weight:200;
-letter-spacing:2px;
-}
-
-nav ul{
-display:flex;
-gap:40px;
-list-style:none;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:200;
+font-family:'Playfair Display',serif;
+font-size:22px;
 letter-spacing:1px;
+font-weight:500;
 }
 
-.menu-toggle{
-display:none;
+.menu{
 font-size:28px;
 cursor:pointer;
 }
@@ -71,8 +55,8 @@ cursor:pointer;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80');
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1950&q=80');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -84,60 +68,94 @@ padding:0 20px;
 }
 
 .hero h1{
-font-size:68px;
-font-weight:200;
-line-height:1.1;
-letter-spacing:2px;
-margin-bottom:25px;
+font-family:'Playfair Display',serif;
+font-size:48px;
+line-height:1.2;
+margin-bottom:20px;
+font-weight:600;
 }
 
 .hero p{
-max-width:750px;
-font-size:20px;
-font-weight:200;
-opacity:0.85;
-margin-bottom:50px;
+max-width:700px;
+font-size:18px;
+font-weight:300;
+line-height:1.6;
+margin-bottom:40px;
+opacity:0.9;
 }
 
 .btn{
-padding:14px 50px;
-border:1px solid rgba(255,255,255,0.6);
+padding:14px 40px;
+border:1px solid #fff;
 background:transparent;
-color:white;
+color:#fff;
+font-size:14px;
+letter-spacing:1px;
+text-transform:uppercase;
 cursor:pointer;
-letter-spacing:2px;
-font-weight:200;
-transition:0.4s;
+transition:0.3s;
 }
 
 .btn:hover{
-background:white;
-color:black;
+background:#fff;
+color:#000;
 }
 
-/* MOBILE */
+/* SERVICES */
+
+.services{
+padding:100px 8%;
+background:#0a0a0a;
+text-align:center;
+}
+
+.services h2{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:60px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.service{
+padding:30px;
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.service:hover{
+border-color:#fff;
+transform:translateY(-5px);
+}
+
+.service h3{
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
+font-size:20px;
+}
+
+.service p{
+font-size:15px;
+opacity:0.8;
+line-height:1.6;
+}
+
+footer{
+padding:40px 8%;
+text-align:center;
+font-size:14px;
+opacity:0.6;
+background:#000;
+}
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:50px;
-}
-
-nav ul{
-position:absolute;
-top:100px;
-right:8%;
-flex-direction:column;
-gap:25px;
-display:none;
-}
-
-nav ul.active{
-display:flex;
-}
-
-.menu-toggle{
-display:block;
+font-size:36px;
 }
 
 }
@@ -147,32 +165,53 @@ display:block;
 
 <body>
 
-<header id="navbar">
+<header>
 <div class="logo">CHL Constructora 🇨🇭 🇪🇸</div>
-
-<nav>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<ul id="menu">
-<li><a href="#">Servicios</a></li>
-<li><a href="#">Contacto</a></li>
-</ul>
-</nav>
+<div class="menu">☰</div>
 </header>
 
 <section class="hero">
-<h1>Construcción &<br>Tramitación en Suiza</h1>
-<p>Gestión exclusiva y acompañamiento profesional para trabajar legalmente en Suiza con precisión y excelencia.</p>
+<h1>Tramitación & Gestión Profesional en Suiza</h1>
+<p>
+Ofrecemos gestión integral para trabajadores en Suiza:
+tramitación laboral, traducción profesional de currículum,
+gestión de alojamiento y acompañamiento legal completo.
+Precisión suiza y atención personalizada en cada proceso.
+</p>
 <button class="btn">Solicitar Información</button>
 </section>
 
-<script>
-window.addEventListener("scroll",function(){
-document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>50);
-});
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
+<section class="services">
+<h2>Nuestros Servicios</h2>
+
+<div class="service-grid">
+
+<div class="service">
+<h3>Tramitación de Trabajo</h3>
+<p>Gestión completa de permisos y documentación necesaria para trabajar legalmente en Suiza.</p>
+</div>
+
+<div class="service">
+<h3>Traducción Profesional de CV</h3>
+<p>Adaptamos y traducimos tu currículum al estándar suizo para maximizar tus oportunidades laborales.</p>
+</div>
+
+<div class="service">
+<h3>Gestión de Alojamiento</h3>
+<p>Te ayudamos a conseguir habitación o vivienda en Suiza para facilitar tu instalación.</p>
+</div>
+
+<div class="service">
+<h3>Acompañamiento Legal</h3>
+<p>Asesoramiento integral en todos los trámites administrativos y procesos legales en Suiza.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 CHL Constructora — Gestión profesional en Suiza
+</footer>
 
 </body>
 </html>
