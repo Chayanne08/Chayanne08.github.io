@@ -25,8 +25,8 @@ padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.65);
-backdrop-filter:blur(6px);
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(8px);
 z-index:1000;
 }
 
@@ -57,7 +57,7 @@ display:block;
 color:#fff;
 text-decoration:none;
 margin-bottom:25px;
-font-size:16px;
+font-size:15px;
 letter-spacing:1px;
 }
 
@@ -65,13 +65,13 @@ nav.active{
 right:0;
 }
 
-/* HERO */
+/* HERO PREMIUM */
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
-url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1950&q=80');
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1505765050516-f72dcac9c60d?auto=format&fit=crop&w=1950&q=80');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -84,20 +84,20 @@ padding:0 20px;
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:48px;
-margin-bottom:20px;
+font-size:46px;
+margin-bottom:25px;
 }
 
 .hero p{
-max-width:750px;
+max-width:720px;
 font-size:18px;
-line-height:1.7;
-opacity:0.9;
-margin-bottom:40px;
+line-height:1.8;
+opacity:0.95;
+margin-bottom:45px;
 }
 
 .btn{
-padding:14px 40px;
+padding:14px 45px;
 border:1px solid #fff;
 background:transparent;
 color:#fff;
@@ -115,7 +115,7 @@ color:#000;
 /* SERVICES */
 
 .services{
-padding:100px 8%;
+padding:110px 8%;
 background:#0a0a0a;
 text-align:center;
 }
@@ -123,18 +123,18 @@ text-align:center;
 .services h2{
 font-family:'Playfair Display',serif;
 font-size:36px;
-margin-bottom:60px;
+margin-bottom:70px;
 }
 
 .service-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:50px;
 }
 
 .service{
-padding:35px;
-border:1px solid rgba(255,255,255,0.1);
+padding:40px;
+border:1px solid rgba(255,255,255,0.08);
 transition:0.3s;
 }
 
@@ -145,39 +145,74 @@ transform:translateY(-6px);
 
 .service h3{
 font-family:'Playfair Display',serif;
-margin-bottom:15px;
+margin-bottom:18px;
 font-size:20px;
 }
 
 .service p{
 font-size:15px;
 opacity:0.85;
-line-height:1.6;
+line-height:1.7;
+}
+
+/* WHY CHL */
+
+.why{
+padding:110px 8%;
+background:#000;
+text-align:center;
+}
+
+.why h2{
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:60px;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:50px;
+}
+
+.why-item{
+padding:30px;
+}
+
+.why-item h3{
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
+font-size:20px;
+}
+
+.why-item p{
+opacity:0.85;
+line-height:1.7;
 }
 
 /* CONTACT */
 
 .contact{
-padding:100px 8%;
-background:#000;
+padding:110px 8%;
+background:#0a0a0a;
 text-align:center;
 }
 
 .contact h2{
 font-family:'Playfair Display',serif;
-font-size:36px;
+font-size:34px;
 margin-bottom:40px;
 }
 
 .contact p{
-margin-bottom:15px;
+margin-bottom:12px;
 font-size:18px;
 }
 
 .whatsapp-btn{
 display:inline-block;
-margin-top:20px;
-padding:14px 35px;
+margin-top:25px;
+padding:14px 40px;
 border:1px solid #25D366;
 color:#25D366;
 text-decoration:none;
@@ -201,7 +236,7 @@ background:#000;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:34px;}
+.hero h1{font-size:32px;}
 }
 </style>
 </head>
@@ -216,14 +251,15 @@ background:#000;
 <nav id="menu">
 <a href="#hero" onclick="toggleMenu()">Inicio</a>
 <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+<a href="#why" onclick="toggleMenu()">Por qué CHL</a>
 <a href="#contacto" onclick="toggleMenu()">Contacto</a>
 </nav>
 
 <section class="hero" id="hero">
 <h1>Tramitación Laboral España – Suiza</h1>
 <p>
-Formalizamos y gestionamos el proceso completo para que trabajadores españoles ejerzan legalmente en Suiza.
-Permisos de trabajo, documentación oficial, adaptación profesional y acompañamiento administrativo con rigor y precisión.
+Procedimiento estructurado para la incorporación legal de trabajadores españoles en el mercado laboral suizo.
+Gestión documental completa, adaptación profesional y supervisión conforme a normativa federal vigente.
 </p>
 <button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
 Solicitar Información
@@ -231,42 +267,60 @@ Solicitar Información
 </section>
 
 <section class="services" id="servicios">
-<h2>Servicios de Gestión Laboral España – Suiza</h2>
+<h2>Servicios Especializados en Suiza</h2>
 
 <div class="service-grid">
 
 <div class="service">
-<h3>Tramitación Oficial de Permisos de Trabajo en Suiza</h3>
-<p>Gestión integral y formalización legal para ejercer actividad laboral en territorio suizo conforme a la normativa vigente.</p>
+<h3>Permisos de Trabajo en Suiza</h3>
+<p>Tramitación oficial y estructurada conforme a los requisitos cantonales y federales suizos.</p>
 </div>
 
 <div class="service">
-<h3>Adaptación Profesional al Mercado Laboral Suizo</h3>
-<p>Traducción, optimización y adecuación estratégica de currículum y perfil profesional según estándares suizos.</p>
+<h3>Adaptación al Mercado Laboral Suizo</h3>
+<p>Optimización estratégica de perfil profesional bajo estándares suizos.</p>
 </div>
 
 <div class="service">
 <h3>Gestión Documental España – Suiza</h3>
-<p>Supervisión completa de contratos, certificados, homologaciones y requisitos administrativos necesarios para trabajar en Suiza.</p>
+<p>Supervisión integral de contratos, certificados y requisitos administrativos.</p>
 </div>
 
 <div class="service">
-<h3>Asesoramiento en Establecimiento en Suiza</h3>
-<p>Orientación inicial sobre residencia, registro local y organización previa a la incorporación laboral.</p>
+<h3>Asesoramiento de Establecimiento</h3>
+<p>Orientación inicial para residencia y registro previo a la incorporación laboral.</p>
 </div>
 
-<div class="service">
-<h3>Acompañamiento Integral del Proceso en Suiza</h3>
-<p>Seguimiento profesional desde España hasta la incorporación efectiva en el puesto de trabajo en Suiza.</p>
+</div>
+</section>
+
+<section class="why" id="why">
+<h2>¿Por qué CHL?</h2>
+
+<div class="why-grid">
+
+<div class="why-item">
+<h3>Especialización Exclusiva en Suiza</h3>
+<p>Enfoque único y específico en el mercado laboral suizo, sin intermediaciones genéricas.</p>
+</div>
+
+<div class="why-item">
+<h3>Procedimiento Legal Estructurado</h3>
+<p>Metodología clara y organizada conforme a normativa vigente.</p>
+</div>
+
+<div class="why-item">
+<h3>Acompañamiento Integral</h3>
+<p>Seguimiento profesional desde España hasta la incorporación efectiva en Suiza.</p>
 </div>
 
 </div>
 </section>
 
 <section class="contact" id="contacto">
-<h2>Contacto</h2>
-<p><strong>Teléfono:</strong> +41 76 740 1541</p>
-<p><strong>Email:</strong> info@chlconstructora.com</p>
+<h2>Contacto Directo</h2>
+<p><strong>📞 Atención directa:</strong> +41 76 740 1541</p>
+<p><strong>✉ Comunicación oficial:</strong> info@chlconstructora.com</p>
 
 <a class="whatsapp-btn" href="https://wa.me/41767401541" target="_blank">
 Iniciar conversación por WhatsApp
@@ -275,7 +329,7 @@ Iniciar conversación por WhatsApp
 </section>
 
 <footer>
-© 2026 CHL Constructora — Gestión profesional España–Suiza
+© 2026 CHL Constructora — Especialización laboral España–Suiza
 </footer>
 
 <script>
