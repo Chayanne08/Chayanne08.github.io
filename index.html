@@ -9,11 +9,7 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:'Inter',sans-serif;
@@ -50,6 +46,30 @@ font-size:28px;
 cursor:pointer;
 }
 
+nav{
+position:fixed;
+top:0;
+right:-100%;
+height:100vh;
+width:260px;
+background:#111;
+padding:100px 30px;
+transition:0.4s ease;
+}
+
+nav a{
+display:block;
+color:#fff;
+text-decoration:none;
+margin-bottom:25px;
+font-size:16px;
+letter-spacing:1px;
+}
+
+nav.active{
+right:0;
+}
+
 /* HERO */
 
 .hero{
@@ -69,7 +89,7 @@ padding:0 20px;
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:48px;
+font-size:46px;
 line-height:1.2;
 margin-bottom:20px;
 font-weight:600;
@@ -101,48 +121,26 @@ background:#fff;
 color:#000;
 }
 
-/* SERVICES */
+/* SECCIONES */
 
-.services{
+.section{
 padding:100px 8%;
 background:#0a0a0a;
 text-align:center;
 }
 
-.services h2{
+.section h2{
 font-family:'Playfair Display',serif;
-font-size:36px;
-margin-bottom:60px;
+font-size:34px;
+margin-bottom:40px;
 }
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-}
-
-.service{
-padding:30px;
-border:1px solid rgba(255,255,255,0.1);
-transition:0.3s;
-}
-
-.service:hover{
-border-color:#fff;
-transform:translateY(-5px);
-}
-
-.service h3{
-font-family:'Playfair Display',serif;
+.contact p{
 margin-bottom:15px;
-font-size:20px;
+font-size:18px;
 }
 
-.service p{
-font-size:15px;
-opacity:0.8;
-line-height:1.6;
-}
+/* FOOTER */
 
 footer{
 padding:40px 8%;
@@ -153,11 +151,7 @@ background:#000;
 }
 
 @media(max-width:768px){
-
-.hero h1{
-font-size:36px;
-}
-
+.hero h1{font-size:34px;}
 }
 
 </style>
@@ -167,10 +161,15 @@ font-size:36px;
 
 <header>
 <div class="logo">CHL Constructora 🇨🇭 🇪🇸</div>
-<div class="menu">☰</div>
+<div class="menu" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="hero">
+<nav id="menu">
+<a href="#hero" onclick="toggleMenu()">Inicio</a>
+<a href="#contacto" onclick="toggleMenu()">Contacto</a>
+</nav>
+
+<section class="hero" id="hero">
 <h1>Tramitación & Gestión Profesional en Suiza</h1>
 <p>
 Ofrecemos gestión integral para trabajadores en Suiza:
@@ -178,40 +177,26 @@ tramitación laboral, traducción profesional de currículum,
 gestión de alojamiento y acompañamiento legal completo.
 Precisión suiza y atención personalizada en cada proceso.
 </p>
-<button class="btn">Solicitar Información</button>
+<button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+Solicitar Información
+</button>
 </section>
 
-<section class="services">
-<h2>Nuestros Servicios</h2>
-
-<div class="service-grid">
-
-<div class="service">
-<h3>Tramitación de Trabajo</h3>
-<p>Gestión completa de permisos y documentación necesaria para trabajar legalmente en Suiza.</p>
-</div>
-
-<div class="service">
-<h3>Traducción Profesional de CV</h3>
-<p>Adaptamos y traducimos tu currículum al estándar suizo para maximizar tus oportunidades laborales.</p>
-</div>
-
-<div class="service">
-<h3>Gestión de Alojamiento</h3>
-<p>Te ayudamos a conseguir habitación o vivienda en Suiza para facilitar tu instalación.</p>
-</div>
-
-<div class="service">
-<h3>Acompañamiento Legal</h3>
-<p>Asesoramiento integral en todos los trámites administrativos y procesos legales en Suiza.</p>
-</div>
-
-</div>
+<section class="section contact" id="contacto">
+<h2>Contacto</h2>
+<p><strong>Teléfono:</strong> +41 76 740 1541</p>
+<p><strong>Email:</strong> info@chlconstructora.com</p>
 </section>
 
 <footer>
 © 2026 CHL Constructora — Gestión profesional en Suiza
 </footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
