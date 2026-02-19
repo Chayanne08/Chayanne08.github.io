@@ -17,6 +17,20 @@ color:#fff;
 scroll-behavior:smooth;
 }
 
+/* ANIMACIÓN SCROLL */
+.fade-up{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.9s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* HEADER */
+
 header{
 position:fixed;
 top:0;
@@ -65,7 +79,7 @@ nav.active{
 right:0;
 }
 
-/* HERO PREMIUM */
+/* HERO */
 
 .hero{
 height:100vh;
@@ -155,7 +169,7 @@ opacity:0.85;
 line-height:1.7;
 }
 
-/* WHY CHL */
+/* WHY */
 
 .why{
 padding:110px 8%;
@@ -177,17 +191,6 @@ gap:50px;
 
 .why-item{
 padding:30px;
-}
-
-.why-item h3{
-font-family:'Playfair Display',serif;
-margin-bottom:15px;
-font-size:20px;
-}
-
-.why-item p{
-opacity:0.85;
-line-height:1.7;
 }
 
 /* CONTACT */
@@ -266,58 +269,58 @@ Solicitar Información
 </button>
 </section>
 
-<section class="services" id="servicios">
+<section class="services fade-up" id="servicios">
 <h2>Servicios Especializados en Suiza</h2>
 
 <div class="service-grid">
 
-<div class="service">
+<div class="service fade-up">
 <h3>Permisos de Trabajo en Suiza</h3>
-<p>Tramitación oficial y estructurada conforme a los requisitos cantonales y federales suizos.</p>
+<p>Tramitación oficial conforme a requisitos cantonales y federales suizos.</p>
 </div>
 
-<div class="service">
+<div class="service fade-up">
 <h3>Adaptación al Mercado Laboral Suizo</h3>
-<p>Optimización estratégica de perfil profesional bajo estándares suizos.</p>
+<p>Optimización estratégica del perfil profesional bajo estándares suizos.</p>
 </div>
 
-<div class="service">
+<div class="service fade-up">
 <h3>Gestión Documental España – Suiza</h3>
-<p>Supervisión integral de contratos, certificados y requisitos administrativos.</p>
+<p>Supervisión integral de contratos y requisitos administrativos.</p>
 </div>
 
-<div class="service">
+<div class="service fade-up">
 <h3>Asesoramiento de Establecimiento</h3>
-<p>Orientación inicial para residencia y registro previo a la incorporación laboral.</p>
+<p>Orientación inicial para residencia y registro previo a la incorporación.</p>
 </div>
 
 </div>
 </section>
 
-<section class="why" id="why">
+<section class="why fade-up" id="why">
 <h2>¿Por qué CHL?</h2>
 
 <div class="why-grid">
 
-<div class="why-item">
+<div class="why-item fade-up">
 <h3>Especialización Exclusiva en Suiza</h3>
-<p>Enfoque único y específico en el mercado laboral suizo, sin intermediaciones genéricas.</p>
+<p>Enfoque específico en el mercado laboral suizo.</p>
 </div>
 
-<div class="why-item">
+<div class="why-item fade-up">
 <h3>Procedimiento Legal Estructurado</h3>
-<p>Metodología clara y organizada conforme a normativa vigente.</p>
+<p>Metodología clara conforme a normativa vigente.</p>
 </div>
 
-<div class="why-item">
+<div class="why-item fade-up">
 <h3>Acompañamiento Integral</h3>
-<p>Seguimiento profesional desde España hasta la incorporación efectiva en Suiza.</p>
+<p>Seguimiento profesional hasta incorporación efectiva en Suiza.</p>
 </div>
 
 </div>
 </section>
 
-<section class="contact" id="contacto">
+<section class="contact fade-up" id="contacto">
 <h2>Contacto Directo</h2>
 <p><strong>📞 Atención directa:</strong> +41 76 740 1541</p>
 <p><strong>✉ Comunicación oficial:</strong> info@chlconstructora.com</p>
@@ -325,7 +328,6 @@ Solicitar Información
 <a class="whatsapp-btn" href="https://wa.me/41767401541" target="_blank">
 Iniciar conversación por WhatsApp
 </a>
-
 </section>
 
 <footer>
@@ -336,6 +338,28 @@ Iniciar conversación por WhatsApp
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
+
+/* ACTIVAR ANIMACIÓN AL HACER SCROLL */
+const faders = document.querySelectorAll('.fade-up');
+
+const appearOptions = {
+threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+entries.forEach(entry=>{
+if(!entry.isIntersecting){
+return;
+}else{
+entry.target.classList.add('show');
+observer.unobserve(entry.target);
+}
+});
+}, appearOptions);
+
+faders.forEach(fader=>{
+appearOnScroll.observe(fader);
+});
 </script>
 
 </body>
