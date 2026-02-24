@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHL CONSTRUCTORA | Trabajadores</title>
+<title>Trabajadores | CHL CONSTRUCTORA</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -20,6 +20,7 @@ background:rgba(15,23,42,0.95);
 display:flex;
 justify-content:space-between;
 align-items:center;
+z-index:1000;
 }
 .logo{
 font-size:22px;
@@ -39,34 +40,51 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+background-size:cover;
+background-position:center;
 }
 .hero-content{max-width:700px;}
 .hero h1{font-size:42px;margin-bottom:20px;}
 .hero p{font-size:18px;opacity:0.9;}
 
-.contact-section{
+.section{
 padding:80px 20px;
 text-align:center;
-background:#0f172a;
-}
-.contact-section h2{
-font-size:28px;
-margin-bottom:20px;
-}
-.contact-section p{
-font-size:18px;
-margin-bottom:15px;
 }
 
-.contact-btn{
+.section-dark{
+background:#0f172a;
+}
+
+.section-darker{
+background:#020617;
+}
+
+.section h2{
+font-size:30px;
+margin-bottom:30px;
+}
+
+.section p{
+font-size:18px;
+margin-bottom:20px;
+opacity:0.9;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.7;
+}
+
+.whatsapp-btn{
 display:inline-block;
-margin-top:25px;
-padding:16px 35px;
+margin-top:20px;
+padding:15px 35px;
 background:#25D366;
 color:white;
 text-decoration:none;
 border-radius:6px;
-font-size:18px;
 font-weight:bold;
 }
 
@@ -84,7 +102,7 @@ font-size:14px;
 <header>
 <div class="logo">CHL CONSTRUCTORA</div>
 <nav>
-<a href="index.html">Inicio</a>
+<a href="trabajadores.html">Trabajadores</a>
 <a href="empresas.html">Empresas</a>
 </nav>
 </header>
@@ -92,22 +110,35 @@ font-size:14px;
 <section class="hero">
 <div class="hero-content">
 <h1>¿Estás buscando empleo?</h1>
-<p>Te ayudamos a incorporarte a proyectos de construcción con organización y seguimiento profesional.</p>
+<p>Te ayudamos a incorporarte a proyectos de construcción con organización, gestión y seguimiento profesional.</p>
 </div>
 </section>
 
-<section class="contact-section">
-<h2>Contactar</h2>
-<p>Si estás interesado en trabajar con nosotros, escríbenos directamente por WhatsApp.</p>
+<section class="section section-dark">
+<h2>¿Cómo procedemos?</h2>
 
-<a href="https://wa.me/41XXXXXXXXX" class="contact-btn">
-CONTACTAR
+<p>1️⃣ Recibimos tu perfil profesional y experiencia en el sector construcción.</p>
+
+<p>2️⃣ Evaluamos tu perfil y lo coordinamos con proyectos disponibles.</p>
+
+<p>3️⃣ Organizamos la incorporación con seguimiento profesional.</p>
+
+</section>
+
+<section class="section section-darker">
+<h2>Información y contacto</h2>
+
+<p>📞 Teléfono: +41 76 740 15 41</p>
+<p>💬 WhatsApp: +41 76 740 15 41</p>
+
+<a href="https://wa.me/41767401541" class="whatsapp-btn">
+CONTACTAR POR WHATSAPP
 </a>
 
 </section>
 
 <footer>
-© 2026 CHL CONSTRUCTORA
+© 2026 CHL CONSTRUCTORA – Gestión profesional en construcción
 </footer>
 
 </body>
