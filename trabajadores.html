@@ -3,31 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trabajadores | CHL Constructora España - Suiza</title>
+<title>Trabajadores | CHL CONSTRUCTORA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:'Inter',sans-serif;
-background:#f4f6f8;
+background:#f2f4f7;
 color:#222;
 }
 
 header{
-background:white;
+background:#ffffff;
 padding:20px 40px;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 header h1{
-font-size:20px;
-font-weight:700;
+font-size:22px;
+font-weight:800;
+letter-spacing:1px;
 }
 
 header a{
@@ -37,8 +41,84 @@ font-weight:500;
 }
 
 .hero{
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1581091870627-3b5de3e9c48c');
+background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:20px;
+font-weight:800;
+}
+
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+}
+
+.section{
+padding:90px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.section h3{
+font-size:30px;
+margin-bottom:30px;
+font-weight:700;
+}
+
+.section p{
+margin-bottom:18px;
+line-height:1.7;
+font-size:16px;
+}
+
+.process{
+background:white;
+padding:90px 20px;
+}
+
+.process h3{
+text-align:center;
+margin-bottom:50px;
+font-size:30px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.step{
+background:#f9f9f9;
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.step:hover{
+transform:translateY(-5px);
+}
+
+.step h4{
+margin-bottom:15px;
+font-size:20px;
+}
+
+.guarantee{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1581093588401-22e7b8b64d27');
 background-size:cover;
 background-position:center;
 color:white;
@@ -46,53 +126,14 @@ text-align:center;
 padding:100px 20px;
 }
 
-.hero h2{
-font-size:36px;
+.guarantee h3{
+font-size:30px;
 margin-bottom:20px;
-}
-
-.section{
-padding:80px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-.section h3{
-font-size:28px;
-margin-bottom:20px;
-}
-
-.section p{
-margin-bottom:15px;
-line-height:1.6;
-}
-
-.process{
-background:white;
-padding:60px 20px;
-}
-
-.process h3{
-text-align:center;
-margin-bottom:40px;
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.step{
-background:#f9f9f9;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 footer{
 text-align:center;
-padding:30px;
+padding:35px;
 background:#111;
 color:white;
 margin-top:50px;
@@ -103,28 +144,61 @@ margin-top:50px;
 <body>
 
 <header>
-<h1>CHL Constructora | España - Suiza</h1>
+<h1>CHL CONSTRUCTORA</h1>
 <a href="index.html">Volver al inicio</a>
 </header>
 
 <section class="hero">
 <h2>¿Estás buscando empleo en Suiza?</h2>
-<p>Gestionamos y tramitamos tu incorporación en proyectos reales del sector construcción.</p>
+<p>Gestionamos y tramitamos tu incorporación en proyectos reales del sector construcción con empresas suizas que necesitan profesionales cualificados.</p>
 </section>
 
 <section class="section">
-<h3>¿Cómo trabajamos?</h3>
-<p>En CHL Constructora gestionamos la conexión entre trabajadores españoles cualificados y empresas suizas que necesitan mano de obra especializada.</p>
-<p>Nos encargamos de la tramitación, documentación y coordinación para que puedas incorporarte de forma segura y organizada.</p>
+<h3>¿Qué hacemos exactamente?</h3>
+
+<p>En CHL CONSTRUCTORA gestionamos la conexión entre trabajadores españoles cualificados y empresas suizas que necesitan mano de obra especializada para proyectos reales.</p>
+
+<p>No somos una bolsa de empleo. Nos encargamos de la coordinación directa con las empresas, revisión de perfiles y organización del proceso completo.</p>
+
+<p>Gestionamos la documentación, supervisamos la incorporación y estructuramos cada paso para que el trabajador pueda incorporarse de forma segura, organizada y profesional.</p>
 </section>
 
 <section class="process">
-<h3>Proceso</h3>
+<h3>Proceso de Incorporación</h3>
+
 <div class="steps">
+
 <div class="step">
-<h4>1. Evaluación</h4>
-<p>Revisamos tu perfil profesional y experiencia.</p>
+<h4>1. Evaluación Profesional</h4>
+<p>Analizamos tu experiencia en obra, especialidad y disponibilidad para proyectos en Suiza.</p>
 </div>
+
 <div class="step">
-<h4>2. Coordinación</h4>
-<p>Te vincul
+<h4>2. Coordinación con Empresa</h4>
+<p>Vinculamos tu perfil con empresas suizas que necesiten exactamente tu especialidad.</p>
+</div>
+
+<div class="step">
+<h4>3. Gestión y Tramitación</h4>
+<p>Organizamos la documentación necesaria y coordinamos los pasos administrativos para tu incorporación.</p>
+</div>
+
+<div class="step">
+<h4>4. Incorporación al Proyecto</h4>
+<p>Una vez aprobado el proceso, se formaliza la entrada al proyecto asignado.</p>
+</div>
+
+</div>
+</section>
+
+<section class="guarantee">
+<h3>Trabajamos con proyectos reales</h3>
+<p>No gestionamos promesas. Coordinamos incorporaciones reales en el sector construcción entre España y Suiza.</p>
+</section>
+
+<footer>
+© 2026 CHL CONSTRUCTORA
+</footer>
+
+</body>
+</html>
