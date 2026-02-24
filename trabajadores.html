@@ -3,95 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trabajadores | CHL CONSTRUCTORA</title>
+<title>Ofertas de trabajo - CHL Constructora</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(180deg,#1e293b 0%,#334155 100%);
-color:white;
-}
-header{
+body{font-family:Arial,Helvetica,sans-serif;background:#111;color:white;}
+
+/* HEADER */
+.main-header{
 position:fixed;
 width:100%;
-padding:20px 40px;
-background:rgba(15,23,42,0.95);
+top:0;
+left:0;
+padding:20px 25px;
+background:#000;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
 }
-.logo{
-font-size:22px;
-font-weight:bold;
-letter-spacing:2px;
-}
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:#e2e8f0;
-}
-nav a:hover{color:#38bdf8;}
-.hero{
+.logo{font-size:22px;font-weight:600;}
+.menu-toggle{font-size:28px;cursor:pointer;}
+
+.mobile-menu{
+position:fixed;
+top:70px;
+right:-100%;
+width:230px;
 height:100vh;
+background:#111;
+display:flex;
+flex-direction:column;
+padding:30px 20px;
+transition:0.3s ease;
+}
+.mobile-menu a{
+color:white;
+text-decoration:none;
+margin-bottom:20px;
+font-size:18px;
+}
+.mobile-menu a:hover{color:#38bdf8;}
+.mobile-menu.active{right:0;}
+
+/* HERO */
+.hero{
+margin-top:80px;
+height:70vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1581091870627-3d6b5c6d8e2a');
 background-size:cover;
 background-position:center;
 }
-.hero-content{max-width:700px;}
-.hero h1{font-size:42px;margin-bottom:20px;}
-.hero p{font-size:18px;opacity:0.9;}
+.hero h1{font-size:38px;}
 
+/* SECTION */
 .section{
 padding:80px 20px;
 text-align:center;
+background:#1a1a1a;
 }
-
-.section-dark{
-background:#0f172a;
-}
-
-.section-darker{
-background:#020617;
-}
-
 .section h2{
-font-size:30px;
+font-size:28px;
 margin-bottom:30px;
 }
-
 .section p{
-font-size:18px;
-margin-bottom:20px;
-opacity:0.9;
 max-width:900px;
-margin-left:auto;
-margin-right:auto;
+margin:15px auto;
+font-size:18px;
 line-height:1.7;
 }
 
-.whatsapp-btn{
+.step{
+margin-bottom:25px;
+}
+
+.whatsapp{
 display:inline-block;
-margin-top:20px;
+margin-top:30px;
 padding:15px 35px;
 background:#25D366;
 color:white;
 text-decoration:none;
-border-radius:6px;
 font-weight:bold;
 }
 
 footer{
-text-align:center;
+background:#000;
 padding:30px;
-background:#020617;
+text-align:center;
 font-size:14px;
 }
 </style>
@@ -99,47 +104,58 @@ font-size:14px;
 
 <body>
 
-<header>
-<div class="logo">CHL CONSTRUCTORA</div>
-<nav>
-<a href="trabajadores.html">Trabajadores</a>
+<header class="main-header">
+<div class="logo">CHL Constructora</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav id="mobileMenu" class="mobile-menu">
+<a href="index.html">Inicio</a>
+<a href="trabajadores.html">Ofertas de trabajo</a>
 <a href="empresas.html">Empresas</a>
 </nav>
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<h1>¿Estás buscando empleo?</h1>
-<p>Te ayudamos a incorporarte a proyectos de construcción con organización, gestión y seguimiento profesional.</p>
+<h1>Oportunidades laborales en construcción</h1>
+</section>
+
+<section class="section">
+<h2>Cómo procedemos</h2>
+
+<div class="step">
+<strong>1. Recepción del perfil profesional</strong>
+<p>Analizamos la experiencia, especialidad y disponibilidad del profesional dentro del sector construcción.</p>
 </div>
-</section>
 
-<section class="section section-dark">
-<h2>¿Cómo procedemos?</h2>
+<div class="step">
+<strong>2. Evaluación y adecuación a proyectos</strong>
+<p>Estudiamos las necesidades reales de obra y vinculamos el perfil con oportunidades acordes a su experiencia.</p>
+</div>
 
-<p>1️⃣ Recibimos tu perfil profesional y experiencia en el sector construcción.</p>
+<div class="step">
+<strong>3. Coordinación de incorporación</strong>
+<p>Organizamos el proceso de entrada de forma estructurada, asegurando claridad en funciones y condiciones.</p>
+</div>
 
-<p>2️⃣ Evaluamos tu perfil y lo coordinamos con proyectos disponibles.</p>
+<div class="step">
+<strong>4. Seguimiento profesional</strong>
+<p>Realizamos acompañamiento y supervisión durante el desarrollo del proyecto para garantizar estabilidad y continuidad.</p>
+</div>
 
-<p>3️⃣ Organizamos la incorporación con seguimiento profesional.</p>
-
-</section>
-
-<section class="section section-darker">
-<h2>Información y contacto</h2>
-
-<p>📞 Teléfono: +41 76 740 15 41</p>
-<p>💬 WhatsApp: +41 76 740 15 41</p>
-
-<a href="https://wa.me/41767401541" class="whatsapp-btn">
+<a href="https://wa.me/41767401541" class="whatsapp">
 CONTACTAR POR WHATSAPP
 </a>
 
 </section>
 
 <footer>
-© 2026 CHL CONSTRUCTORA – Gestión profesional en construcción
+Teléfono / WhatsApp: +41 76 740 15 41
 </footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
