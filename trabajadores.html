@@ -35,47 +35,88 @@ header {
     text-decoration: none;
 }
 
+.volver:hover {
+    color: #22c55e;
+}
+
+/* HERO CON IMAGEN */
+
 .hero {
-    padding: 100px 20px 80px;
+    position: relative;
+    padding: 140px 20px 120px;
     text-align: center;
-    background: linear-gradient(180deg, #0f172a, #111827);
+    background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15,23,42,0.85), rgba(15,23,42,0.95));
 }
 
 .hero h1 {
+    position: relative;
+    z-index: 2;
     font-size: 42px;
     margin-bottom: 20px;
 }
 
 .hero p {
+    position: relative;
+    z-index: 2;
     max-width: 700px;
     margin: auto;
-    color: #cbd5e1;
+    color: #e2e8f0;
     line-height: 1.6;
 }
 
+/* SECCIÓN */
+
 .section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: #111827;
 }
 
 .section-title {
     text-align: center;
-    font-size: 34px;
+    font-size: 36px;
     font-weight: 800;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
+    position: relative;
 }
+
+.section-title::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #22c55e;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* TARJETAS */
 
 .card {
     max-width: 900px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 40px auto;
     background: #1f2937;
-    padding: 30px;
-    border-radius: 14px;
+    padding: 40px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border: 1px solid #22c55e;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 .card h3 {
     color: #22c55e;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card p {
@@ -85,7 +126,7 @@ header {
 
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
     background: #0f172a;
     color: #94a3b8;
 }
@@ -101,7 +142,7 @@ footer {
 
 <section class="hero">
     <h1>Oportunidades profesionales en construcción</h1>
-    <p>Gestionamos tu incorporación a proyectos de obra de forma organizada, clara y profesional.</p>
+    <p>Gestionamos tu incorporación a proyectos de obra con estructura, organización y seguimiento profesional.</p>
 </section>
 
 <section class="section">
@@ -119,7 +160,7 @@ footer {
 
     <div class="card">
         <h3>3. Incorporación al proyecto</h3>
-        <p>Te integramos en proyectos reales de construcción con organización y seguimiento profesional.</p>
+        <p>Te integramos en proyectos reales con organización y seguimiento continuo.</p>
     </div>
 
 </section>
