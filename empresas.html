@@ -3,130 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Empresas | CHL Constructora</title>
+<title>Empresas | CHL CONSTRUCTORA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family:'Inter',sans-serif;
-    background:#f4f6f8;
-    color:#222;
+font-family:'Inter',sans-serif;
+background:#f2f4f7;
+color:#222;
 }
 
 header{
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    padding:80px 20px;
-    text-align:center;
+background:#ffffff;
+padding:20px 40px;
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 header h1{
-    font-size:38px;
-    margin-bottom:15px;
+font-size:22px;
+font-weight:800;
+letter-spacing:1px;
 }
 
-header p{
-    font-size:18px;
-    opacity:0.9;
+header a{
+text-decoration:none;
+color:#333;
+font-weight:500;
 }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:60px 20px;
+.hero{
+background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:120px 20px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
+.hero h2{
+font-size:40px;
+margin-bottom:20px;
+font-weight:800;
 }
 
-.section-title h2{
-    font-size:30px;
-    margin-bottom:10px;
+.hero p{
+font-size:18px;
+max-width:750px;
+margin:auto;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+.section{
+padding:90px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-.card{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    transition:0.3s;
+.section h3{
+font-size:30px;
+margin-bottom:30px;
+font-weight:700;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#2c5364;
-}
-
-.card p{
-    line-height:1.6;
-    font-size:15px;
+.section p{
+margin-bottom:18px;
+line-height:1.7;
+font-size:16px;
 }
 
 .process{
-    background:white;
-    padding:60px 20px;
+background:white;
+padding:90px 20px;
 }
 
-.process-steps{
-    max-width:900px;
-    margin:auto;
+.process h3{
+text-align:center;
+margin-bottom:50px;
+font-size:30px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
 }
 
 .step{
-    margin-bottom:30px;
-    padding-left:20px;
-    border-left:4px solid #2c5364;
+background:#f9f9f9;
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.step:hover{
+transform:translateY(-5px);
 }
 
 .step h4{
-    margin-bottom:8px;
-    color:#2c5364;
+margin-bottom:15px;
+font-size:20px;
 }
 
-.cta{
-    background:linear-gradient(135deg,#2c5364,#203a43);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+.guarantee{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1541976076758-347942db1972');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:100px 20px;
 }
 
-.cta a{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 30px;
-    background:white;
-    color:#203a43;
-    text-decoration:none;
-    font-weight:600;
-    border-radius:8px;
-    transition:0.3s;
-}
-
-.cta a:hover{
-    background:#ddd;
+.guarantee h3{
+font-size:30px;
+margin-bottom:20px;
 }
 
 footer{
-    background:#111;
-    color:#aaa;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
+text-align:center;
+padding:35px;
+background:#111;
+color:white;
+margin-top:50px;
 }
 </style>
 </head>
@@ -134,70 +144,60 @@ footer{
 <body>
 
 <header>
-    <h1>¿Busca mano de obra cualificada?</h1>
-    <p>Conectamos empresas suizas con trabajadores españoles especializados en construcción.</p>
+<h1>CHL CONSTRUCTORA</h1>
+<a href="index.html">Volver al inicio</a>
 </header>
 
-<section class="container">
-    <div class="section-title">
-        <h2>Qué ofrecemos a su empresa</h2>
-        <p>Gestión integral de personal España – Suiza</p>
-    </div>
+<section class="hero">
+<h2>¿Busca mano de obra cualificada para su proyecto?</h2>
+<p>Coordinamos la incorporación de trabajadores españoles especializados para proyectos del sector construcción en Suiza.</p>
+</section>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Selección de trabajadores</h3>
-            <p>Buscamos perfiles cualificados según las necesidades específicas de su proyecto.</p>
-        </div>
+<section class="section">
+<h3>¿Qué ofrecemos a las empresas?</h3>
 
-        <div class="card">
-            <h3>Gestión documental</h3>
-            <p>Tramitamos permisos, contratos y documentación necesaria para trabajar en Suiza.</p>
-        </div>
+<p>En CHL CONSTRUCTORA gestionamos la conexión entre empresas suizas y trabajadores españoles cualificados del sector construcción.</p>
 
-        <div class="card">
-            <h3>Coordinación directa</h3>
-            <p>Mantenemos comunicación constante entre empresa y trabajador para garantizar estabilidad y rendimiento.</p>
-        </div>
-    </div>
+<p>No actuamos como bolsa de empleo masiva. Coordinamos perfiles específicos según la necesidad real del proyecto.</p>
+
+<p>Nos encargamos de la evaluación profesional, coordinación y tramitación necesaria para que la incorporación se realice de forma organizada y estructurada.</p>
 </section>
 
 <section class="process">
-    <div class="section-title">
-        <h2>Cómo funciona el proceso</h2>
-    </div>
+<h3>Proceso de Coordinación</h3>
 
-    <div class="process-steps">
-        <div class="step">
-            <h4>1. Nos comunica su necesidad</h4>
-            <p>Indíquenos el tipo de perfil profesional que necesita y la duración del proyecto.</p>
-        </div>
+<div class="steps">
 
-        <div class="step">
-            <h4>2. Seleccionamos candidatos</h4>
-            <p>Filtramos trabajadores con experiencia real en el sector solicitado.</p>
-        </div>
+<div class="step">
+<h4>1. Análisis de Necesidad</h4>
+<p>Evaluamos el perfil profesional requerido para el proyecto.</p>
+</div>
 
-        <div class="step">
-            <h4>3. Tramitamos la documentación</h4>
-            <p>Gestionamos todo el proceso administrativo para que usted no tenga preocupaciones.</p>
-        </div>
+<div class="step">
+<h4>2. Selección de Perfil</h4>
+<p>Coordinamos trabajadores españoles que se ajusten a la especialidad solicitada.</p>
+</div>
 
-        <div class="step">
-            <h4>4. Incorporación al proyecto</h4>
-            <p>El trabajador se incorpora con respaldo y seguimiento continuo.</p>
-        </div>
-    </div>
+<div class="step">
+<h4>3. Gestión Administrativa</h4>
+<p>Organizamos la documentación necesaria para la correcta incorporación.</p>
+</div>
+
+<div class="step">
+<h4>4. Incorporación al Proyecto</h4>
+<p>El trabajador se integra en el proyecto bajo coordinación estructurada.</p>
+</div>
+
+</div>
 </section>
 
-<section class="cta">
-    <h2>¿Tiene un proyecto en marcha?</h2>
-    <p>Estamos preparados para gestionar la mano de obra que necesita.</p>
-    <a href="index.html">Volver a la página principal</a>
+<section class="guarantee">
+<h3>Coordinación estructurada España - Suiza</h3>
+<p>Gestionamos procesos reales, organizados y profesionales para el sector construcción.</p>
 </section>
 
 <footer>
-    © 2026 CHL Constructora | España - Suiza
+© 2026 CHL CONSTRUCTORA
 </footer>
 
 </body>
