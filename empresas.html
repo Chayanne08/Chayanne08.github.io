@@ -5,70 +5,109 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL CONSTRUCTORA | Empresas</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#1e293b 0%,#334155 100%);
+color:white;
+}
+header{
+position:fixed;
+width:100%;
+padding:20px 40px;
+background:rgba(15,23,42,0.95);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+}
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#e2e8f0;
+}
+nav a:hover{color:#38bdf8;}
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+.hero-content{max-width:700px;}
+.hero h1{font-size:42px;margin-bottom:20px;}
+.hero p{font-size:18px;opacity:0.9;}
 
-body { margin:0; font-family:'Inter',sans-serif; background:#f8fafc; color:#1e293b; }
-
-header {
-    background:white;
-    padding:20px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 2px 12px rgba(0,0,0,0.05);
+.contact-section{
+padding:80px 20px;
+text-align:center;
+background:#0f172a;
+}
+.contact-section h2{
+font-size:28px;
+margin-bottom:20px;
+}
+.contact-section p{
+font-size:18px;
+margin-bottom:15px;
 }
 
-.logo { font-family:'Montserrat',sans-serif; font-weight:800; font-size:22px; }
-
-nav a {
-    text-decoration:none;
-    color:#475569;
-    margin-left:25px;
-    font-weight:500;
+.contact-btn{
+display:inline-block;
+margin-top:25px;
+padding:16px 35px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:18px;
+font-weight:bold;
 }
 
-nav a:hover { color:#16a34a; }
-
-.hero {
-    padding:120px 20px;
-    text-align:center;
-    background:linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover no-repeat;
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+font-size:14px;
 }
-
-.hero h1 { font-size:36px; font-weight:800; margin-bottom:20px; }
-
-.hero p { max-width:700px; margin:auto; font-size:18px; color:#475569; }
-
-footer {
-    text-align:center;
-    padding:40px 20px;
-    background:#f1f5f9;
-    font-size:14px;
-    color:#64748b;
-}
-
 </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">CHL CONSTRUCTORA</div>
-    <nav>
-        <a href="trabajadores.html">Trabajadores</a>
-        <a href="empresas.html">Empresas</a>
-    </nav>
+<div class="logo">CHL CONSTRUCTORA</div>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="trabajadores.html">Trabajadores</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>¿Necesitas personal cualificado?</h1>
-    <p>Coordinamos profesionales del sector construcción con empresas que buscan estabilidad y organización.</p>
+<div class="hero-content">
+<h1>¿Necesitas personal cualificado?</h1>
+<p>Coordinamos profesionales del sector construcción de forma organizada y eficiente.</p>
+</div>
+</section>
+
+<section class="contact-section">
+<h2>Contactar</h2>
+<p>Si tu empresa necesita colaboración o personal cualificado, contáctanos directamente por WhatsApp.</p>
+
+<a href="https://wa.me/41XXXXXXXXX" class="contact-btn">
+CONTACTAR
+</a>
+
 </section>
 
 <footer>
-© 2026 CHL CONSTRUCTORA – Gestión profesional en construcción
+© 2026 CHL CONSTRUCTORA
 </footer>
 
 </body>
