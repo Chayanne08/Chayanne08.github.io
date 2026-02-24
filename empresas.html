@@ -35,47 +35,88 @@ header {
     text-decoration: none;
 }
 
+.volver:hover {
+    color: #22c55e;
+}
+
+/* HERO CON IMAGEN */
+
 .hero {
-    padding: 100px 20px 80px;
+    position: relative;
+    padding: 140px 20px 120px;
     text-align: center;
-    background: linear-gradient(180deg, #0f172a, #111827);
+    background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15,23,42,0.85), rgba(15,23,42,0.95));
 }
 
 .hero h1 {
+    position: relative;
+    z-index: 2;
     font-size: 42px;
     margin-bottom: 20px;
 }
 
 .hero p {
+    position: relative;
+    z-index: 2;
     max-width: 700px;
     margin: auto;
-    color: #cbd5e1;
+    color: #e2e8f0;
     line-height: 1.6;
 }
 
+/* SECCIÓN */
+
 .section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: #111827;
 }
 
 .section-title {
     text-align: center;
-    font-size: 34px;
+    font-size: 36px;
     font-weight: 800;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
+    position: relative;
 }
+
+.section-title::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #22c55e;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* TARJETAS */
 
 .card {
     max-width: 900px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 40px auto;
     background: #1f2937;
-    padding: 30px;
-    border-radius: 14px;
+    padding: 40px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border: 1px solid #22c55e;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 .card h3 {
     color: #22c55e;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card p {
@@ -85,7 +126,7 @@ header {
 
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
     background: #0f172a;
     color: #94a3b8;
 }
@@ -101,7 +142,7 @@ footer {
 
 <section class="hero">
     <h1>Soluciones profesionales para proyectos de construcción</h1>
-    <p>Coordinamos personal cualificado y gestionamos procesos de incorporación para reforzar sus equipos de obra.</p>
+    <p>Coordinamos personal cualificado y gestionamos procesos de incorporación para reforzar equipos de obra con estructura y garantía.</p>
 </section>
 
 <section class="section">
@@ -109,17 +150,17 @@ footer {
 
     <div class="card">
         <h3>1. Análisis de necesidades</h3>
-        <p>Estudiamos el perfil profesional requerido y el alcance del proyecto para ofrecer una solución ajustada.</p>
+        <p>Estudiamos el perfil profesional requerido y el alcance del proyecto para ofrecer una solución ajustada a sus objetivos.</p>
     </div>
 
     <div class="card">
         <h3>2. Selección y coordinación</h3>
-        <p>Asignamos trabajadores cualificados con experiencia real en obra según los requisitos técnicos.</p>
+        <p>Asignamos trabajadores con experiencia real en obra según requisitos técnicos y operativos.</p>
     </div>
 
     <div class="card">
         <h3>3. Seguimiento operativo</h3>
-        <p>Mantenemos una coordinación continua para asegurar rendimiento, adaptación y cumplimiento.</p>
+        <p>Mantenemos coordinación continua para asegurar rendimiento, adaptación y cumplimiento en cada fase del proyecto.</p>
     </div>
 
 </section>
