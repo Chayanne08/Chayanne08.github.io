@@ -5,130 +5,104 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL CONSTRUCTORA | Empresas</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #0f172a;
-    color: #f1f5f9;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
 header {
-    background: #111827;
-    padding: 25px 40px;
+    background: white;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
     font-weight: 800;
+    font-size: 22px;
 }
 
 .volver {
-    color: #cbd5e1;
     text-decoration: none;
+    color: #475569;
+    font-weight: 500;
 }
 
 .volver:hover {
-    color: #22c55e;
+    color: #16a34a;
 }
-
-/* HERO CON IMAGEN */
 
 .hero {
-    position: relative;
-    padding: 140px 20px 120px;
+    padding: 120px 20px 100px;
     text-align: center;
-    background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(15,23,42,0.85), rgba(15,23,42,0.95));
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover no-repeat;
 }
 
 .hero h1 {
-    position: relative;
-    z-index: 2;
-    font-size: 42px;
+    font-size: 38px;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 .hero p {
-    position: relative;
-    z-index: 2;
     max-width: 700px;
     margin: auto;
-    color: #e2e8f0;
+    font-size: 18px;
+    color: #475569;
     line-height: 1.6;
 }
 
-/* SECCIÓN */
-
 .section {
-    padding: 100px 20px;
-    background: #111827;
+    padding: 90px 20px;
 }
 
 .section-title {
     text-align: center;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 800;
-    margin-bottom: 70px;
-    position: relative;
+    margin-bottom: 60px;
 }
-
-.section-title::after {
-    content: "";
-    width: 70px;
-    height: 4px;
-    background: #22c55e;
-    display: block;
-    margin: 20px auto 0;
-    border-radius: 2px;
-}
-
-/* TARJETAS */
 
 .card {
     max-width: 900px;
-    margin: 0 auto 40px auto;
-    background: #1f2937;
-    padding: 40px;
-    border-radius: 18px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.05);
+    margin: 0 auto 30px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    border: 1px solid #22c55e;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    transform: translateY(-6px);
 }
 
 .card h3 {
-    color: #22c55e;
-    margin-bottom: 12px;
+    color: #16a34a;
+    margin-bottom: 10px;
 }
 
 .card p {
-    color: #cbd5e1;
+    color: #475569;
     line-height: 1.6;
 }
 
 footer {
     text-align: center;
-    padding: 50px 20px;
-    background: #0f172a;
-    color: #94a3b8;
+    padding: 40px 20px;
+    background: #f1f5f9;
+    font-size: 14px;
+    color: #64748b;
 }
 
 </style>
@@ -141,32 +115,32 @@ footer {
 </header>
 
 <section class="hero">
-    <h1>Soluciones profesionales para proyectos de construcción</h1>
-    <p>Coordinamos personal cualificado y gestionamos procesos de incorporación para reforzar equipos de obra con estructura y garantía.</p>
+    <h1>¿Necesitas personal cualificado?</h1>
+    <p>Conectamos empresas con profesionales del sector de la construcción de forma organizada y estructurada.</p>
 </section>
 
 <section class="section">
-    <h2 class="section-title">Nuestro Proceso</h2>
+    <h2 class="section-title">Cómo trabajamos con tu empresa</h2>
 
     <div class="card">
         <h3>1. Análisis de necesidades</h3>
-        <p>Estudiamos el perfil profesional requerido y el alcance del proyecto para ofrecer una solución ajustada a sus objetivos.</p>
+        <p>Evaluamos el perfil profesional requerido según el proyecto.</p>
     </div>
 
     <div class="card">
         <h3>2. Selección y coordinación</h3>
-        <p>Asignamos trabajadores con experiencia real en obra según requisitos técnicos y operativos.</p>
+        <p>Gestionamos perfiles adecuados y coordinamos la incorporación.</p>
     </div>
 
     <div class="card">
-        <h3>3. Seguimiento operativo</h3>
-        <p>Mantenemos coordinación continua para asegurar rendimiento, adaptación y cumplimiento en cada fase del proyecto.</p>
+        <h3>3. Seguimiento profesional</h3>
+        <p>Mantenemos seguimiento continuo para garantizar estabilidad y rendimiento.</p>
     </div>
 
 </section>
 
 <footer>
-    © 2026 CHL CONSTRUCTORA – Gestión profesional en construcción
+© 2026 CHL CONSTRUCTORA – Gestión profesional en construcción
 </footer>
 
 </body>
