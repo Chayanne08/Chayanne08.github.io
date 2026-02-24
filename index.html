@@ -3,237 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHL Constructora | España – Suiza</title>
+<title>CHL CONSTRUCTORA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
 
-body{
-font-family:'Inter',sans-serif;
-background:#f5f5f5;
-color:#222;
-scroll-behavior:smooth;
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
-/* HEADER */
+/* HEADER UNIFICADO */
 
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,0.9);
-backdrop-filter:blur(8px);
-z-index:1000;
-border-bottom:1px solid #e5e5e5;
+header {
+    background: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 
-.logo{
-font-family:'Playfair Display',serif;
-font-size:22px;
-letter-spacing:1px;
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1px;
 }
 
-.menu{
-font-size:26px;
-cursor:pointer;
+nav a {
+    text-decoration: none;
+    color: #475569;
+    margin-left: 25px;
+    font-weight: 500;
 }
 
-nav{
-position:fixed;
-top:0;
-right:-100%;
-width:260px;
-height:100vh;
-background:#fff;
-padding:100px 30px;
-transition:0.4s ease;
-box-shadow:-5px 0 20px rgba(0,0,0,0.08);
-}
-
-nav a{
-display:block;
-color:#222;
-text-decoration:none;
-margin-bottom:25px;
-font-size:15px;
-letter-spacing:1px;
-}
-
-nav.active{
-right:0;
+nav a:hover {
+    color: #16a34a;
 }
 
 /* HERO */
 
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(255,255,255,0.65),rgba(255,255,255,0.75)),
-url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1950&q=80');
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:0 20px;
+.hero {
+    padding: 140px 20px 120px;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover no-repeat;
 }
 
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:40px;
-margin-bottom:20px;
-color:#111;
+.hero h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
-.hero p{
-max-width:750px;
-font-size:17px;
-line-height:1.8;
-margin-bottom:40px;
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
 }
 
-.hero-buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+.buttons {
+    margin-top: 40px;
 }
 
-.btn{
-padding:14px 35px;
-border:none;
-background:#111;
-color:#fff;
-letter-spacing:1px;
-cursor:pointer;
-transition:0.3s;
-text-decoration:none;
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    margin: 10px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.btn:hover{
-background:#444;
+.btn:hover {
+    background: #16a34a;
 }
 
-/* SECTIONS */
-
-.section{
-padding:110px 8%;
-text-align:center;
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f1f5f9;
+    font-size: 14px;
+    color: #64748b;
 }
 
-.section h2{
-font-family:'Playfair Display',serif;
-font-size:32px;
-margin-bottom:40px;
-}
-
-.grid-2{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:50px;
-align-items:center;
-}
-
-.grid-2 img{
-width:100%;
-border-radius:8px;
-}
-
-.box{
-text-align:left;
-}
-
-.box p{
-margin-bottom:20px;
-line-height:1.7;
-}
-
-.alt{
-background:#ffffff;
-}
-
-/* FOOTER */
-
-footer{
-padding:40px 8%;
-text-align:center;
-font-size:14px;
-background:#fff;
-border-top:1px solid #e5e5e5;
-}
 </style>
 </head>
-
 <body>
 
 <header>
-<div class="logo">CHL Constructora | España – Suiza</div>
-<div class="menu" onclick="toggleMenu()">☰</div>
+    <div class="logo">CHL CONSTRUCTORA</div>
+    <nav>
+        <a href="trabajadores.html">Trabajadores</a>
+        <a href="empresas.html">Empresas</a>
+    </nav>
 </header>
 
-<nav id="menu">
-<a href="#inicio" onclick="toggleMenu()">Inicio</a>
-<a href="#trabajadores" onclick="toggleMenu()">Trabajadores</a>
-<a href="#empresas" onclick="toggleMenu()">Empresas</a>
-</nav>
+<section class="hero">
+    <h1>Gestión y coordinación laboral en construcción</h1>
+    <p>Conectamos profesionales y empresas del sector de la construcción con un proceso organizado, estructurado y conforme a normativa vigente.</p>
 
-<section class="hero" id="inicio">
-<h1>Gestión y tramitación laboral España – Suiza</h1>
-<p>
-Coordinamos la incorporación de trabajadores españoles al sector construcción en Suiza,
-con un proceso organizado y conforme a normativa vigente.
-</p>
-
-<div class="hero-buttons">
-<a href="trabajadores.html" class="btn">TRABAJADORES</a>
-<a href="empresas.html" class="btn">EMPRESAS</a>
-</div>
-</section>
-
-<section class="section alt" id="trabajadores">
-<div class="grid-2">
-<img src="https://images.unsplash.com/photo-1581090700227-4c4f50aaf1c9?auto=format&fit=crop&w=1200&q=80">
-<div class="box">
-<h2>¿Estás buscando empleo en Suiza?</h2>
-<p>
-Gestionamos tu incorporación laboral en el sector construcción.
-Revisamos tu perfil y coordinamos el proceso documental necesario.
-</p>
-<a href="trabajadores.html" class="btn">VER INFORMACIÓN</a>
-</div>
-</div>
-</section>
-
-<section class="section" id="empresas">
-<div class="grid-2">
-<div class="box">
-<h2>¿Empresa suiza? ¿Necesita mano de obra?</h2>
-<p>
-Gestionamos personal español para proyectos en construcción.
-Proceso estructurado y coordinación documental organizada.
-</p>
-<a href="empresas.html" class="btn">INFORMACIÓN EMPRESAS</a>
-</div>
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
-</div>
+    <div class="buttons">
+        <a href="trabajadores.html" class="btn">Trabajadores</a>
+        <a href="empresas.html" class="btn">Empresas</a>
+    </div>
 </section>
 
 <footer>
-© 2026 CHL Constructora — Gestión laboral España | Especialización en mercado suizo
+© 2026 CHL CONSTRUCTORA – Gestión profesional en construcción
 </footer>
-
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
