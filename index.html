@@ -5,120 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL CONSTRUCTORA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
-
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f8fafc;
-    color: #1e293b;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#1e293b 0%,#334155 100%);
+color:white;
 }
-
-/* HEADER UNIFICADO */
-
-header {
-    background: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+header{
+position:fixed;
+width:100%;
+padding:20px 40px;
+background:rgba(15,23,42,0.95);
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
-
-.logo {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 22px;
-    letter-spacing: 1px;
+.logo{
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
 }
-
-nav a {
-    text-decoration: none;
-    color: #475569;
-    margin-left: 25px;
-    font-weight: 500;
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#e2e8f0;
 }
-
-nav a:hover {
-    color: #16a34a;
+nav a:hover{color:#38bdf8;}
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
-
-/* HERO */
-
-.hero {
-    padding: 140px 20px 120px;
-    text-align: center;
-    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover no-repeat;
+.hero-content{max-width:700px;}
+.hero h1{font-size:42px;margin-bottom:20px;}
+.hero p{font-size:18px;opacity:0.9;}
+.contact-section{
+padding:80px 20px;
+text-align:center;
+background:#0f172a;
 }
-
-.hero h1 {
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 20px;
+.contact-section h2{
+font-size:28px;
+margin-bottom:20px;
 }
-
-.hero p {
-    max-width: 750px;
-    margin: auto;
-    font-size: 18px;
-    color: #475569;
-    line-height: 1.6;
+.contact-section p{
+font-size:18px;
+margin-bottom:10px;
 }
-
-.buttons {
-    margin-top: 40px;
+.whatsapp-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
 }
-
-.btn {
-    display: inline-block;
-    padding: 14px 30px;
-    margin: 10px;
-    background: #111827;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+font-size:14px;
 }
-
-.btn:hover {
-    background: #16a34a;
-}
-
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background: #f1f5f9;
-    font-size: 14px;
-    color: #64748b;
-}
-
 </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">CHL CONSTRUCTORA</div>
-    <nav>
-        <a href="trabajadores.html">Trabajadores</a>
-        <a href="empresas.html">Empresas</a>
-    </nav>
+<div class="logo">CHL CONSTRUCTORA</div>
+<nav>
+<a href="trabajadores.html">Trabajadores</a>
+<a href="empresas.html">Empresas</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>Gestión y coordinación laboral en construcción</h1>
-    <p>Conectamos profesionales y empresas del sector de la construcción con un proceso organizado, estructurado y conforme a normativa vigente.</p>
+<div class="hero-content">
+<h1>Gestión y coordinación laboral en construcción</h1>
+<p>Conectamos profesionales y empresas del sector construcción mediante procesos organizados y estructurados.</p>
+</div>
+</section>
 
-    <div class="buttons">
-        <a href="trabajadores.html" class="btn">Trabajadores</a>
-        <a href="empresas.html" class="btn">Empresas</a>
-    </div>
+<section class="contact-section">
+<h2>Información y contacto</h2>
+<p>Para más información o colaboración profesional:</p>
+<p>📞 Teléfono: +41 XXX XXX XXX</p>
+<p>💬 WhatsApp: +41 XXX XXX XXX</p>
+<a href="https://wa.me/41XXXXXXXXX" class="whatsapp-btn">Contactar por WhatsApp</a>
 </section>
 
 <footer>
-© 2026 CHL CONSTRUCTORA – Gestión profesional en construcción
+© 2026 CHL CONSTRUCTORA
 </footer>
 
 </body>
