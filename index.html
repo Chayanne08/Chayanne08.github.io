@@ -7,11 +7,13 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
 font-family:Arial,sans-serif;
 background:linear-gradient(180deg,#1e293b 0%,#334155 100%);
 color:white;
 }
+
 header{
 position:fixed;
 width:100%;
@@ -20,18 +22,25 @@ background:rgba(15,23,42,0.95);
 display:flex;
 justify-content:space-between;
 align-items:center;
+z-index:1000;
 }
+
 .logo{
 font-size:22px;
 font-weight:bold;
 letter-spacing:2px;
 }
+
 nav a{
 margin-left:25px;
 text-decoration:none;
 color:#e2e8f0;
 }
-nav a:hover{color:#38bdf8;}
+
+nav a:hover{
+color:#38bdf8;
+}
+
 .hero{
 height:100vh;
 display:flex;
@@ -39,33 +48,63 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5');
+background-size:cover;
+background-position:center;
 }
-.hero-content{max-width:700px;}
-.hero h1{font-size:42px;margin-bottom:20px;}
-.hero p{font-size:18px;opacity:0.9;}
-.contact-section{
-padding:80px 20px;
-text-align:center;
-background:#0f172a;
+
+.hero-content{
+max-width:800px;
 }
-.contact-section h2{
-font-size:28px;
+
+.hero h1{
+font-size:42px;
 margin-bottom:20px;
 }
-.contact-section p{
-font-size:18px;
-margin-bottom:10px;
+
+.hero p{
+font-size:20px;
+opacity:0.9;
 }
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section-dark{
+background:#0f172a;
+}
+
+.section-darker{
+background:#020617;
+}
+
+.section h2{
+font-size:32px;
+margin-bottom:30px;
+}
+
+.section p{
+font-size:18px;
+max-width:900px;
+margin:15px auto;
+line-height:1.7;
+opacity:0.9;
+}
+
 .whatsapp-btn{
 display:inline-block;
-margin-top:20px;
-padding:14px 30px;
+margin-top:25px;
+padding:15px 35px;
 background:#25D366;
 color:white;
 text-decoration:none;
 border-radius:6px;
-font-weight:600;
+font-weight:bold;
 }
+
 footer{
 text-align:center;
 padding:30px;
@@ -92,16 +131,38 @@ font-size:14px;
 </div>
 </section>
 
-<section class="contact-section">
+<section class="section section-dark">
+<h2>Nuestros servicios</h2>
+
+<p>✔ Coordinación de personal cualificado para proyectos de construcción.</p>
+<p>✔ Organización y seguimiento profesional de incorporaciones.</p>
+<p>✔ Gestión eficiente entre empresas y trabajadores.</p>
+
+</section>
+
+<section class="section">
+<h2>¿Cómo trabajamos?</h2>
+
+<p>1️⃣ Analizamos las necesidades del proyecto o del profesional.</p>
+<p>2️⃣ Coordinamos perfiles adecuados según experiencia y especialización.</p>
+<p>3️⃣ Realizamos seguimiento continuo para garantizar resultados.</p>
+
+</section>
+
+<section class="section section-darker">
 <h2>Información y contacto</h2>
-<p>Para más información o colaboración profesional:</p>
-<p>📞 Teléfono: +41 XXX XXX XXX</p>
-<p>💬 WhatsApp: +41 XXX XXX XXX</p>
-<a href="https://wa.me/41XXXXXXXXX" class="whatsapp-btn">Contactar por WhatsApp</a>
+
+<p>📞 Teléfono: +41 76 740 15 41</p>
+<p>💬 WhatsApp: +41 76 740 15 41</p>
+
+<a href="https://wa.me/41767401541" class="whatsapp-btn">
+CONTACTAR POR WHATSAPP
+</a>
+
 </section>
 
 <footer>
-© 2026 CHL CONSTRUCTORA
+© 2026 CHL CONSTRUCTORA – Gestión profesional en construcción
 </footer>
 
 </body>
