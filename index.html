@@ -17,8 +17,6 @@ color:#fff;
 scroll-behavior:smooth;
 }
 
-/* HEADER */
-
 header{
 position:fixed;
 top:0;
@@ -67,8 +65,6 @@ nav.active{
 right:0;
 }
 
-/* HERO */
-
 .hero{
 height:100vh;
 background:
@@ -114,8 +110,6 @@ background:#fff;
 color:#000;
 }
 
-/* SERVICES */
-
 .services{
 padding:110px 8%;
 background:#0a0a0a;
@@ -157,8 +151,6 @@ opacity:0.85;
 line-height:1.7;
 }
 
-/* WHY */
-
 .why{
 padding:110px 8%;
 background:#000;
@@ -180,8 +172,6 @@ gap:50px;
 .why-item{
 padding:30px;
 }
-
-/* INFORMATION SECTION */
 
 .contact{
 padding:110px 8%;
@@ -237,8 +227,6 @@ background:#fff;
 color:#000;
 }
 
-/* FOOTER */
-
 footer{
 padding:40px 8%;
 text-align:center;
@@ -262,15 +250,17 @@ background:#000;
 
 <nav id="menu">
 <a href="#hero" onclick="toggleMenu()">Inicio</a>
-<a href="#servicios" onclick="toggleMenu()">Servicios</a>
+<a href="#trabajo" onclick="toggleMenu()">Trabajadores / Empresas</a>
+<a href="#servicios" onclick="toggleMenu()">Qué hacemos</a>
 <a href="#why" onclick="toggleMenu()">Por qué CHL</a>
 <a href="#contacto" onclick="toggleMenu()">Información</a>
 </nav>
 
 <section class="hero" id="hero">
-<h1>Gestión estructurada de incorporación laboral de España a Suiza</h1>
+<h1>Trabaja en Suiza en el sector de la construcción</h1>
 <p>
-Procedimiento organizado para la integración profesional en el mercado laboral suizo, conforme a normativa federal vigente y requisitos cantonales aplicables.
+Si tienes experiencia en obra y quieres mejores condiciones laborales, te ayudamos a conectar con empresas en Suiza.
+También colaboramos con constructoras que necesitan personal cualificado.
 </p>
 
 <button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
@@ -278,52 +268,70 @@ Solicitar Información
 </button>
 </section>
 
-<section class="services" id="servicios">
-<h2>Servicios Especializados</h2>
+<section class="services" id="trabajo">
+<h2>¿Eres trabajador o empresa?</h2>
 
 <div class="service-grid">
 
 <div class="service">
-<h3>Evaluación Profesional</h3>
-<p>Análisis estructurado del perfil conforme a estándares del mercado suizo.</p>
+<h3>Busco trabajo en Suiza</h3>
+<p>Si tienes experiencia en construcción, envíanos tu currículum y revisamos tu perfil.</p>
 </div>
 
 <div class="service">
-<h3>Coordinación Documental</h3>
-<p>Supervisión integral de documentación y requisitos administrativos.</p>
+<h3>Necesito personal para mi obra</h3>
+<p>Presentamos trabajadores cualificados con disponibilidad para incorporación.</p>
+</div>
+
+</div>
+</section>
+
+<section class="services" id="servicios">
+<h2>¿Qué hacemos?</h2>
+
+<div class="service-grid">
+
+<div class="service">
+<h3>Seleccionamos trabajadores</h3>
+<p>Revisamos experiencia real en construcción antes de presentar el perfil.</p>
 </div>
 
 <div class="service">
-<h3>Gestión de Incorporación</h3>
-<p>Organización del proceso bajo marco normativo vigente.</p>
+<h3>Presentamos perfiles a empresas suizas</h3>
+<p>Conectamos trabajadores de España con constructoras en Suiza.</p>
 </div>
 
 <div class="service">
-<h3>Supervisión Operativa</h3>
-<p>Intervención directa cuando la estructura del proyecto lo requiera.</p>
+<h3>Proceso claro y directo</h3>
+<p>Si el perfil encaja, la empresa contacta y se firma contrato directamente.</p>
+</div>
+
+<div class="service">
+<h3>Apoyo durante el proceso</h3>
+<p>Acompañamos en los pasos necesarios hasta la incorporación.</p>
 </div>
 
 </div>
 </section>
 
 <section class="why" id="why">
-<h2>¿Por qué CHL?</h2>
+<h2>¿Por qué elegir CHL?</h2>
 
 <div class="why-grid">
 
 <div class="why-item">
-<h3>Especialización en Suiza</h3>
-<p>Conocimiento técnico del entorno laboral suizo.</p>
+<h3>Experiencia real en construcción</h3>
+<p>Conocemos cómo funciona la obra en España y en Suiza.</p>
 </div>
 
 <div class="why-item">
-<h3>Procedimiento Estructurado</h3>
-<p>Metodología organizada con seguimiento continuo.</p>
+<h3>Perfiles filtrados</h3>
+<p>No enviamos currículums al azar. Solo perfiles que encajan.</p>
 </div>
 
 <div class="why-item">
-<h3>Operativa Conforme a Normativa</h3>
-<p>Actuación alineada con requisitos federales y cantonales vigentes.</p>
+<h3>Contacto directo</h3>
+<p>Comunicación clara y rápida por teléfono o WhatsApp.</p>
 </div>
 
 </div>
@@ -333,21 +341,21 @@ Solicitar Información
 <h2>Información</h2>
 
 <div class="contact-box">
-<p><strong>Atención telefónica</strong><br>
+<p><strong>Teléfono</strong><br>
 +41 76 740 1541</p>
 
-<p><strong>Correo electrónico oficial</strong><br>
+<p><strong>Email</strong><br>
 info@chlconstructora.com</p>
 
 <a class="whatsapp-btn" href="https://wa.me/41767401541" target="_blank">
-Solicitar información por WhatsApp
+Escribir por WhatsApp
 </a>
 </div>
 
 </section>
 
 <footer>
-© 2026 CHL Constructora — Base operativa en España | Especialización exclusiva en mercado laboral suizo
+© 2026 CHL Constructora — Conectando trabajadores y empresas entre España y Suiza
 </footer>
 
 <script>
