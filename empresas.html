@@ -3,78 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Empresas | CHL Constructora</title>
+<title>Empresas | CHL CONSTRUCTORA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-    font-family:'Inter',sans-serif;
-    background:#f5f5f5;
-    color:#222;
-    line-height:1.6;
+font-family:'Inter',sans-serif;
+background:#f2f4f7;
+color:#222;
 }
 
 header{
-    background:white;
-    padding:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+background:#ffffff;
+padding:20px 40px;
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 header h1{
-    font-size:20px;
-    font-weight:600;
+font-size:22px;
+font-weight:800;
+letter-spacing:1px;
 }
 
-.container{
-    max-width:1000px;
-    margin:60px auto;
-    padding:0 20px;
+header a{
+text-decoration:none;
+color:#333;
+font-weight:500;
 }
 
-h2{
-    font-size:32px;
-    margin-bottom:20px;
-    font-weight:700;
+.hero{
+background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:120px 20px;
 }
 
-h3{
-    font-size:22px;
-    margin-bottom:10px;
-    font-weight:600;
+.hero h2{
+font-size:40px;
+margin-bottom:20px;
+font-weight:800;
 }
 
-section{
-    margin-bottom:60px;
+.hero p{
+font-size:18px;
+max-width:750px;
+margin:auto;
 }
 
-ul{
-    margin-top:15px;
-    padding-left:20px;
+.section{
+padding:90px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-.button{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 28px;
-    background:#111;
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    letter-spacing:1px;
+.section h3{
+font-size:30px;
+margin-bottom:30px;
+font-weight:700;
 }
 
-.button:hover{
-    background:#333;
+.section p{
+margin-bottom:18px;
+line-height:1.7;
+font-size:16px;
 }
 
-.back{
-    display:inline-block;
-    margin-top:40px;
-    text-decoration:none;
-    color:#111;
-    font-weight:600;
+.process{
+background:white;
+padding:90px 20px;
+}
+
+.process h3{
+text-align:center;
+margin-bottom:50px;
+font-size:30px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.step{
+background:#f9f9f9;
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.step:hover{
+transform:translateY(-5px);
+}
+
+.step h4{
+margin-bottom:15px;
+font-size:20px;
+}
+
+.guarantee{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1541976076758-347942db1972');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.guarantee h3{
+font-size:30px;
+margin-bottom:20px;
+}
+
+footer{
+text-align:center;
+padding:35px;
+background:#111;
+color:white;
+margin-top:50px;
 }
 </style>
 </head>
@@ -82,45 +144,61 @@ ul{
 <body>
 
 <header>
-<h1>CHL Constructora | España – Suiza</h1>
+<h1>CHL CONSTRUCTORA</h1>
+<a href="index.html">Volver al inicio</a>
 </header>
 
-<div class="container">
-
-<h2>Servicios para Empresas Suizas</h2>
-
-<section>
-<h3>Qué ofrecemos</h3>
-<p>Coordinamos la incorporación de mano de obra española cualificada para proyectos de construcción en Suiza. Seleccionamos perfiles según las necesidades del proyecto.</p>
-<ul>
-<li>Preselección profesional</li>
-<li>Evaluación de experiencia</li>
-<li>Coordinación documental</li>
-<li>Organización de incorporación</li>
-<li>Seguimiento operativo</li>
-</ul>
+<section class="hero">
+<h2>¿Busca mano de obra cualificada para su proyecto?</h2>
+<p>Coordinamos la incorporación de trabajadores españoles especializados para proyectos del sector construcción en Suiza.</p>
 </section>
 
-<section>
-<h3>Ventajas</h3>
-<ul>
-<li>Mano de obra cualificada</li>
-<li>Perfiles con experiencia en obra</li>
-<li>Proceso organizado</li>
-<li>Comunicación clara</li>
-</ul>
+<section class="section">
+<h3>¿Qué ofrecemos a las empresas?</h3>
+
+<p>En CHL CONSTRUCTORA gestionamos la conexión entre empresas suizas y trabajadores españoles cualificados del sector construcción.</p>
+
+<p>No actuamos como bolsa de empleo masiva. Coordinamos perfiles específicos según la necesidad real del proyecto.</p>
+
+<p>Nos encargamos de la evaluación profesional, coordinación y tramitación necesaria para que la incorporación se realice de forma organizada y estructurada.</p>
 </section>
 
-<section>
-<h3>Colaboración</h3>
-<p>Estudiamos cada proyecto de forma individual para garantizar una incorporación adecuada y eficiente según las necesidades específicas de la empresa.</p>
+<section class="process">
+<h3>Proceso de Coordinación</h3>
 
-<a href="#" class="button">SOLICITAR INFORMACIÓN</a>
-</section>
+<div class="steps">
 
-<a href="index.html" class="back">← Volver al inicio</a>
+<div class="step">
+<h4>1. Análisis de Necesidad</h4>
+<p>Evaluamos el perfil profesional requerido para el proyecto.</p>
+</div>
+
+<div class="step">
+<h4>2. Selección de Perfil</h4>
+<p>Coordinamos trabajadores españoles que se ajusten a la especialidad solicitada.</p>
+</div>
+
+<div class="step">
+<h4>3. Gestión Administrativa</h4>
+<p>Organizamos la documentación necesaria para la correcta incorporación.</p>
+</div>
+
+<div class="step">
+<h4>4. Incorporación al Proyecto</h4>
+<p>El trabajador se integra en el proyecto bajo coordinación estructurada.</p>
+</div>
 
 </div>
+</section>
+
+<section class="guarantee">
+<h3>Coordinación estructurada España - Suiza</h3>
+<p>Gestionamos procesos reales, organizados y profesionales para el sector construcción.</p>
+</section>
+
+<footer>
+© 2026 CHL CONSTRUCTORA
+</footer>
 
 </body>
 </html>
