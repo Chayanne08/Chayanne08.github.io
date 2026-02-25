@@ -1,271 +1,145 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHL Constructora</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Gestión Profesional de Personal</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Montserrat', sans-serif;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
 }
 
-body{
-background:#ffffff;
-color:#111;
+header {
+    background-color: #000000;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* HEADER */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-background:#000;
-padding:16px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 1px;
 }
 
-.logo{
-color:white;
-font-size:16px;
-letter-spacing:2px;
-font-weight:500;
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:18px;
-font-size:12px;
-letter-spacing:1px;
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* HERO */
-
-.hero{
-margin-top:65px;
-height:70vh;
-background:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding:0 6%;
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 700px;
 }
 
-.hero-content{
-max-width:600px;
-color:white;
+.bloque-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.hero h1{
-font-size:26px;
-font-weight:500;
-line-height:1.3;
-margin-bottom:15px;
+.bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.hero p{
-font-size:14px;
-font-weight:300;
-line-height:1.6;
-color:#ddd;
+.bloque img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
 }
 
-/* QUIENES SOMOS */
-
-.about{
-padding:80px 6%;
-text-align:center;
-background:white;
+.boton {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+    width: fit-content;
 }
 
-.about h2{
-font-size:24px;
-font-weight:500;
-margin-bottom:20px;
+.boton:hover {
+    background-color: #333333;
 }
 
-.about p{
-max-width:700px;
-margin:auto;
-color:#444;
-line-height:1.7;
-font-size:14px;
-font-weight:300;
+.contacto {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
 }
 
-/* SECCIONES */
-
-.section{
-padding:80px 6%;
-display:flex;
-flex-direction:column;
-gap:25px;
-background:white;
+.whatsapp {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
 }
-
-.section img{
-width:100%;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-.section-content h2{
-font-size:22px;
-font-weight:500;
-margin-bottom:12px;
-}
-
-.section-content p{
-color:#555;
-line-height:1.6;
-margin-bottom:18px;
-font-size:14px;
-font-weight:300;
-}
-
-.btn{
-display:inline-block;
-padding:10px 22px;
-background:#000;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-size:12px;
-letter-spacing:1px;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#25D366;
-}
-
-/* INFORMACIÓN */
-
-.info{
-padding:80px 6%;
-background:white;
-display:flex;
-justify-content:center;
-}
-
-.info-card{
-background:#000;
-padding:35px;
-border-radius:14px;
-max-width:500px;
-text-align:center;
-color:white;
-}
-
-.info-card h3{
-font-size:20px;
-font-weight:500;
-margin-bottom:10px;
-}
-
-.info-card p{
-color:#ccc;
-margin-bottom:18px;
-font-size:13px;
-}
-
-.contact-links a{
-display:block;
-text-decoration:none;
-color:white;
-background:#111;
-padding:12px;
-border-radius:8px;
-margin-bottom:10px;
-font-size:13px;
-transition:0.3s;
-}
-
-.contact-links a:hover{
-background:#25D366;
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">CHL CONSTRUCTORA</div>
-<nav>
-<a href="index.html">INICIO</a>
-<a href="trabajadores.html">TRABAJADORES</a>
-<a href="empresas.html">EMPRESAS</a>
-</nav>
+<h1>TRAMITACIÓN Y GESTIÓN PROFESIONAL DE PERSONAL CUALIFICADO</h1>
 </header>
 
-<section class="hero">
-<div class="hero-content">
-<h1>Tramitación y gestión profesional de personal laboral cualificado</h1>
+<section>
+<h2>¿Quiénes somos?</h2>
 <p>
-Coordinamos procesos administrativos y laborales bajo normativa vigente,
-garantizando organización, transparencia y cumplimiento legal.
-</p>
-</div>
-</section>
-
-<section class="about">
-<h2>Quiénes somos</h2>
-<p>
-Empresa especializada en tramitación y gestión profesional de personal laboral cualificado.
-Procesos estructurados, cumplimiento normativo y coordinación eficiente
-entre empresas y trabajadores.
+Somos una empresa especializada en la gestión y tramitación de personal cualificado entre España y Suiza. 
+Ofrecemos un servicio profesional, transparente y eficiente tanto para trabajadores como para empresas 
+que buscan soluciones laborales fiables.
 </p>
 </section>
 
-<section class="section">
-<img src="https://images.unsplash.com/photo-1581092588429-8d60a0c26e1d" alt="">
-<div class="section-content">
-<h2>¿Estás buscando empleo?</h2>
+<section class="bloque-flex">
+
+<div class="bloque">
+<h2>¿Buscas empleo?</h2>
+<img src="trabajadores.jpg" alt="Trabajadores">
 <p>
-Gestionamos oportunidades laborales reales con empresas verificadas.
-Seguimiento, coordinación documental y acompañamiento completo.
+Gestionamos oportunidades laborales en Suiza para profesionales cualificados. 
+Te acompañamos en todo el proceso: asesoramiento, documentación y contacto directo con empresas.
 </p>
-<a href="trabajadores.html" class="btn">MÁS INFORMACIÓN</a>
+<a href="trabajadores.html" class="boton">BUSCO EMPLEO</a>
 </div>
+
+<div class="bloque">
+<h2>¿Buscas personal?</h2>
+<img src="empresa.jpg" alt="Empresa">
+<p>
+Seleccionamos personal preparado desde España para cubrir las necesidades de tu empresa en Suiza. 
+Nos encargamos de la gestión completa para que recibas candidatos listos para incorporarse.
+</p>
+<a href="empresas.html" class="boton">BUSCO PERSONAL</a>
+</div>
+
 </section>
 
-<section class="section">
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
-<div class="section-content">
-<h2>¿Estás buscando personal cualificado?</h2>
-<p>
-Seleccionamos y coordinamos personal laboral adaptado a las necesidades
-de cada empresa con procesos profesionales y organizados.
-</p>
-<a href="empresas.html" class="btn">MÁS INFORMACIÓN</a>
-</div>
-</section>
-
-<section class="info">
-<div class="info-card">
-<h3>Información y Contacto</h3>
-<p>Atención directa y coordinación profesional.</p>
-
-<div class="contact-links">
-<a href="tel:+41767401541">📞 +41 76 740 15 41</a>
-<a href="https://wa.me/41767401541" target="_blank">💬 Contactar por WhatsApp</a>
-</div>
-
-</div>
+<section class="contacto">
+<h2>CONTACTAR</h2>
+<p>Teléfono y WhatsApp directo</p>
+<a class="whatsapp" href="https://wa.me/41767401541" target="_blank">
++41 76 740 15 41
+</a>
 </section>
 
 </body>
