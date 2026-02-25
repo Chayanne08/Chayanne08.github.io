@@ -18,6 +18,8 @@ color:white;
 scroll-behavior:smooth;
 }
 
+/* HEADER */
+
 header{
 position:fixed;
 top:0;
@@ -40,6 +42,8 @@ font-size:28px;
 cursor:pointer;
 }
 
+/* MENU */
+
 nav{
 position:fixed;
 top:0;
@@ -57,53 +61,90 @@ transition:0.4s;
 nav a{
 color:white;
 text-decoration:none;
-margin:20px 0;
-font-size:20px;
+margin:25px 0;
+font-size:22px;
 letter-spacing:2px;
 }
 
 nav.active{right:0;}
 
-section{
-padding:120px 8%;
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
+/* HERO */
 
 .hero{
-background:#0f0f0f;
+height:100vh;
+background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+padding:0 20px;
 }
 
-h1{
-font-size:34px;
-margin-bottom:20px;
+.hero h1{
+background:rgba(0,0,0,0.6);
+padding:20px;
+font-size:28px;
 }
 
-h2{
-font-size:26px;
-margin-bottom:20px;
+/* SECTIONS */
+
+.section{
+padding:80px 8%;
+background:#111;
 }
 
-p{
-color:#ccc;
-line-height:1.6;
-max-width:700px;
+.cards{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.card{
+background:#1c1c1c;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.card h2{
 margin-bottom:15px;
+font-size:22px;
 }
+
+.card p{
+color:#ccc;
+margin-bottom:20px;
+line-height:1.5;
+}
+
+/* BUTTON */
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:14px 30px;
-background:black;
+padding:12px 25px;
+background:#25D366;
 color:white;
 text-decoration:none;
 font-weight:600;
-letter-spacing:1px;
 border-radius:6px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.whatsapp-big{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#25D366;
+color:white;
+font-weight:600;
+border-radius:50px;
+text-decoration:none;
+font-size:18px;
 }
 
 </style>
@@ -117,49 +158,49 @@ border-radius:6px;
 </header>
 
 <nav id="menu">
-<a href="#inicio">Inicio</a>
 <a href="#empleo">Busco empleo</a>
 <a href="#personal">Busco personal</a>
-<a href="#quienes">Quiénes somos</a>
-<a href="#como">Cómo trabajamos</a>
 <a href="#contacto">Contacto</a>
 </nav>
 
-<section id="inicio" class="hero">
+<!-- HERO -->
+<section class="hero">
 <h1>TRAMITACIÓN PROFESIONAL DE MANO DE OBRA ESPAÑOLA PARA SUIZA</h1>
-<p>Especialistas en gestión y coordinación de profesionales del sector construcción para empresas en Suiza.</p>
 </section>
 
-<section id="empleo">
+<!-- EMPLEO Y PERSONAL EN TARJETAS -->
+<section class="section">
+<div class="cards">
+
+<div class="card" id="empleo">
 <h2>Busco empleo</h2>
-<p>Si eres profesional del sector construcción y quieres trabajar en Suiza, te ayudamos en el proceso de coordinación y conexión con empresas serias.</p>
+<p>Si eres profesional del sector construcción y quieres trabajar en Suiza, coordinamos tu incorporación con empresas responsables.</p>
 <a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20trabajar%20en%20Suiza" class="btn" target="_blank">
-SOLICITAR INFORMACIÓN
+Solicitar información
 </a>
-</section>
+</div>
 
-<section id="personal">
+<div class="card" id="personal">
 <h2>Busco personal</h2>
-<p>Seleccionamos profesionales españoles cualificados y coordinamos su incorporación eficiente en empresas del sector construcción en Suiza.</p>
+<p>Seleccionamos profesionales españoles cualificados y organizamos su incorporación eficiente en empresas del sector construcción en Suiza.</p>
 <a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20personal%20para%20mi%20empresa" class="btn" target="_blank">
-SOLICITAR INFORMACIÓN
+Solicitar información
 </a>
+</div>
+
+</div>
 </section>
 
-<section id="quienes">
-<h2>Quiénes somos</h2>
-<p>CHL Constructora es una empresa dedicada a la tramitación y coordinación de mano de obra española para el mercado suizo, especializada en el sector construcción.</p>
-</section>
-
-<section id="como">
-<h2>Cómo trabajamos</h2>
-<p>Realizamos una preselección de perfiles profesionales, coordinamos la documentación necesaria y organizamos la incorporación directa con empresas en Suiza.</p>
-</section>
-
-<section id="contacto">
+<!-- CONTACTO -->
+<section class="section contact" id="contacto">
 <h2>Contacto</h2>
-<p>Puedes contactar directamente con nosotros:</p>
-<p><strong>+41 76 740 15 41</strong></p>
+<p>Pulsa el botón y escríbenos directamente por WhatsApp.</p>
+
+<a href="https://wa.me/41767401541" class="whatsapp-big" target="_blank">
+💬 ESCRIBIR POR WHATSAPP
+</a>
+
+<p style="margin-top:15px;">+41 76 740 15 41</p>
 </section>
 
 <script>
