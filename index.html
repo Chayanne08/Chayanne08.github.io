@@ -5,272 +5,179 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL Constructora</title>
 
-<!-- Nueva tipografía más elegante -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{margin:0;padding:0;box-sizing:border-box;}
-
 body{
+margin:0;
 font-family:'Montserrat',sans-serif;
-background:#0f0f0f;
-color:white;
-scroll-behavior:smooth;
+background:#0d0d0d;
+color:#ffffff;
 }
-
-/* HEADER */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-background:#000;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-z-index:1000;
-}
-
-.logo{
-font-weight:700;
-letter-spacing:2px;
-}
-
-.menu-toggle{
-font-size:26px;
-cursor:pointer;
-}
-
-/* MENU */
-
-nav{
-position:fixed;
-top:0;
-right:-100%;
-width:70%;
-height:100vh;
-background:#111;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-transition:0.4s;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:25px 0;
-font-size:20px;
-}
-
-nav.active{right:0;}
-
-/* HERO */
 
 .hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+height:80vh;
+background:url('TU-IMAGEN-AQUI.jpg') center/cover no-repeat;
 display:flex;
-flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:0 20px;
+position:relative;
 }
 
-.hero-box{
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.65);
-padding:40px;
-max-width:900px;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
 }
 
 .hero h1{
-font-family:'Playfair Display',serif;
-font-size:32px;
-font-weight:600;
-letter-spacing:1px;
-margin-bottom:20px;
+font-size:42px;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
 }
-
-.hero p{
-font-size:17px;
-font-weight:400;
-color:#e5e5e5;
-line-height:1.6;
-}
-
-/* SECTION */
 
 .section{
-padding:70px 8%;
-}
-
-.card{
-background:#161616;
-padding:30px;
-border-radius:8px;
-margin-bottom:30px;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-.card h2{
-margin-bottom:20px;
-font-weight:600;
-}
-
-.card p{
-color:#ccc;
-margin-bottom:12px;
-line-height:1.6;
-}
-
-/* BUTTON */
-
-.btn{
-display:inline-block;
-margin-top:15px;
-padding:12px 24px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:4px;
-font-weight:600;
-}
-
-/* CONTACT */
-
-.contact{
-background:#111;
-padding:70px 8%;
-text-align:center;
-border-top:1px solid #222;
-}
-
-.contact-box{
-background:#161616;
-padding:40px;
-border-radius:8px;
-max-width:600px;
+padding:60px 20px;
+max-width:1100px;
 margin:auto;
 }
 
-.contact-box h2{
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+}
+
+.card{
+background:#1a1a1a;
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card h2{
+font-size:22px;
+font-weight:700;
 margin-bottom:15px;
+position:relative;
+padding-bottom:10px;
 }
 
-.contact-box p{
-color:#ccc;
-margin-bottom:20px;
+.card h2::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:60px;
+height:3px;
+background:#ffffff;
 }
 
-.contact-number{
-font-size:18px;
-margin-bottom:20px;
-}
-
-.whatsapp-button{
-display:inline-block;
-padding:14px 28px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:4px;
+.card h3{
+margin-top:25px;
+font-size:16px;
 font-weight:600;
+text-transform:uppercase;
+letter-spacing:1px;
+color:#cccccc;
 }
 
+.card p{
+color:#e6e6e6;
+line-height:1.6;
+}
+
+.card ul{
+margin-top:15px;
+padding-left:18px;
+color:#f2f2f2;
+line-height:1.6;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+color:#aaa;
+font-size:14px;
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">CHL CONSTRUCTORA</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
-
-<nav id="menu">
-<a href="#empleo">Busco empleo</a>
-<a href="#personal">Busco personal</a>
-<a href="#servicios">Servicios</a>
-<a href="#contacto">Contacto</a>
-</nav>
-
 <section class="hero">
-<div class="hero-box">
-<h1>Tramitación y Gestión Profesional de Mano de Obra para Suiza</h1>
-<p>
-Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción.
-Gestionamos procesos completos de selección, documentación e incorporación,
-garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo.
-</p>
+<div class="hero-content">
+<h1>Tramitación y Gestión Profesional</h1>
 </div>
 </section>
 
 <section class="section">
+<div class="cards">
 
-<div class="card" id="empleo">
-<h2>Busco empleo</h2>
-<p>Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional.</p>
-<p><strong>Procedimiento:</strong></p>
-<p>• Evaluación y análisis de perfil profesional.</p>
-<p>• Verificación de experiencia y especialización técnica.</p>
-<p>• Coordinación documental.</p>
-<p>• Presentación a empresas adecuadas.</p>
-<p>• Seguimiento hasta incorporación efectiva.</p>
+<div class="card">
+<h2>Incorporación Profesional en Suiza</h2>
 
-<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20trabajar%20en%20Suiza" class="btn" target="_blank">
-Solicitar información
-</a>
+<p>
+Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional.
+</p>
+
+<h3>Procedimiento</h3>
+
+<ul>
+<li>Recepción y análisis de candidatura</li>
+<li>Presentación a empresas colaboradoras</li>
+<li>Confirmación de condiciones y aprobación</li>
+<li>Inicio del proceso de contratación legal en Suiza</li>
+</ul>
+
+<p>
+Trabajamos exclusivamente con contratación formal y transparente. 
+Si tu perfil encaja, te contactaremos. En caso contrario, quedará registrado para futuras vacantes.
+<br><br>
+Gracias por confiar en CHL Constructora.
+</p>
 </div>
 
-<div class="card" id="personal">
-<h2>Busco personal</h2>
-<p>Ofrecemos a empresas suizas un servicio integral de selección y coordinación de profesionales cualificados.</p>
-<p><strong>Procedimiento:</strong></p>
-<p>• Evaluación técnica de perfiles.</p>
-<p>• Selección según necesidades del proyecto.</p>
-<p>• Gestión documental previa.</p>
-<p>• Coordinación de incorporación.</p>
-<p>• Seguimiento inicial.</p>
+<div class="card">
+<h2>Selección Profesional de Personal</h2>
 
-<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20personal%20para%20mi%20empresa" class="btn" target="_blank">
-Solicitar información
-</a>
+<p>
+Ofrecemos a las empresas suizas un servicio especializado de selección de profesionales del sector construcción, garantizando perfiles evaluados y documentación verificada.
+</p>
+
+<h3>Servicios</h3>
+
+<ul>
+<li>Evaluación y validación de perfiles profesionales</li>
+<li>Verificación de experiencia y especialización técnica</li>
+<li>Coordinación documental y administrativa</li>
+<li>Gestión de alojamiento si es requerido</li>
+<li>Acompañamiento integral durante todo el proceso</li>
+</ul>
+
+<p>
+Trabajamos bajo estándares de cumplimiento normativo y contratación transparente.
+</p>
 </div>
 
-<div class="card" id="servicios">
-<h2>Servicios</h2>
-<p>Además de la coordinación de personal, ofrecemos servicios complementarios para garantizar una integración eficiente y profesional:</p>
-<p>• Evaluación avanzada de perfiles profesionales.</p>
-<p>• Traducción y adaptación de currículums al mercado suizo.</p>
-<p>• Asesoramiento documental.</p>
-<p>• Gestión y coordinación de alojamiento.</p>
-<p>• Acompañamiento durante todo el proceso de incorporación.</p>
-<p>• Soporte personalizado para empresas y trabajadores.</p>
-</div>
-
-</section>
-
-<section class="contact" id="contacto">
-<div class="contact-box">
-<h2>Contacto</h2>
-<p>Para información profesional directa, puede contactarnos a través de WhatsApp.</p>
-<div class="contact-number">+41 76 740 15 41</div>
-
-<a href="https://wa.me/41767401541" class="whatsapp-button" target="_blank">
-Contactar por WhatsApp
-</a>
 </div>
 </section>
 
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
+<footer>
+© 2026 CHL Constructora - Gestión profesional de mano de obra para Suiza
+</footer>
 
 </body>
 </html>
