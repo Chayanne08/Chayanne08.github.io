@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestión Profesional de Mano de Obra</title>
+<title>CHL Constructora</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -16,109 +17,147 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff;
-    color: #111;
-}
-
-header {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-header h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-header p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: auto;
+    background-color: #0f0f0f;
+    color: #ffffff;
 }
 
 section {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
+    padding: 100px 10%;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 p {
-    font-size: 17px;
-    line-height: 1.7;
+    color: #cccccc;
+    line-height: 1.8;
+    font-size: 18px;
+    max-width: 700px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+.hero {
+    background-color: #0f0f0f;
+    text-align: center;
+}
+
+.hero p {
+    margin: 30px auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 35px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+.dark-section {
+    background-color: #1a1a1a;
+}
+
+.split {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
-img {
+.split img {
     width: 100%;
+    max-width: 450px;
     border-radius: 8px;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 30px;
-    background-color: #000;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background-color: #333;
-}
-
-.contact {
+.center {
     text-align: center;
-    padding: 80px 20px;
+    margin: auto;
 }
 
 footer {
+    background-color: #000000;
     text-align: center;
-    padding: 30px;
-    font-size: 14px;
-    color: #777;
+    padding: 60px 10%;
 }
+
+footer p {
+    margin: 10px auto;
+}
+
+@media (max-width: 900px) {
+
+    .split {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+}
+
 </style>
 </head>
-
 <body>
 
-<header>
-    <h1>GESTIONAMOS MANO DE OBRA ESPAÑOLA PARA SUIZA</h1>
-    <p>Tramitación profesional de trabajadores cualificados para empresas suizas.</p>
-</header>
+<!-- HERO -->
 
-<section>
+<section class="hero">
+    <h1>CHL CONSTRUCTORA</h1>
+    <p>Gestión y tramitación de mano de obra española para el mercado suizo.</p>
+    <a href="#contacto" class="btn">CONTACTAR</a>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+
+<section class="dark-section center">
     <h2>QUIÉNES SOMOS</h2>
     <p>
-        Empresa especializada en la gestión y tramitación de mano de obra española
-        para el mercado suizo. Coordinamos selección, documentación y seguimiento.
+        Empresa especializada en la gestión y tramitación de mano de obra española 
+        para el mercado suizo. Coordinamos selección, documentación y seguimiento 
+        garantizando profesionalidad, seguridad y cumplimiento legal.
     </p>
 </section>
 
+<!-- BUSCAS EMPLEO -->
+
 <section>
-    <div class="grid">
+    <div class="split">
         <div>
             <h2>¿BUSCAS EMPLEO EN SUIZA?</h2>
             <p>
-                Gestionamos tu incorporación de manera profesional y segura.
+                Gestionamos tu incorporación de manera profesional y segura. 
+                Te acompañamos en todo el proceso para facilitar tu acceso 
+                al mercado laboral suizo.
             </p>
-            <a href="#" class="button">SOY TRABAJADOR</a>
+            <a href="#contacto" class="btn">SOY TRABAJADOR</a>
         </div>
         <div>
             <img src="trabajadores.jpg" alt="Trabajadores">
@@ -126,29 +165,31 @@ footer {
     </div>
 </section>
 
-<section>
-    <div class="grid">
+<!-- BUSCAS PERSONAL -->
+
+<section class="dark-section">
+    <div class="split">
         <div>
             <img src="empresa.jpg" alt="Empresa">
         </div>
         <div>
-            <h2>¿BUSCAS PERSONAL PARA TU EMPRESA?</h2>
+            <h2>¿BUSCAS PERSONAL?</h2>
             <p>
-                Ofrecemos trabajadores cualificados listos para incorporarse.
+                Ofrecemos soluciones eficaces para empresas suizas que necesitan 
+                mano de obra cualificada española. Nos encargamos del proceso 
+                completo de selección y documentación.
             </p>
-            <a href="#" class="button">SOY EMPRESA</a>
+            <a href="#contacto" class="btn">SOY EMPRESA</a>
         </div>
     </div>
 </section>
 
-<section class="contact">
-    <h2>CONTACTO</h2>
-    <p>+41 76 740 15 41</p>
-    <a href="https://wa.me/41767401541" class="button">ESCRIBIR POR WHATSAPP</a>
-</section>
+<!-- CONTACTO -->
 
-<footer>
-    © 2026 Gestión Profesional de Mano de Obra
+<footer id="contacto">
+    <h2>CONTACTO</h2>
+    <p>WhatsApp: +41 76 740 15 41</p>
+    <p>Email: info@chlconstructora.com</p>
 </footer>
 
 </body>
