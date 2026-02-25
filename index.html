@@ -40,20 +40,39 @@ letter-spacing:2px;
 .menu-toggle{
 font-size:24px;
 cursor:pointer;
+margin-left:15px;
 }
 
-/* MENU (ARREGLADO SOLO TAMAÑO Y POSICIÓN) */
+.lang-switch{
+display:flex;
+gap:10px;
+}
+
+.lang-switch button{
+background:none;
+border:1px solid #444;
+color:white;
+padding:4px 10px;
+cursor:pointer;
+font-size:12px;
+}
+
+.lang-switch button:hover{
+background:#222;
+}
+
+/* MENU */
 
 nav{
 position:fixed;
-top:80px; /* ahora empieza debajo del header */
+top:80px;
 right:-100%;
 width:260px;
-height:calc(100vh - 80px); /* ya no ocupa toda la pantalla completa */
+height:calc(100vh - 80px);
 background:#0b0b0b;
 display:flex;
 flex-direction:column;
-justify-content:flex-start; /* empieza desde arriba */
+justify-content:flex-start;
 align-items:center;
 padding-top:60px;
 transition:0.3s ease;
@@ -85,14 +104,8 @@ background:white;
 transition:0.3s;
 }
 
-nav a:hover{
-opacity:1;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
+nav a:hover{opacity:1;}
+nav a:hover::after{width:100%;}
 nav.active{right:0;}
 
 /* HERO */
@@ -131,9 +144,7 @@ line-height:1.6;
 
 /* SECTION */
 
-.section{
-padding:70px 8%;
-}
+.section{padding:70px 8%;}
 
 .card{
 background:#161616;
@@ -143,16 +154,8 @@ margin-bottom:30px;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-.card h2{
-margin-bottom:20px;
-font-weight:600;
-}
-
-.card p{
-color:#ccc;
-margin-bottom:12px;
-line-height:1.6;
-}
+.card h2{margin-bottom:20px;font-weight:600;}
+.card p{color:#ccc;margin-bottom:12px;line-height:1.6;}
 
 /* BUTTON */
 
@@ -184,19 +187,9 @@ max-width:600px;
 margin:auto;
 }
 
-.contact-box h2{
-margin-bottom:15px;
-}
-
-.contact-box p{
-color:#ccc;
-margin-bottom:20px;
-}
-
-.contact-number{
-font-size:18px;
-margin-bottom:20px;
-}
+.contact-box h2{margin-bottom:15px;}
+.contact-box p{color:#ccc;margin-bottom:20px;}
+.contact-number{font-size:18px;margin-bottom:20px;}
 
 .whatsapp-button{
 display:inline-block;
@@ -215,87 +208,50 @@ font-weight:600;
 
 <header>
 <div class="logo">CHL CONSTRUCTORA</div>
+
+<div style="display:flex;align-items:center;">
+<div class="lang-switch">
+<button onclick="setLanguage('es')">ES</button>
+<button onclick="setLanguage('de')">DE</button>
+</div>
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</div>
 </header>
 
 <nav id="menu">
-<a href="#empleo">Incorporación Profesional en Suiza</a>
-<a href="#personal">Selección Profesional de Personal</a>
-<a href="#servicios">Servicios</a>
-<a href="#contacto">Contacto</a>
+<a href="#empleo" data-es="Incorporación Profesional en Suiza" data-de="Berufliche Integration in der Schweiz">Incorporación Profesional en Suiza</a>
+<a href="#personal" data-es="Selección Profesional de Personal" data-de="Professionelle Personalauswahl">Selección Profesional de Personal</a>
+<a href="#servicios" data-es="Servicios" data-de="Dienstleistungen">Servicios</a>
+<a href="#contacto" data-es="Contacto" data-de="Kontakt">Contacto</a>
 </nav>
 
 <section class="hero">
 <div class="hero-box">
-<h1>Tramitación y Gestión Profesional de Mano de Obra para Suiza</h1>
-<p>
-Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción.
-Gestionamos procesos completos de selección, documentación e incorporación,
-garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo.
+<h1 data-es="Tramitación y Gestión Profesional de Mano de Obra para Suiza"
+    data-de="Professionelle Vermittlung und Koordination von Fachkräften für die Schweiz">
+Tramitación y Gestión Profesional de Mano de Obra para Suiza
+</h1>
+
+<p data-es="Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción. Gestionamos procesos completos de selección, documentación e incorporación, garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo."
+   data-de="Spezialisten für die Koordination und Vermittlung qualifizierter Fachkräfte im Bauwesen. Wir übernehmen den gesamten Auswahl-, Dokumentations- und Integrationsprozess und garantieren Effizienz, Sicherheit und die Einhaltung der schweizerischen Vorschriften.">
+Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción...
 </p>
 </div>
 </section>
 
-<section class="section">
-
-<div class="card" id="empleo">
-<h2>Incorporación Profesional en Suiza</h2>
-<p>Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional.</p>
-<p><strong>Procedimiento:</strong></p>
-<p>• Recepción y análisis de candidatura.</p>
-<p>• Presentación a empresas colaboradoras.</p>
-<p>• Confirmación de condiciones y aprobación.</p>
-<p>• Inicio del proceso de contratación legal en Suiza.</p>
-
-<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20trabajar%20en%20Suiza" class="btn" target="_blank">
-Solicitar información
-</a>
-</div>
-
-<div class="card" id="personal">
-<h2>Selección Profesional de Personal</h2>
-<p>Ofrecemos a empresas suizas un servicio integral de selección y coordinación de profesionales cualificados.</p>
-<p><strong>Procedimiento:</strong></p>
-<p>• Evaluación técnica de perfiles.</p>
-<p>• Selección según necesidades del proyecto.</p>
-<p>• Gestión documental previa.</p>
-<p>• Coordinación de incorporación.</p>
-<p>• Seguimiento inicial.</p>
-
-<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20personal%20para%20mi%20empresa" class="btn" target="_blank">
-Solicitar información
-</a>
-</div>
-
-<div class="card" id="servicios">
-<h2>Servicios</h2>
-<p>Además de la coordinación de personal, ofrecemos servicios complementarios para garantizar una integración eficiente y profesional:</p>
-<p>• Evaluación avanzada de perfiles profesionales.</p>
-<p>• Traducción y adaptación de currículums al mercado suizo.</p>
-<p>• Asesoramiento documental.</p>
-<p>• Gestión y coordinación de alojamiento.</p>
-<p>• Acompañamiento durante todo el proceso de incorporación.</p>
-<p>• Soporte personalizado para empresas y trabajadores.</p>
-</div>
-
-</section>
-
-<section class="contact" id="contacto">
-<div class="contact-box">
-<h2>Contacto</h2>
-<p>Para información profesional directa, puede contactarnos a través de WhatsApp.</p>
-<div class="contact-number">+41 76 740 15 41</div>
-
-<a href="https://wa.me/41767401541" class="whatsapp-button" target="_blank">
-Contactar por WhatsApp
-</a>
-</div>
-</section>
-
 <script>
+
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
+
+function setLanguage(lang){
+document.documentElement.lang = lang;
+document.querySelectorAll("[data-es]").forEach(el=>{
+el.textContent = el.getAttribute("data-"+lang);
+});
+}
+
 </script>
 
 </body>
