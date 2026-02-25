@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
@@ -19,7 +18,6 @@ scroll-behavior:smooth;
 }
 
 /* HEADER */
-
 header{
 position:fixed;
 top:0;
@@ -42,8 +40,7 @@ font-size:24px;
 cursor:pointer;
 }
 
-/* SELECTOR IDIOMA */
-
+/* IDIOMA */
 .lang-switch{
 margin-right:20px;
 font-size:13px;
@@ -61,7 +58,6 @@ text-decoration:underline;
 }
 
 /* MENU */
-
 nav{
 position:fixed;
 top:80px;
@@ -103,18 +99,11 @@ background:white;
 transition:0.3s;
 }
 
-nav a:hover{
-opacity:1;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
+nav a:hover{opacity:1;}
+nav a:hover::after{width:100%;}
 nav.active{right:0;}
 
 /* HERO */
-
 .hero{
 height:100vh;
 background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -148,10 +137,7 @@ line-height:1.6;
 }
 
 /* SECTION */
-
-.section{
-padding:70px 8%;
-}
+.section{padding:70px 8%;}
 
 .card{
 background:#161616;
@@ -161,19 +147,10 @@ margin-bottom:30px;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-.card h2{
-margin-bottom:20px;
-font-weight:600;
-}
-
-.card p{
-color:#ccc;
-margin-bottom:12px;
-line-height:1.6;
-}
+.card h2{margin-bottom:20px;font-weight:600;}
+.card p{color:#ccc;margin-bottom:12px;line-height:1.6;}
 
 /* BUTTON */
-
 .btn{
 display:inline-block;
 margin-top:15px;
@@ -186,7 +163,6 @@ font-weight:600;
 }
 
 /* CONTACT */
-
 .contact{
 background:#111;
 padding:70px 8%;
@@ -202,19 +178,9 @@ max-width:600px;
 margin:auto;
 }
 
-.contact-box h2{
-margin-bottom:15px;
-}
-
-.contact-box p{
-color:#ccc;
-margin-bottom:20px;
-}
-
-.contact-number{
-font-size:18px;
-margin-bottom:20px;
-}
+.contact-box h2{margin-bottom:15px;}
+.contact-box p{color:#ccc;margin-bottom:20px;}
+.contact-number{font-size:18px;margin-bottom:20px;}
 
 .whatsapp-button{
 display:inline-block;
@@ -225,7 +191,6 @@ text-decoration:none;
 border-radius:4px;
 font-weight:600;
 }
-
 </style>
 </head>
 
@@ -241,7 +206,6 @@ font-weight:600;
 </div>
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </div>
-
 </header>
 
 <nav id="menu">
@@ -259,10 +223,9 @@ Tramitación y Gestión Profesional de Mano de Obra para Suiza
 </h1>
 
 <p data-es="Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción. Gestionamos procesos completos de selección, documentación e incorporación, garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo."
-data-de="Spezialisten für die Koordination und Vermittlung qualifizierter Fachkräfte im Bausektor. Wir übernehmen vollständige Auswahl-, Dokumentations- und Integrationsprozesse und garantieren Effizienz, Sicherheit und rechtliche Konformität im Schweizer Markt.">
-Especialistas en la coordinación y tramitación...
+data-de="Spezialisten für die Koordination und Vermittlung qualifizierter Fachkräfte im Bausektor. Wir übernehmen vollständige Auswahl-, Dokumentations- und Integrationsprozesse und garantieren Effizienz, Sicherheit sowie die Einhaltung der schweizerischen Vorschriften.">
+Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción. Gestionamos procesos completos de selección, documentación e incorporación, garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo.
 </p>
-
 </div>
 </section>
 
@@ -275,48 +238,11 @@ Incorporación Profesional en Suiza
 
 <p data-es="Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional."
 data-de="Wir organisieren die Integration von Fachkräften aus dem Bausektor in den Schweizer Arbeitsmarkt durch einen strukturierten und professionellen Prozess.">
-Gestionamos la incorporación...
+Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional.
 </p>
 
-</div>
+<p data-es="Procedimiento:" data-de="Vorgehensweise:"><strong>Procedimiento:</strong></p>
 
-<div class="card" id="personal">
-<h2 data-es="Selección Profesional de Personal" data-de="Professionelle Personalauswahl">
-Selección Profesional de Personal
-</h2>
-
-<p data-es="Ofrecemos a empresas suizas un servicio integral de selección y coordinación de profesionales cualificados."
-data-de="Wir bieten Schweizer Unternehmen einen umfassenden Service für die Auswahl und Koordination qualifizierter Fachkräfte.">
-Ofrecemos a empresas suizas...
-</p>
-
-</div>
-
-<div class="card" id="servicios">
-<h2 data-es="Servicios" data-de="Dienstleistungen">
-Servicios
-</h2>
-</div>
-
-</section>
-
-<section class="contact" id="contacto">
-<div class="contact-box">
-<h2 data-es="Contacto" data-de="Kontakt">Contacto</h2>
-</div>
-</section>
-
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-
-function setLang(lang){
-document.querySelectorAll("[data-es]").forEach(el=>{
-el.innerText = el.getAttribute("data-" + lang);
-});
-}
-</script>
-
-</body>
-</html>
+<p data-es="• Recepción y análisis de candidatura." data-de="• Eingang und Analyse der Bewerbung.">• Recepción y análisis de candidatura.</p>
+<p data-es="• Presentación a empresas colaboradoras." data-de="• Vorstellung bei Partnerunternehmen.">• Presentación a empresas colaboradoras.</p>
+<p data-es="• Confirmación
