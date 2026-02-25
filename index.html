@@ -5,18 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL Constructora</title>
 
+<!-- FUENTE MODERNA -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', Arial, sans-serif;
+font-family:'Montserrat', sans-serif;
 }
 
 body{
-background:#0f0f0f;
-color:white;
+background:#f4f4f4;
+color:#111;
 }
 
 /* HEADER */
@@ -26,7 +29,7 @@ position:fixed;
 top:0;
 width:100%;
 background:#000;
-padding:22px 8%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -34,21 +37,18 @@ z-index:1000;
 }
 
 .logo{
-font-size:22px;
-letter-spacing:3px;
-font-weight:600;
-}
-
-nav{
-display:flex;
-gap:30px;
+color:white;
+font-size:18px;
+letter-spacing:4px;
+font-weight:500;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-size:14px;
-letter-spacing:1px;
+margin-left:25px;
+font-size:13px;
+letter-spacing:2px;
 transition:0.3s;
 }
 
@@ -56,18 +56,13 @@ nav a:hover{
 color:#25D366;
 }
 
-.menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
-}
-
 /* HERO */
 
 .hero{
-height:90vh;
-background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
+margin-top:75px;
+height:85vh;
+background:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -76,38 +71,68 @@ padding:0 8%;
 }
 
 .hero-content{
-max-width:800px;
+max-width:700px;
+color:white;
 }
 
 .hero h1{
-font-size:48px;
+font-size:38px;
+font-weight:500;
 line-height:1.2;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .hero p{
-color:#ccc;
-font-size:18px;
+font-size:16px;
+font-weight:300;
 line-height:1.6;
+color:#ddd;
 }
 
-/* SECTIONS */
+/* QUIENES SOMOS */
+
+.about{
+padding:100px 8%;
+background:white;
+text-align:center;
+}
+
+.about h2{
+font-size:30px;
+font-weight:500;
+margin-bottom:25px;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+color:#444;
+line-height:1.8;
+font-size:16px;
+font-weight:300;
+}
+
+/* SECCIONES */
 
 .section{
-padding:120px 8%;
+padding:90px 8%;
 display:flex;
 align-items:center;
-gap:70px;
+gap:50px;
 }
 
 .section:nth-child(even){
-background:#151515;
+background:#f9f9f9;
+}
+
+.section:nth-child(odd){
+background:white;
 }
 
 .section img{
 width:50%;
-border-radius:14px;
-box-shadow:0 15px 40px rgba(0,0,0,0.5);
+border-radius:12px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
 }
 
 .section-content{
@@ -115,74 +140,74 @@ width:50%;
 }
 
 .section-content h2{
-font-size:36px;
-margin-bottom:20px;
+font-size:28px;
+font-weight:500;
+margin-bottom:18px;
 }
 
 .section-content p{
-color:#bbb;
+color:#555;
 line-height:1.7;
-margin-bottom:30px;
-font-size:17px;
+margin-bottom:20px;
+font-weight:300;
 }
 
 .btn{
 display:inline-block;
-padding:14px 34px;
-background:white;
-color:black;
+padding:12px 28px;
+background:#000;
+color:white;
 text-decoration:none;
-font-weight:600;
 border-radius:40px;
 transition:0.3s;
+font-size:14px;
+letter-spacing:1px;
 }
 
 .btn:hover{
 background:#25D366;
-color:white;
 }
 
-/* INFO CARD */
+/* INFORMACIÓN */
 
 .info{
-padding:120px 8%;
-background:#000;
+padding:100px 8%;
+background:#111;
 display:flex;
 justify-content:center;
 }
 
 .info-card{
-background:#111;
-padding:50px;
-border-radius:20px;
-max-width:600px;
+background:#1c1c1c;
+padding:45px;
+border-radius:18px;
+max-width:550px;
 text-align:center;
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
+color:white;
 }
 
 .info-card h3{
-font-size:28px;
-margin-bottom:20px;
+font-size:24px;
+font-weight:500;
+margin-bottom:15px;
 }
 
 .info-card p{
-color:#aaa;
-margin-bottom:25px;
-}
-
-.contact-links{
-display:flex;
-flex-direction:column;
-gap:15px;
+color:#bbb;
+margin-bottom:20px;
+font-weight:300;
 }
 
 .contact-links a{
+display:block;
 text-decoration:none;
 color:white;
-background:#1c1c1c;
-padding:14px;
-border-radius:10px;
+background:#2a2a2a;
+padding:12px;
+border-radius:8px;
+margin-bottom:12px;
 transition:0.3s;
+font-size:14px;
 }
 
 .contact-links a:hover{
@@ -193,6 +218,10 @@ background:#25D366;
 
 @media(max-width:900px){
 
+.hero h1{
+font-size:30px;
+}
+
 .section{
 flex-direction:column;
 }
@@ -200,14 +229,6 @@ flex-direction:column;
 .section img,
 .section-content{
 width:100%;
-}
-
-nav{
-display:none;
-}
-
-.menu-toggle{
-display:block;
 }
 
 }
@@ -223,43 +244,52 @@ display:block;
 <a href="index.html">INICIO</a>
 <a href="trabajadores.html">TRABAJADORES</a>
 <a href="empresas.html">EMPRESAS</a>
-<a href="#">INFORMACIÓN</a>
 </nav>
-<div class="menu-toggle">☰</div>
 </header>
 
 <section class="hero">
 <div class="hero-content">
-<h1>Tramitación y gestión profesional de personal cualificado</h1>
+<h1>Tramitación y gestión profesional de personal laboral cualificado</h1>
 <p>
-Conectamos talento preparado con empresas que valoran la responsabilidad,
-la estructura y el compromiso profesional. Coordinación directa y procesos
-organizados.
+Coordinamos procesos administrativos y laborales bajo normativa vigente,
+garantizando organización, transparencia y cumplimiento legal tanto para
+empresas como para profesionales.
 </p>
 </div>
 </section>
 
+<section class="about">
+<h2>Quiénes somos</h2>
+<p>
+Somos una empresa especializada en la tramitación y gestión profesional de personal laboral cualificado.
+Trabajamos con estándares de organización y cumplimiento normativo,
+garantizando procesos legales, actualizados y estructurados.
+Nuestra prioridad es ofrecer seguridad administrativa, claridad en cada trámite
+y coordinación eficiente entre empresas y trabajadores.
+</p>
+</section>
+
 <section class="section">
-<img src="https://images.unsplash.com/photo-1581091870627-3c65a9d9a13f">
+<img src="https://images.unsplash.com/photo-1581092588429-8d60a0c26e1d">
 <div class="section-content">
 <h2>¿Estás buscando empleo?</h2>
 <p>
-Analizamos tu perfil profesional y gestionamos oportunidades reales con
-empresas verificadas. Te acompañamos en la tramitación y coordinación
-administrativa necesaria para una incorporación segura y organizada.
+Gestionamos oportunidades laborales reales con empresas verificadas.
+Te acompañamos en cada fase del proceso: revisión de perfil,
+coordinación documental y seguimiento hasta la incorporación.
 </p>
 <a href="trabajadores.html" class="btn">MÁS INFORMACIÓN</a>
 </div>
 </section>
 
 <section class="section">
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
 <div class="section-content">
 <h2>¿Estás buscando personal cualificado?</h2>
 <p>
-Seleccionamos perfiles profesionales responsables adaptados a las necesidades
-de tu empresa. Gestión estructurada, comunicación directa y coordinación
-eficiente durante todo el proceso.
+Seleccionamos y coordinamos personal laboral responsable,
+adaptado a las necesidades específicas de tu empresa.
+Procesos estructurados, comunicación directa y gestión profesional.
 </p>
 <a href="empresas.html" class="btn">MÁS INFORMACIÓN</a>
 </div>
@@ -268,10 +298,7 @@ eficiente durante todo el proceso.
 <section class="info">
 <div class="info-card">
 <h3>Información y Contacto</h3>
-<p>
-Atención directa y coordinación profesional. Respuesta rápida vía teléfono
-o WhatsApp.
-</p>
+<p>Atención directa y coordinación profesional.</p>
 
 <div class="contact-links">
 <a href="tel:+34600111222">📞 +34 600 111 222</a>
