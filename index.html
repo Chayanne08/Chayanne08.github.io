@@ -5,210 +5,109 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHL Constructora</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
 
 body{
-font-family:'Montserrat',sans-serif;
-background:#0f0f0f;
-color:white;
-scroll-behavior:smooth;
+background:#000;
+color:#fff;
+overflow-x:hidden;
 }
 
 /* HEADER */
-
 header{
 position:fixed;
 top:0;
 width:100%;
-background:#000;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
+padding:20px 30px;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(6px);
 z-index:1000;
 }
 
 .logo{
-font-weight:700;
-letter-spacing:2px;
+font-size:22px;
+letter-spacing:3px;
+font-weight:600;
 }
 
-.menu-toggle{
-font-size:24px;
+.menu-btn{
+font-size:26px;
 cursor:pointer;
 }
 
-/* MENU */
-
-nav{
-position:fixed;
-top:0;
-right:-100%;
-width:260px;
-height:100vh;
-background:#0b0b0b;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-transition:0.3s ease;
-box-shadow:-10px 0 30px rgba(0,0,0,0.8);
-z-index:999;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:18px 0;
-font-size:14px;
-font-weight:500;
-letter-spacing:1.5px;
-text-transform:uppercase;
-opacity:0.85;
-transition:0.3s;
-position:relative;
-}
-
-nav a::after{
-content:"";
-position:absolute;
-bottom:-6px;
-left:0;
-width:0;
-height:1px;
-background:white;
-transition:0.3s;
-}
-
-nav a:hover{
-opacity:1;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
-nav.active{right:0;}
-
 /* HERO */
-
 .hero{
 height:100vh;
-padding-top:100px; /* 👈 ESTE ES EL ARREGLO REAL */
-background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+background:url('tu-imagen.jpg') center/cover no-repeat;
 display:flex;
-flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding-left:20px;
-padding-right:20px;
-}
-
-.hero-box{
-background:rgba(0,0,0,0.65);
-padding:40px;
-max-width:900px;
+padding:20px;
 }
 
 .hero h1{
-font-family:'Playfair Display',serif;
-font-size:32px;
+font-size:38px;
 font-weight:600;
-letter-spacing:1px;
-margin-bottom:20px;
+letter-spacing:2px;
 }
 
-.hero p{
-font-size:17px;
-font-weight:400;
-color:#e5e5e5;
-line-height:1.6;
-}
-
-/* SECTION */
-
-.section{
-padding:70px 8%;
-}
-
-.card{
-background:#161616;
-padding:30px;
-border-radius:8px;
-margin-bottom:30px;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-.card h2{
-margin-bottom:20px;
-font-weight:600;
-}
-
-.card p{
-color:#ccc;
-margin-bottom:12px;
-line-height:1.6;
-}
-
-/* BUTTON */
-
-.btn{
-display:inline-block;
-margin-top:15px;
-padding:12px 24px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:4px;
-font-weight:600;
-}
-
-/* CONTACT */
-
-.contact{
+/* MENU LATERAL */
+.side-menu{
+position:fixed;
+top:0;
+right:-260px;
+width:260px;
+height:100%;
 background:#111;
-padding:70px 8%;
-text-align:center;
-border-top:1px solid #222;
+box-shadow:-5px 0 20px rgba(0,0,0,0.6);
+padding:80px 30px;
+transition:0.3s ease;
+z-index:2000;
 }
 
-.contact-box{
-background:#161616;
-padding:40px;
-border-radius:8px;
-max-width:600px;
-margin:auto;
+.side-menu.active{
+right:0;
 }
 
-.contact-box h2{
-margin-bottom:15px;
-}
-
-.contact-box p{
-color:#ccc;
-margin-bottom:20px;
-}
-
-.contact-number{
-font-size:18px;
-margin-bottom:20px;
-}
-
-.whatsapp-button{
-display:inline-block;
-padding:14px 28px;
-background:#25D366;
-color:white;
+.side-menu a{
+display:block;
+color:#fff;
 text-decoration:none;
-border-radius:4px;
-font-weight:600;
+margin-bottom:25px;
+font-size:16px;
+letter-spacing:1px;
+font-weight:500;
 }
 
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+opacity:0;
+visibility:hidden;
+transition:0.3s;
+z-index:1500;
+}
+
+.overlay.active{
+opacity:1;
+visibility:visible;
+}
 </style>
 </head>
 
@@ -216,10 +115,35 @@ font-weight:600;
 
 <header>
 <div class="logo">CHL CONSTRUCTORA</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="menu-btn" onclick="openMenu()">☰</div>
 </header>
 
-<nav id="menu">
-<a href="#empleo">Incorporación Profesional en Suiza</a>
-<a href="#personal">Selección Profesional de Personal</a>
-<a href="#servicios">
+<section class="hero">
+<h1>TRAMITACIÓN Y GESTIÓN PROFESIONAL</h1>
+</section>
+
+<div class="side-menu" id="menu">
+<a href="#">Inicio</a>
+<a href="#">Busco empleo</a>
+<a href="#">Busco personal</a>
+<a href="#">Servicios</a>
+<a href="#">Quiénes somos</a>
+<a href="#">Contacto</a>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<script>
+function openMenu(){
+document.getElementById('menu').classList.add('active');
+document.getElementById('overlay').classList.add('active');
+}
+
+function closeMenu(){
+document.getElementById('menu').classList.remove('active');
+document.getElementById('overlay').classList.remove('active');
+}
+</script>
+
+</body>
+</html>
