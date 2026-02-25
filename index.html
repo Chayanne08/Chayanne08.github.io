@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
@@ -18,6 +19,7 @@ scroll-behavior:smooth;
 }
 
 /* HEADER */
+
 header{
 position:fixed;
 top:0;
@@ -40,24 +42,8 @@ font-size:24px;
 cursor:pointer;
 }
 
-/* LANGUAGE SWITCH */
-.lang-switch{
-margin-right:20px;
-font-size:13px;
-cursor:pointer;
-opacity:0.8;
-}
-
-.lang-switch span{
-margin:0 5px;
-}
-
-.lang-switch span:hover{
-opacity:1;
-text-decoration:underline;
-}
-
 /* MENU */
+
 nav{
 position:fixed;
 top:80px;
@@ -99,11 +85,18 @@ background:white;
 transition:0.3s;
 }
 
-nav a:hover{opacity:1;}
-nav a:hover::after{width:100%;}
+nav a:hover{
+opacity:1;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
 nav.active{right:0;}
 
 /* HERO */
+
 .hero{
 height:100vh;
 background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -137,7 +130,10 @@ line-height:1.6;
 }
 
 /* SECTION */
-.section{padding:70px 8%;}
+
+.section{
+padding:70px 8%;
+}
 
 .card{
 background:#161616;
@@ -147,10 +143,19 @@ margin-bottom:30px;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-.card h2{margin-bottom:20px;font-weight:600;}
-.card p{color:#ccc;margin-bottom:12px;line-height:1.6;}
+.card h2{
+margin-bottom:20px;
+font-weight:600;
+}
+
+.card p{
+color:#ccc;
+margin-bottom:12px;
+line-height:1.6;
+}
 
 /* BUTTON */
+
 .btn{
 display:inline-block;
 margin-top:15px;
@@ -163,6 +168,7 @@ font-weight:600;
 }
 
 /* CONTACT */
+
 .contact{
 background:#111;
 padding:70px 8%;
@@ -178,9 +184,19 @@ max-width:600px;
 margin:auto;
 }
 
-.contact-box h2{margin-bottom:15px;}
-.contact-box p{color:#ccc;margin-bottom:20px;}
-.contact-number{font-size:18px;margin-bottom:20px;}
+.contact-box h2{
+margin-bottom:15px;
+}
+
+.contact-box p{
+color:#ccc;
+margin-bottom:20px;
+}
+
+.contact-number{
+font-size:18px;
+margin-bottom:20px;
+}
 
 .whatsapp-button{
 display:inline-block;
@@ -191,6 +207,7 @@ text-decoration:none;
 border-radius:4px;
 font-weight:600;
 }
+
 </style>
 </head>
 
@@ -198,130 +215,97 @@ font-weight:600;
 
 <header>
 <div class="logo">CHL CONSTRUCTORA</div>
-
-<div style="display:flex; align-items:center;">
-<div class="lang-switch">
-<span onclick="setLang('es')">ES</span> | 
-<span onclick="setLang('de')">DE</span>
-</div>
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</div>
 </header>
 
 <nav id="menu">
-<a href="#empleo" data-es="Incorporación Profesional en Suiza" data-de="Berufliche Eingliederung in der Schweiz">Incorporación Profesional en Suiza</a>
-<a href="#personal" data-es="Selección Profesional de Personal" data-de="Professionelle Personalauswahl">Selección Profesional de Personal</a>
-<a href="#servicios" data-es="Servicios" data-de="Dienstleistungen">Servicios</a>
-<a href="#contacto" data-es="Contacto" data-de="Kontakt">Contacto</a>
+<a href="#empleo">Incorporación Profesional en Suiza</a>
+<a href="#personal">Selección Profesional de Personal</a>
+<a href="#servicios">Servicios</a>
+<a href="#quienes">Quiénes Somos</a>
+<a href="#contacto">Contacto</a>
 </nav>
 
 <section class="hero">
 <div class="hero-box">
-<h1 data-es="Tramitación y Gestión Profesional de Mano de Obra para Suiza"
-data-de="Professionelle Vermittlung und Verwaltung von Fachkräften für die Schweiz">
-Tramitación y Gestión Profesional de Mano de Obra para Suiza
-</h1>
-
-<p data-es="Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción. Gestionamos procesos completos de selección, documentación e incorporación, garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo."
-data-de="Spezialisten für die Koordination und Vermittlung qualifizierter Fachkräfte im Bausektor. Wir übernehmen vollständige Auswahl-, Dokumentations- und Integrationsprozesse und garantieren Effizienz, Sicherheit sowie die Einhaltung der schweizerischen Vorschriften.">
-Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción. Gestionamos procesos completos de selección, documentación e incorporación, garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo.
+<h1>Gestión y Coordinación Profesional de Personal Técnico y Especializado</h1>
+<p>
+Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción.
+Gestionamos procesos completos de selección, documentación e incorporación,
+garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo.
 </p>
 </div>
 </section>
 
 <section class="section">
 
-<div class="card" id="empleo">
-<h2 data-es="Incorporación Profesional en Suiza" data-de="Berufliche Eingliederung in der Schweiz">Incorporación Profesional en Suiza</h2>
-
-<p data-es="Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional."
-data-de="Wir organisieren die Integration von Fachkräften aus dem Bausektor in den Schweizer Arbeitsmarkt durch einen strukturierten und professionellen Prozess.">
-Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional.
+<div class="card" id="quienes">
+<h2>Quiénes Somos</h2>
+<p>
+Tras años de experiencia gestionando procesos de incorporación profesional en Suiza, hemos constituido nuestra compañía en España para ofrecer un servicio más cercano y personalizado.
 </p>
+<p>
+Conocemos en profundidad el mercado laboral suizo, sus exigencias y su funcionamiento, lo que nos permite coordinar procesos con seguridad, profesionalidad y compromiso tanto para empresas como para profesionales.
+</p>
+</div>
 
-<p data-es="Procedimiento:" data-de="Vorgehensweise:"><strong>Procedimiento:</strong></p>
-<p data-es="• Recepción y análisis de candidatura." data-de="• Eingang und Analyse der Bewerbung.">• Recepción y análisis de candidatura.</p>
-<p data-es="• Presentación a empresas colaboradoras." data-de="• Vorstellung bei Partnerunternehmen.">• Presentación a empresas colaboradoras.</p>
-<p data-es="• Confirmación de condiciones y aprobación." data-de="• Bestätigung der Bedingungen und Genehmigung.">• Confirmación de condiciones y aprobación.</p>
-<p data-es="• Inicio del proceso de contratación legal en Suiza." data-de="• Einleitung des rechtlichen Einstellungsverfahrens in der Schweiz.">• Inicio del proceso de contratación legal en Suiza.</p>
+<div class="card" id="empleo">
+<h2>Incorporación Profesional en Suiza</h2>
+<p>Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional.</p>
+<p><strong>Procedimiento:</strong></p>
+<p>• Recepción y análisis de candidatura.</p>
+<p>• Presentación a empresas colaboradoras.</p>
+<p>• Confirmación de condiciones y aprobación.</p>
+<p>• Inicio del proceso de contratación legal en Suiza.</p>
 
-<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20trabajar%20en%20Suiza"
-class="btn"
-data-es="Solicitar información"
-data-de="Information anfordern"
-target="_blank">Solicitar información</a>
+<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20trabajar%20en%20Suiza" class="btn" target="_blank">
+Solicitar información
+</a>
 </div>
 
 <div class="card" id="personal">
-<h2 data-es="Selección Profesional de Personal" data-de="Professionelle Personalauswahl">Selección Profesional de Personal</h2>
+<h2>Selección Profesional de Personal</h2>
+<p>Ofrecemos a empresas suizas un servicio integral de selección y coordinación de profesionales cualificados.</p>
+<p><strong>Procedimiento:</strong></p>
+<p>• Evaluación técnica de perfiles.</p>
+<p>• Selección según necesidades del proyecto.</p>
+<p>• Gestión documental previa.</p>
+<p>• Coordinación de incorporación.</p>
+<p>• Seguimiento inicial.</p>
 
-<p data-es="Ofrecemos a empresas suizas un servicio integral de selección y coordinación de profesionales cualificados."
-data-de="Wir bieten Schweizer Unternehmen einen umfassenden Service für die Auswahl und Koordination qualifizierter Fachkräfte.">
-Ofrecemos a empresas suizas un servicio integral de selección y coordinación de profesionales cualificados.
-</p>
-
-<p data-es="Procedimiento:" data-de="Vorgehensweise:"><strong>Procedimiento:</strong></p>
-<p data-es="• Evaluación técnica de perfiles." data-de="• Technische Bewertung der Profile.">• Evaluación técnica de perfiles.</p>
-<p data-es="• Selección según necesidades del proyecto." data-de="• Auswahl entsprechend den Projektanforderungen.">• Selección según necesidades del proyecto.</p>
-<p data-es="• Gestión documental previa." data-de="• Vorbereitende Dokumentenverwaltung.">• Gestión documental previa.</p>
-<p data-es="• Coordinación de incorporación." data-de="• Koordination der Integration.">• Coordinación de incorporación.</p>
-<p data-es="• Seguimiento inicial." data-de="• Anfangsbetreuung.">• Seguimiento inicial.</p>
-
-<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20personal%20para%20mi%20empresa"
-class="btn"
-data-es="Solicitar información"
-data-de="Information anfordern"
-target="_blank">Solicitar información</a>
+<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20personal%20para%20mi%20empresa" class="btn" target="_blank">
+Solicitar información
+</a>
 </div>
 
 <div class="card" id="servicios">
-<h2 data-es="Servicios" data-de="Dienstleistungen">Servicios</h2>
-
-<p data-es="Además de la coordinación de personal, ofrecemos servicios complementarios para garantizar una integración eficiente y profesional:"
-data-de="Neben der Personalkoordination bieten wir ergänzende Dienstleistungen zur Gewährleistung einer effizienten und professionellen Integration:">
-Además de la coordinación de personal, ofrecemos servicios complementarios para garantizar una integración eficiente y profesional:
-</p>
-
-<p data-es="• Evaluación avanzada de perfiles profesionales." data-de="• Erweiterte Bewertung professioneller Profile.">• Evaluación avanzada de perfiles profesionales.</p>
-<p data-es="• Traducción y adaptación de currículums al mercado suizo." data-de="• Übersetzung und Anpassung von Lebensläufen an den Schweizer Markt.">• Traducción y adaptación de currículums al mercado suizo.</p>
-<p data-es="• Asesoramiento documental." data-de="• Dokumentationsberatung.">• Asesoramiento documental.</p>
-<p data-es="• Gestión y coordinación de alojamiento." data-de="• Organisation und Koordination von Unterkünften.">• Gestión y coordinación de alojamiento.</p>
-<p data-es="• Acompañamiento durante todo el proceso de incorporación." data-de="• Begleitung während des gesamten Integrationsprozesses.">• Acompañamiento durante todo el proceso de incorporación.</p>
-<p data-es="• Soporte personalizado para empresas y trabajadores." data-de="• Individuelle Unterstützung für Unternehmen und Arbeitnehmer.">• Soporte personalizado para empresas y trabajadores.</p>
+<h2>Servicios</h2>
+<p>Además de la coordinación de personal, ofrecemos servicios complementarios para garantizar una integración eficiente y profesional:</p>
+<p>• Evaluación avanzada de perfiles profesionales.</p>
+<p>• Traducción y adaptación de currículums al mercado suizo.</p>
+<p>• Asesoramiento documental.</p>
+<p>• Gestión y coordinación de alojamiento.</p>
+<p>• Acompañamiento durante todo el proceso de incorporación.</p>
+<p>• Soporte personalizado para empresas y trabajadores.</p>
 </div>
 
 </section>
 
 <section class="contact" id="contacto">
 <div class="contact-box">
-<h2 data-es="Contacto" data-de="Kontakt">Contacto</h2>
-
-<p data-es="Para información profesional directa, puede contactarnos a través de WhatsApp."
-data-de="Für direkte professionelle Informationen kontaktieren Sie uns bitte über WhatsApp.">
-Para información profesional directa, puede contactarnos a través de WhatsApp.
-</p>
-
+<h2>Contacto</h2>
+<p>Para información profesional directa, puede contactarnos a través de WhatsApp.</p>
 <div class="contact-number">+41 76 740 15 41</div>
 
-<a href="https://wa.me/41767401541"
-class="whatsapp-button"
-data-es="Contactar por WhatsApp"
-data-de="Über WhatsApp kontaktieren"
-target="_blank">Contactar por WhatsApp</a>
-
+<a href="https://wa.me/41767401541" class="whatsapp-button" target="_blank">
+Contactar por WhatsApp
+</a>
 </div>
 </section>
 
 <script>
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
-}
-
-function setLang(lang){
-document.documentElement.lang = lang;
-document.querySelectorAll("[data-es]").forEach(el=>{
-el.innerText = el.getAttribute("data-" + lang);
-});
 }
 </script>
 
