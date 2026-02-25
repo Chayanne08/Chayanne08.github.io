@@ -11,21 +11,22 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body{
-background:#000;
+background:#0f0f0f;
+color:white;
 }
 
 /* HEADER */
 
-.header{
+header{
 position:fixed;
 top:0;
 width:100%;
 background:#000;
-padding:25px 8%;
+padding:22px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -33,39 +34,38 @@ z-index:1000;
 }
 
 .logo{
-color:white;
 font-size:22px;
 letter-spacing:3px;
-font-weight:bold;
+font-weight:600;
 }
 
-.nav{
+nav{
 display:flex;
-gap:35px;
+gap:30px;
 }
 
-.nav a{
+nav a{
 color:white;
 text-decoration:none;
-font-weight:500;
+font-size:14px;
+letter-spacing:1px;
 transition:0.3s;
 }
 
-.nav a:hover{
+nav a:hover{
 color:#25D366;
 }
 
 .menu-toggle{
 display:none;
-font-size:28px;
+font-size:26px;
 cursor:pointer;
-color:white;
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
+height:90vh;
 background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
 url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
 background-size:cover;
@@ -73,140 +73,137 @@ background-position:center;
 display:flex;
 align-items:center;
 padding:0 8%;
-color:white;
 }
 
 .hero-content{
-max-width:750px;
+max-width:800px;
 }
 
 .hero h1{
-font-size:55px;
+font-size:48px;
+line-height:1.2;
 margin-bottom:25px;
-line-height:1.1;
 }
 
 .hero p{
-font-size:20px;
 color:#ccc;
-}
-
-/* MAIN BLOCKS */
-
-.main-block{
-background:#f4f4f4;
-padding:120px 8%;
-}
-
-.content-block{
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin-bottom:120px;
-gap:60px;
-}
-
-.content-block.reverse{
-flex-direction:row-reverse;
-}
-
-.text{
-flex:1;
-}
-
-.text h2{
-font-size:34px;
-margin-bottom:20px;
-color:#111;
-}
-
-.text p{
 font-size:18px;
-color:#555;
-margin-bottom:30px;
 line-height:1.6;
 }
 
-.block-button{
+/* SECTIONS */
+
+.section{
+padding:120px 8%;
+display:flex;
+align-items:center;
+gap:70px;
+}
+
+.section:nth-child(even){
+background:#151515;
+}
+
+.section img{
+width:50%;
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.section-content{
+width:50%;
+}
+
+.section-content h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.section-content p{
+color:#bbb;
+line-height:1.7;
+margin-bottom:30px;
+font-size:17px;
+}
+
+.btn{
 display:inline-block;
-padding:14px 30px;
-background:black;
-color:white;
+padding:14px 34px;
+background:white;
+color:black;
 text-decoration:none;
 font-weight:600;
-border-radius:6px;
+border-radius:40px;
 transition:0.3s;
 }
 
-.block-button:hover{
-background:#333;
-transform:translateY(-3px);
-}
-
-.image{
-flex:1;
-}
-
-.image img{
-width:100%;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* WHATSAPP */
-
-.whatsapp-float{
-position:fixed;
-bottom:35px;
-right:35px;
-background:linear-gradient(135deg,#128C7E,#25D366);
+.btn:hover{
+background:#25D366;
 color:white;
-padding:16px 30px;
-border-radius:50px;
+}
+
+/* INFO CARD */
+
+.info{
+padding:120px 8%;
+background:#000;
+display:flex;
+justify-content:center;
+}
+
+.info-card{
+background:#111;
+padding:50px;
+border-radius:20px;
+max-width:600px;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+.info-card h3{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.info-card p{
+color:#aaa;
+margin-bottom:25px;
+}
+
+.contact-links{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-links a{
 text-decoration:none;
-font-weight:600;
-font-size:15px;
-box-shadow:0 12px 35px rgba(0,0,0,0.5);
+color:white;
+background:#1c1c1c;
+padding:14px;
+border-radius:10px;
 transition:0.3s;
 }
 
-.whatsapp-float:hover{
-transform:translateY(-5px);
+.contact-links a:hover{
+background:#25D366;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:900px){
 
-.content-block,
-.content-block.reverse{
+.section{
 flex-direction:column;
 }
 
-.hero{
-padding-top:120px;
-height:auto;
-padding-bottom:80px;
-}
-
-.hero h1{
-font-size:36px;
-}
-
-.nav{
-position:absolute;
-top:80px;
-right:0;
-background:#000;
+.section img,
+.section-content{
 width:100%;
-flex-direction:column;
-align-items:center;
-padding:30px 0;
-display:none;
 }
 
-.nav.active{
-display:flex;
+nav{
+display:none;
 }
 
 .menu-toggle{
@@ -220,79 +217,69 @@ display:block;
 
 <body>
 
-<header class="header">
+<header>
 <div class="logo">CHL CONSTRUCTORA</div>
-
-<nav class="nav" id="nav">
+<nav>
 <a href="index.html">INICIO</a>
 <a href="trabajadores.html">TRABAJADORES</a>
 <a href="empresas.html">EMPRESAS</a>
-<a href="informacion.html">INFORMACIÓN</a>
+<a href="#">INFORMACIÓN</a>
 </nav>
-
-<div class="menu-toggle" id="menu-toggle">☰</div>
+<div class="menu-toggle">☰</div>
 </header>
 
 <section class="hero">
 <div class="hero-content">
-<h1>Conectamos talento cualificado con empresas profesionales</h1>
+<h1>Tramitación y gestión profesional de personal cualificado</h1>
 <p>
-Gestión estructurada y coordinación directa entre profesionales
-y empresas que buscan compromiso y seriedad.
+Conectamos talento preparado con empresas que valoran la responsabilidad,
+la estructura y el compromiso profesional. Coordinación directa y procesos
+organizados.
 </p>
 </div>
 </section>
 
-<section class="main-block">
-
-<div class="content-block">
-<div class="text">
-<h2>¿Buscas empleo en Suiza?</h2>
+<section class="section">
+<img src="https://images.unsplash.com/photo-1581091870627-3c65a9d9a13f">
+<div class="section-content">
+<h2>¿Estás buscando empleo?</h2>
 <p>
-Gestionamos y tramitamos oportunidades laborales con empresas
-verificadas. Coordinamos el proceso administrativo y te acompañamos
-durante cada fase de incorporación profesional.
+Analizamos tu perfil profesional y gestionamos oportunidades reales con
+empresas verificadas. Te acompañamos en la tramitación y coordinación
+administrativa necesaria para una incorporación segura y organizada.
 </p>
-<a href="trabajadores.html" class="block-button">
-IR A TRABAJADORES
-</a>
+<a href="trabajadores.html" class="btn">MÁS INFORMACIÓN</a>
 </div>
-<div class="image">
-<img src="https://images.unsplash.com/photo-1581090700227-1e8e9b6c6a0b" alt="Trabajadores profesionales">
-</div>
-</div>
-
-<div class="content-block reverse">
-<div class="text">
-<h2>¿Necesitas personal cualificado?</h2>
-<p>
-Seleccionamos y coordinamos profesionales responsables según las
-necesidades de tu empresa. Procesos organizados, comunicación directa
-y gestión documental estructurada.
-</p>
-<a href="empresas.html" class="block-button">
-IR A EMPRESAS
-</a>
-</div>
-<div class="image">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Empresa construcción">
-</div>
-</div>
-
 </section>
 
-<a href="https://wa.me/34600111222" class="whatsapp-float" target="_blank">
-CONTACTAR POR WHATSAPP
-</a>
+<section class="section">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+<div class="section-content">
+<h2>¿Estás buscando personal cualificado?</h2>
+<p>
+Seleccionamos perfiles profesionales responsables adaptados a las necesidades
+de tu empresa. Gestión estructurada, comunicación directa y coordinación
+eficiente durante todo el proceso.
+</p>
+<a href="empresas.html" class="btn">MÁS INFORMACIÓN</a>
+</div>
+</section>
 
-<script>
-const toggle=document.getElementById("menu-toggle");
-const nav=document.getElementById("nav");
+<section class="info">
+<div class="info-card">
+<h3>Información y Contacto</h3>
+<p>
+Atención directa y coordinación profesional. Respuesta rápida vía teléfono
+o WhatsApp.
+</p>
 
-toggle.addEventListener("click",()=>{
-nav.classList.toggle("active");
-});
-</script>
+<div class="contact-links">
+<a href="tel:+34600111222">📞 +34 600 111 222</a>
+<a href="https://wa.me/34600111222" target="_blank">💬 Contactar por WhatsApp</a>
+</div>
+
+</div>
+</section>
 
 </body>
 </html>
