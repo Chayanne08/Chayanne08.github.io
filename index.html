@@ -98,7 +98,6 @@ nav a:hover{opacity:1;}
 nav a:hover::after{width:100%;}
 nav.active{right:0;}
 
-/* HERO */
 .hero{
 height:100vh;
 background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -130,7 +129,6 @@ color:#e5e5e5;
 line-height:1.6;
 }
 
-/* SECTION */
 .section{padding:70px 8%;}
 
 .card{
@@ -155,7 +153,6 @@ border-radius:4px;
 font-weight:600;
 }
 
-/* CONTACT */
 .contact{
 background:#111;
 padding:70px 8%;
@@ -232,7 +229,6 @@ garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo.
 <p data-i="emp_3">• Presentación a empresas colaboradoras.</p>
 <p data-i="emp_4">• Confirmación de condiciones y aprobación.</p>
 <p data-i="emp_5">• Inicio del proceso de contratación legal en Suiza.</p>
-
 <a href="#" class="btn" data-i="btn1">Solicitar información</a>
 </div>
 
@@ -245,7 +241,6 @@ garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo.
 <p data-i="per_4">• Gestión documental previa.</p>
 <p data-i="per_5">• Coordinación de incorporación.</p>
 <p data-i="per_6">• Seguimiento inicial.</p>
-
 <a href="#" class="btn" data-i="btn1">Solicitar información</a>
 </div>
 
@@ -278,14 +273,7 @@ document.getElementById("menu").classList.toggle("active");
 
 let lang="es";
 
-function toggleLanguage(){
-lang = (lang==="es") ? "de" : "es";
-applyLang();
-}
-
-function applyLang(){
-
-const t={
+const translations={
 de:{
 menu1:"Berufliche Integration in der Schweiz",
 menu2:"Professionelle Personalauswahl",
@@ -326,12 +314,14 @@ btn2:"Per WhatsApp kontaktieren"
 }
 };
 
-if(lang==="de"){
-document.querySelectorAll("[data-i]").forEach(el=>{
-el.innerHTML=t.de[el.getAttribute("data-i")];
-});
-}else{
+function toggleLanguage(){
+lang = (lang==="es") ? "de" : "es";
+if(lang==="es"){
 location.reload();
+}else{
+document.querySelectorAll("[data-i]").forEach(el=>{
+el.innerHTML=translations.de[el.getAttribute("data-i")];
+});
 }
 }
 </script>
