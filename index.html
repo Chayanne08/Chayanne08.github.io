@@ -42,32 +42,33 @@ font-size:24px;
 cursor:pointer;
 }
 
-/* MENU PREMIUM */
+/* MENU (ARREGLADO SOLO ESTO) */
 
 nav{
 position:fixed;
 top:0;
 right:-100%;
-width:45%;
+width:260px; /* antes 45% */
 height:100vh;
-background:linear-gradient(to bottom,#0a0a0a,#111);
+background:#0b0b0b; /* fondo sólido más profesional */
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-transition:0.35s ease;
-box-shadow:-5px 0 30px rgba(0,0,0,0.6);
+transition:0.3s ease;
+box-shadow:-10px 0 30px rgba(0,0,0,0.8);
+z-index:999;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin:18px 0;
-font-size:16px;
+font-size:14px; /* un poco más pequeño */
 font-weight:500;
 letter-spacing:1.5px;
 text-transform:uppercase;
-opacity:0.8;
+opacity:0.85;
 transition:0.3s;
 position:relative;
 }
