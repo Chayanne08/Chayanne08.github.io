@@ -3,257 +3,288 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestión Profesional de Mano de Obra para Suiza</title>
+<title>CHL Constructora</title>
 
-<!-- NUEVA TIPOGRAFÍA EJECUTIVA -->
+<!-- Nueva tipografía más ejecutiva -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: #ffffff;
-    color: #111;
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#0f0f0f;
+color:white;
+scroll-behavior:smooth;
 }
 
-/* HERO - NO TOCO TU IMAGEN */
-.hero {
-    background: url("tu-imagen.jpg") center/cover no-repeat;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+z-index:1000;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
+.logo{
+font-weight:700;
+letter-spacing:2px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
+.menu-toggle{
+font-size:26px;
+cursor:pointer;
 }
 
-.hero h1 {
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+/* MENU */
+
+nav{
+position:fixed;
+top:0;
+right:-100%;
+width:70%;
+height:100vh;
+background:#111;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:0.4s;
 }
 
-/* BOTONES */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 10px;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-    font-weight: 600;
+nav a{
+color:white;
+text-decoration:none;
+margin:25px 0;
+font-size:20px;
 }
 
-.btn:hover {
-    background: #222;
+nav.active{right:0;}
+
+/* HERO (NO TOCAMOS IMAGEN) */
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
 }
 
-/* MENÚ */
-nav {
-    position: fixed;
-    width: 100%;
-    background: #000;
-    color: #fff;
-    padding: 15px;
-    z-index: 1000;
+.hero h1{
+background:rgba(0,0,0,0.65);
+padding:30px;
+font-size:30px;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
+max-width:900px;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* SECTION */
+
+.section{
+padding:70px 8%;
 }
 
-.menu-links {
-    display: none;
-    flex-direction: column;
-    background: #000;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
+/* TARJETAS MÁS PROFESIONALES */
+
+.card{
+background:#161616;
+padding:35px;
+border-radius:12px;
+margin-bottom:30px;
+box-shadow:0 8px 25px rgba(0,0,0,0.6);
+border:1px solid #222;
+transition:0.3s ease;
 }
 
-.menu-links a {
-    color: white;
-    padding: 12px;
-    text-decoration: none;
-    font-weight: 500;
+.card:hover{
+transform:translateY(-4px);
+border-color:#25D366;
 }
 
-.menu-links a:hover {
-    background: #222;
+.card h2{
+margin-bottom:25px;
+font-weight:700;
+position:relative;
+padding-bottom:12px;
 }
 
-.menu-toggle {
-    cursor: pointer;
-    font-size: 25px;
+/* Línea profesional debajo del título */
+.card h2::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:50px;
+height:3px;
+background:#25D366;
 }
 
-/* SECCIONES */
-section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
+.card p{
+color:#e5e5e5;
+margin-bottom:12px;
+line-height:1.6;
 }
 
-/* TÍTULOS CON LÍNEA PROFESIONAL */
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 24px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+transition:0.3s;
 }
 
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #000;
-    margin: 10px auto 0;
+.btn:hover{
+background:#1ebe5d;
 }
 
-/* TARJETAS PROFESIONALIZADAS */
-.box {
-    background: #f8f8f8;
-    padding: 35px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    border: 1px solid #e5e5e5;
-    transition: 0.3s ease;
+/* CONTACT */
+
+.contact{
+background:#111;
+padding:70px 8%;
+text-align:center;
+border-top:1px solid #222;
 }
 
-.box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+.contact-box{
+background:#161616;
+padding:45px;
+border-radius:12px;
+max-width:600px;
+margin:auto;
+border:1px solid #222;
 }
 
-.box strong {
-    font-weight: 700;
-    display: block;
-    margin-bottom: 10px;
+.contact-box h2{
+margin-bottom:20px;
+font-weight:700;
 }
 
-.box {
-    color: #222; /* MÁS OSCURO Y LEGIBLE */
-    line-height: 1.6;
+.contact-box p{
+color:#e5e5e5;
+margin-bottom:20px;
 }
 
-/* CONTACTO MÁS LIMPIO */
-.contacto {
-    text-align: center;
-    font-size: 18px;
-    background: #f4f4f4;
-    padding: 40px;
-    border-radius: 10px;
-    border: 1px solid #e5e5e5;
+.contact-number{
+font-size:18px;
+margin-bottom:20px;
+letter-spacing:1px;
 }
+
+.whatsapp-button{
+display:inline-block;
+padding:14px 28px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+transition:0.3s;
+}
+
+.whatsapp-button:hover{
+background:#1ebe5d;
+}
+
 </style>
 </head>
 
 <body>
 
-<nav>
-<div class="menu">
-<div><strong>Gestión Profesional</strong></div>
+<header>
+<div class="logo">CHL CONSTRUCTORA</div>
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<div class="menu-links" id="menu">
-<a href="#inicio">Inicio</a>
-<a href="trabajadores.html">Busco empleo</a>
-<a href="empresas.html">Busco personal</a>
+</header>
+
+<nav id="menu">
+<a href="#empleo">Busco empleo</a>
+<a href="#personal">Busco personal</a>
+<a href="#servicios">Servicios</a>
 <a href="#contacto">Contacto</a>
-</div>
-</div>
 </nav>
 
-<!-- HERO -->
-<div class="hero" id="inicio">
-<div class="hero-content">
+<section class="hero">
 <h1>TRAMITACIÓN Y GESTIÓN PROFESIONAL DE MANO DE OBRA PARA SUIZA</h1>
-<a href="trabajadores.html" class="btn">Busco empleo</a>
-<a href="empresas.html" class="btn">Busco personal</a>
-</div>
-</div>
-
-<!-- QUIÉNES SOMOS -->
-<section>
-<h2>¿Quiénes somos?</h2>
-<div class="box">
-Somos un servicio profesional especializado en la tramitación y gestión de trabajadores españoles para el mercado laboral suizo.
-Ofrecemos un proceso transparente, serio y eficiente tanto para candidatos como para empresas.
-</div>
 </section>
 
-<!-- CÓMO TRABAJAMOS -->
-<section>
-<h2>¿Cómo trabajamos?</h2>
-<div class="box">
-Seleccionamos perfiles adecuados según las necesidades reales de cada empresa.
-Acompañamos al trabajador durante todo el proceso: documentación, adaptación y seguimiento.
-</div>
-</section>
+<section class="section">
 
-<!-- SERVICIOS -->
-<section>
+<div class="card" id="empleo">
+<h2>Busco empleo</h2>
+<p>Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional.</p>
+<p><strong>Procedimiento:</strong></p>
+<p>• Evaluación y análisis de perfil profesional.</p>
+<p>• Verificación de experiencia y especialización técnica.</p>
+<p>• Coordinación documental.</p>
+<p>• Presentación a empresas adecuadas.</p>
+<p>• Seguimiento hasta incorporación efectiva.</p>
+
+<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20trabajar%20en%20Suiza" class="btn" target="_blank">
+Solicitar información
+</a>
+</div>
+
+<div class="card" id="personal">
+<h2>Busco personal</h2>
+<p>Ofrecemos a empresas suizas un servicio integral de selección y coordinación de profesionales cualificados.</p>
+<p><strong>Procedimiento:</strong></p>
+<p>• Evaluación técnica de perfiles.</p>
+<p>• Selección según necesidades del proyecto.</p>
+<p>• Gestión documental previa.</p>
+<p>• Coordinación de incorporación.</p>
+<p>• Seguimiento inicial.</p>
+
+<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20personal%20para%20mi%20empresa" class="btn" target="_blank">
+Solicitar información
+</a>
+</div>
+
+<div class="card" id="servicios">
 <h2>Servicios</h2>
-
-<div class="box">
-<strong>Selección y validación de perfiles</strong>
-Búsqueda personalizada de candidatos cualificados según las necesidades de cada empresa.
-</div>
-
-<div class="box">
-<strong>Traducción profesional de currículums</strong>
-Adaptación de CV al mercado suizo (alemán o francés).
-</div>
-
-<div class="box">
-<strong>Gestión de alojamiento</strong>
-Apoyo en la búsqueda de vivienda para facilitar la incorporación.
-</div>
-
-<div class="box">
-<strong>Acompañamiento integral</strong>
-Asesoramiento durante todo el proceso administrativo y laboral.
+<p>Además de la coordinación de personal, ofrecemos servicios complementarios para garantizar una integración eficiente y profesional:</p>
+<p>• Evaluación avanzada de perfiles profesionales.</p>
+<p>• Traducción y adaptación de currículums al mercado suizo.</p>
+<p>• Asesoramiento documental.</p>
+<p>• Gestión y coordinación de alojamiento.</p>
+<p>• Acompañamiento durante todo el proceso de incorporación.</p>
+<p>• Soporte personalizado para empresas y trabajadores.</p>
 </div>
 
 </section>
 
-<!-- CONTACTO -->
-<section id="contacto">
+<section class="contact" id="contacto">
+<div class="contact-box">
 <h2>Contacto</h2>
-<div class="contacto">
-+41 76 740 15 41
+<p>Para información profesional directa, puede contactarnos a través de WhatsApp.</p>
+<div class="contact-number">+41 76 740 15 41</div>
+
+<a href="https://wa.me/41767401541" class="whatsapp-button" target="_blank">
+Contactar por WhatsApp
+</a>
 </div>
 </section>
 
 <script>
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "flex";
-    }
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
