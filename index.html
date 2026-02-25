@@ -42,19 +42,20 @@ font-size:24px;
 cursor:pointer;
 }
 
-/* MENU (ARREGLADO SOLO ESTO) */
+/* MENU (ARREGLADO SOLO TAMAÑO Y POSICIÓN) */
 
 nav{
 position:fixed;
-top:0;
+top:80px; /* ahora empieza debajo del header */
 right:-100%;
-width:260px; /* antes 45% */
-height:100vh;
-background:#0b0b0b; /* fondo sólido más profesional */
+width:260px;
+height:calc(100vh - 80px); /* ya no ocupa toda la pantalla completa */
+background:#0b0b0b;
 display:flex;
 flex-direction:column;
-justify-content:center;
+justify-content:flex-start; /* empieza desde arriba */
 align-items:center;
+padding-top:60px;
 transition:0.3s ease;
 box-shadow:-10px 0 30px rgba(0,0,0,0.8);
 z-index:999;
@@ -64,7 +65,7 @@ nav a{
 color:white;
 text-decoration:none;
 margin:18px 0;
-font-size:14px; /* un poco más pequeño */
+font-size:14px;
 font-weight:500;
 letter-spacing:1.5px;
 text-transform:uppercase;
