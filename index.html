@@ -7,133 +7,165 @@
 
 <style>
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: #0b1c2d;
-  color: white;
-  line-height: 1.6;
+body{
+color:white;
+background:#000;
+}
+
+/* HERO CON IMAGEN */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
 }
 
 /* HEADER */
-.header {
-  background: #081520;
-  padding: 20px 40px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+.header{
+position:fixed;
+top:0;
+width:100%;
+background:#000;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.logo{
+font-size:22px;
+letter-spacing:3px;
+font-weight:bold;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
+.nav{
+display:flex;
+gap:35px;
 }
 
-.nav {
-  display: flex;
-  gap: 30px;
+.nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
 }
 
-.nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
+.nav a:hover{
+color:#25D366;
 }
 
-.nav a:hover {
-  color: #4da3ff;
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
+/* TEXTO HERO */
+.hero-content{
+max-width:750px;
 }
 
-/* SECCIONES */
-section {
-  padding: 120px 40px 60px 40px;
-  max-width: 1100px;
-  margin: auto;
+.hero h1{
+font-size:56px;
+margin-bottom:25px;
+line-height:1.1;
 }
 
-h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.hero p{
+font-size:20px;
+color:#ccc;
+margin-bottom:40px;
 }
 
-h2 {
-  margin-top: 40px;
-  margin-bottom: 15px;
-  font-size: 24px;
+/* SERVICIOS */
+.services{
+padding:120px 8%;
+background:#0a0a0a;
 }
 
-ul {
-  margin-top: 10px;
+.services h2{
+font-size:32px;
+margin-bottom:30px;
 }
 
-li {
-  margin-bottom: 10px;
+.services ul{
+list-style:none;
 }
 
-/* WHATSAPP PREMIUM */
-.whatsapp-float {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: linear-gradient(135deg, #1f8f4e, #25D366);
-  color: white;
-  padding: 14px 26px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  transition: all 0.3s ease;
+.services li{
+margin-bottom:18px;
+font-size:18px;
 }
 
-.whatsapp-float:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+/* BOTÓN WHATSAPP PREMIUM */
+.whatsapp-float{
+position:fixed;
+bottom:35px;
+right:35px;
+background:linear-gradient(135deg,#128C7E,#25D366);
+color:white;
+padding:16px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+font-size:15px;
+box-shadow:0 12px 35px rgba(0,0,0,0.5);
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:translateY(-5px);
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-  .nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #081520;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0;
-    display: none;
-  }
+.hero h1{
+font-size:38px;
+}
 
-  .nav.active {
-    display: flex;
-  }
+.hero{
+padding-top:120px;
+height:auto;
+padding-bottom:80px;
+}
 
-  .menu-toggle {
-    display: block;
-  }
+.nav{
+position:absolute;
+top:80px;
+right:0;
+background:#000;
+width:100%;
+flex-direction:column;
+align-items:center;
+padding:30px 0;
+display:none;
+}
+
+.nav.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.whatsapp-float{
+font-size:14px;
+padding:14px 24px;
+}
 
 }
 
@@ -143,26 +175,30 @@ li {
 <body>
 
 <header class="header">
-  <div class="container">
-    <div class="logo">CHL CONSTRUCTORA</div>
-    <nav class="nav" id="nav">
-      <a href="index.html">INICIO</a>
-      <a href="trabajadores.html">TRABAJADORES</a>
-      <a href="empresas.html">EMPRESAS</a>
-      <a href="informacion.html">INFORMACIÓN</a>
-    </nav>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-  </div>
+<div class="logo">CHL CONSTRUCTORA</div>
+
+<nav class="nav" id="nav">
+<a href="index.html">INICIO</a>
+<a href="trabajadores.html">TRABAJADORES</a>
+<a href="empresas.html">EMPRESAS</a>
+<a href="informacion.html">INFORMACIÓN</a>
+</nav>
+
+<div class="menu-toggle" id="menu-toggle">☰</div>
 </header>
 
-<section>
+<section class="hero">
+<div class="hero-content">
 <h1>Tramitación y gestión profesional de personal cualificado</h1>
 <p>
 Coordinamos procesos de incorporación laboral de forma organizada,
 garantizando gestión administrativa estructurada y comunicación directa
 entre empresas y profesionales.
 </p>
+</div>
+</section>
 
+<section class="services">
 <h2>Nuestros servicios</h2>
 <ul>
 <li>✔ Gestión documental y administrativa</li>
@@ -181,7 +217,7 @@ const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav");
 
 toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
+nav.classList.toggle("active");
 });
 </script>
 
