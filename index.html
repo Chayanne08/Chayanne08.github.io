@@ -42,20 +42,19 @@ font-size:24px;
 cursor:pointer;
 }
 
-/* MENU (ARREGLADO SOLO TAMAÑO Y POSICIÓN) */
+/* MENU */
 
 nav{
 position:fixed;
-top:80px; /* ahora empieza debajo del header */
+top:0;
 right:-100%;
 width:260px;
-height:calc(100vh - 80px); /* ya no ocupa toda la pantalla completa */
+height:100vh;
 background:#0b0b0b;
 display:flex;
 flex-direction:column;
-justify-content:flex-start; /* empieza desde arriba */
+justify-content:center;
 align-items:center;
-padding-top:60px;
 transition:0.3s ease;
 box-shadow:-10px 0 30px rgba(0,0,0,0.8);
 z-index:999;
@@ -99,13 +98,15 @@ nav.active{right:0;}
 
 .hero{
 height:100vh;
+padding-top:100px; /* 👈 ESTE ES EL ARREGLO REAL */
 background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:0 20px;
+padding-left:20px;
+padding-right:20px;
 }
 
 .hero-box{
@@ -221,82 +222,4 @@ font-weight:600;
 <nav id="menu">
 <a href="#empleo">Incorporación Profesional en Suiza</a>
 <a href="#personal">Selección Profesional de Personal</a>
-<a href="#servicios">Servicios</a>
-<a href="#contacto">Contacto</a>
-</nav>
-
-<section class="hero">
-<div class="hero-box">
-<h1>Tramitación y Gestión Profesional de Mano de Obra para Suiza</h1>
-<p>
-Especialistas en la coordinación y tramitación de profesionales cualificados del sector construcción.
-Gestionamos procesos completos de selección, documentación e incorporación,
-garantizando eficiencia, seguridad y cumplimiento normativo en el mercado suizo.
-</p>
-</div>
-</section>
-
-<section class="section">
-
-<div class="card" id="empleo">
-<h2>Incorporación Profesional en Suiza</h2>
-<p>Gestionamos la incorporación de profesionales del sector construcción al mercado suizo mediante un proceso estructurado y profesional.</p>
-<p><strong>Procedimiento:</strong></p>
-<p>• Recepción y análisis de candidatura.</p>
-<p>• Presentación a empresas colaboradoras.</p>
-<p>• Confirmación de condiciones y aprobación.</p>
-<p>• Inicio del proceso de contratación legal en Suiza.</p>
-
-<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20trabajar%20en%20Suiza" class="btn" target="_blank">
-Solicitar información
-</a>
-</div>
-
-<div class="card" id="personal">
-<h2>Selección Profesional de Personal</h2>
-<p>Ofrecemos a empresas suizas un servicio integral de selección y coordinación de profesionales cualificados.</p>
-<p><strong>Procedimiento:</strong></p>
-<p>• Evaluación técnica de perfiles.</p>
-<p>• Selección según necesidades del proyecto.</p>
-<p>• Gestión documental previa.</p>
-<p>• Coordinación de incorporación.</p>
-<p>• Seguimiento inicial.</p>
-
-<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20personal%20para%20mi%20empresa" class="btn" target="_blank">
-Solicitar información
-</a>
-</div>
-
-<div class="card" id="servicios">
-<h2>Servicios</h2>
-<p>Además de la coordinación de personal, ofrecemos servicios complementarios para garantizar una integración eficiente y profesional:</p>
-<p>• Evaluación avanzada de perfiles profesionales.</p>
-<p>• Traducción y adaptación de currículums al mercado suizo.</p>
-<p>• Asesoramiento documental.</p>
-<p>• Gestión y coordinación de alojamiento.</p>
-<p>• Acompañamiento durante todo el proceso de incorporación.</p>
-<p>• Soporte personalizado para empresas y trabajadores.</p>
-</div>
-
-</section>
-
-<section class="contact" id="contacto">
-<div class="contact-box">
-<h2>Contacto</h2>
-<p>Para información profesional directa, puede contactarnos a través de WhatsApp.</p>
-<div class="contact-number">+41 76 740 15 41</div>
-
-<a href="https://wa.me/41767401541" class="whatsapp-button" target="_blank">
-Contactar por WhatsApp
-</a>
-</div>
-</section>
-
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
-
-</body>
-</html>
+<a href="#servicios">
