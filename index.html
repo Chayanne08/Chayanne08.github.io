@@ -9,114 +9,101 @@
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#111;
+color:white;
+scroll-behavior:smooth;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0f0f0f;
-    color: #ffffff;
+header{
+position:fixed;
+top:0;
+width:100%;
+background:black;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+z-index:1000;
 }
 
-section {
-    padding: 80px 8%;
+.logo{
+font-weight:800;
+letter-spacing:3px;
 }
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.menu-toggle{
+font-size:28px;
+cursor:pointer;
 }
 
-h1, h2 {
-    text-transform: uppercase;
-    letter-spacing: 3px;
+nav{
+position:fixed;
+top:0;
+right:-100%;
+width:70%;
+height:100vh;
+background:#1a1a1a;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:0.4s;
 }
 
-h1 {
-    font-size: 42px;
-    font-weight: 800;
+nav a{
+color:white;
+text-decoration:none;
+margin:20px 0;
+font-size:20px;
+letter-spacing:2px;
 }
 
-h2 {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 25px;
+nav.active{right:0;}
+
+section{
+padding:120px 8%;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-p {
-    color: #cccccc;
-    line-height: 1.7;
-    font-size: 17px;
-    max-width: 600px;
-    margin-top: 20px;
+.hero{
+background:#0f0f0f;
+text-align:center;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 35px;
-    padding: 14px 35px;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s ease;
+h1{
+font-size:34px;
+margin-bottom:20px;
 }
 
-.btn:hover {
-    background-color: #ffffff;
-    color: #0f0f0f;
+h2{
+font-size:26px;
+margin-bottom:20px;
 }
 
-.dark-section {
-    background-color: #1a1a1a;
+p{
+color:#ccc;
+line-height:1.6;
+max-width:700px;
+margin-bottom:15px;
 }
 
-.split {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.split img {
-    width: 100%;
-    max-width: 420px;
-    border-radius: 8px;
-}
-
-footer {
-    background-color: #000000;
-    text-align: center;
-    padding: 60px 8%;
-}
-
-@media (max-width: 768px) {
-
-    section {
-        padding: 60px 6%;
-    }
-
-    h1 {
-        font-size: 34px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    .split {
-        flex-direction: column;
-        text-align: center;
-    }
-
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:black;
+color:white;
+text-decoration:none;
+font-weight:600;
+letter-spacing:1px;
+border-radius:6px;
 }
 
 </style>
@@ -124,47 +111,62 @@ footer {
 
 <body>
 
-<section class="hero">
-    <h1>CHL CONSTRUCTORA</h1>
-    <p>Gestión y tramitación de mano de obra española para el mercado suizo.</p>
-    <a href="#contacto" class="btn">CONTACTAR</a>
+<header>
+<div class="logo">CHL CONSTRUCTORA</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="menu">
+<a href="#inicio">Inicio</a>
+<a href="#empleo">Busco empleo</a>
+<a href="#personal">Busco personal</a>
+<a href="#quienes">Quiénes somos</a>
+<a href="#como">Cómo trabajamos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio" class="hero">
+<h1>TRAMITACIÓN PROFESIONAL DE MANO DE OBRA ESPAÑOLA PARA SUIZA</h1>
+<p>Especialistas en gestión y coordinación de profesionales del sector construcción para empresas en Suiza.</p>
 </section>
 
-<section class="dark-section">
-    <h2>QUIÉNES SOMOS</h2>
-    <div class="split">
-        <p>
-            En CHL Constructora gestionamos y tramitamos mano de obra cualificada española 
-            para empresas del sector de la construcción en Suiza. 
-            Ofrecemos un servicio profesional, eficiente y totalmente adaptado a las exigencias del mercado suizo.
-        </p>
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Construcción">
-    </div>
+<section id="empleo">
+<h2>Busco empleo</h2>
+<p>Si eres profesional del sector construcción y quieres trabajar en Suiza, te ayudamos en el proceso de coordinación y conexión con empresas serias.</p>
+<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20trabajar%20en%20Suiza" class="btn" target="_blank">
+SOLICITAR INFORMACIÓN
+</a>
 </section>
 
-<section>
-    <h2>SERVICIOS</h2>
-    <div class="split">
-        <img src="https://images.unsplash.com/photo-1581092919535-7146ff1f9e3b" alt="Equipo construcción">
-        <p>
-            Selección de personal cualificado, gestión documental, coordinación logística 
-            y asesoramiento integral para empresas que requieren mano de obra especializada.
-        </p>
-    </div>
+<section id="personal">
+<h2>Busco personal</h2>
+<p>Seleccionamos profesionales españoles cualificados y coordinamos su incorporación eficiente en empresas del sector construcción en Suiza.</p>
+<a href="https://wa.me/41767401541?text=Hola,%20quiero%20información%20sobre%20personal%20para%20mi%20empresa" class="btn" target="_blank">
+SOLICITAR INFORMACIÓN
+</a>
 </section>
 
-<section class="dark-section" id="contacto">
-    <h2>CONTACTO</h2>
-    <p>
-        Para más información sobre nuestros servicios y colaboración empresarial,
-        puede ponerse en contacto con nosotros.
-    </p>
-    <a href="mailto:info@chlconstructora.com" class="btn">ENVIAR EMAIL</a>
+<section id="quienes">
+<h2>Quiénes somos</h2>
+<p>CHL Constructora es una empresa dedicada a la tramitación y coordinación de mano de obra española para el mercado suizo, especializada en el sector construcción.</p>
 </section>
 
-<footer>
-    <p>© 2026 CHL Constructora. Todos los derechos reservados.</p>
-</footer>
+<section id="como">
+<h2>Cómo trabajamos</h2>
+<p>Realizamos una preselección de perfiles profesionales, coordinamos la documentación necesaria y organizamos la incorporación directa con empresas en Suiza.</p>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<p>Puedes contactar directamente con nosotros:</p>
+<p><strong>+41 76 740 15 41</strong></p>
+</section>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
