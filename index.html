@@ -15,23 +15,11 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-color:white;
 background:#000;
 }
 
-/* HERO CON IMAGEN */
-.hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding:0 8%;
-}
-
 /* HEADER */
+
 .header{
 position:fixed;
 top:0;
@@ -45,6 +33,7 @@ z-index:1000;
 }
 
 .logo{
+color:white;
 font-size:22px;
 letter-spacing:3px;
 font-weight:bold;
@@ -70,15 +59,29 @@ color:#25D366;
 display:none;
 font-size:28px;
 cursor:pointer;
+color:white;
 }
 
-/* TEXTO HERO */
+/* HERO */
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+}
+
 .hero-content{
 max-width:750px;
 }
 
 .hero h1{
-font-size:56px;
+font-size:55px;
 margin-bottom:25px;
 line-height:1.1;
 }
@@ -86,30 +89,72 @@ line-height:1.1;
 .hero p{
 font-size:20px;
 color:#ccc;
-margin-bottom:40px;
 }
 
-/* SERVICIOS */
-.services{
+/* MAIN BLOCKS */
+
+.main-block{
+background:#f4f4f4;
 padding:120px 8%;
-background:#0a0a0a;
 }
 
-.services h2{
-font-size:32px;
-margin-bottom:30px;
+.content-block{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:120px;
+gap:60px;
 }
 
-.services ul{
-list-style:none;
+.content-block.reverse{
+flex-direction:row-reverse;
 }
 
-.services li{
-margin-bottom:18px;
+.text{
+flex:1;
+}
+
+.text h2{
+font-size:34px;
+margin-bottom:20px;
+color:#111;
+}
+
+.text p{
 font-size:18px;
+color:#555;
+margin-bottom:30px;
+line-height:1.6;
 }
 
-/* BOTÓN WHATSAPP PREMIUM */
+.block-button{
+display:inline-block;
+padding:14px 30px;
+background:black;
+color:white;
+text-decoration:none;
+font-weight:600;
+border-radius:6px;
+transition:0.3s;
+}
+
+.block-button:hover{
+background:#333;
+transform:translateY(-3px);
+}
+
+.image{
+flex:1;
+}
+
+.image img{
+width:100%;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* WHATSAPP */
+
 .whatsapp-float{
 position:fixed;
 bottom:35px;
@@ -130,16 +175,22 @@ transform:translateY(-5px);
 }
 
 /* RESPONSIVE */
-@media(max-width:768px){
 
-.hero h1{
-font-size:38px;
+@media(max-width:900px){
+
+.content-block,
+.content-block.reverse{
+flex-direction:column;
 }
 
 .hero{
 padding-top:120px;
 height:auto;
 padding-bottom:80px;
+}
+
+.hero h1{
+font-size:36px;
 }
 
 .nav{
@@ -160,11 +211,6 @@ display:flex;
 
 .menu-toggle{
 display:block;
-}
-
-.whatsapp-float{
-font-size:14px;
-padding:14px 24px;
 }
 
 }
@@ -189,23 +235,50 @@ padding:14px 24px;
 
 <section class="hero">
 <div class="hero-content">
-<h1>Tramitación y gestión profesional de personal cualificado</h1>
+<h1>Conectamos talento cualificado con empresas profesionales</h1>
 <p>
-Coordinamos procesos de incorporación laboral de forma organizada,
-garantizando gestión administrativa estructurada y comunicación directa
-entre empresas y profesionales.
+Gestión estructurada y coordinación directa entre profesionales
+y empresas que buscan compromiso y seriedad.
 </p>
 </div>
 </section>
 
-<section class="services">
-<h2>Nuestros servicios</h2>
-<ul>
-<li>✔ Gestión documental y administrativa</li>
-<li>✔ Coordinación empresa – profesional</li>
-<li>✔ Seguimiento operativo</li>
-<li>✔ Procesos estructurados y organizados</li>
-</ul>
+<section class="main-block">
+
+<div class="content-block">
+<div class="text">
+<h2>¿Buscas empleo en Suiza?</h2>
+<p>
+Gestionamos y tramitamos oportunidades laborales con empresas
+verificadas. Coordinamos el proceso administrativo y te acompañamos
+durante cada fase de incorporación profesional.
+</p>
+<a href="trabajadores.html" class="block-button">
+IR A TRABAJADORES
+</a>
+</div>
+<div class="image">
+<img src="https://images.unsplash.com/photo-1581090700227-1e8e9b6c6a0b" alt="Trabajadores profesionales">
+</div>
+</div>
+
+<div class="content-block reverse">
+<div class="text">
+<h2>¿Necesitas personal cualificado?</h2>
+<p>
+Seleccionamos y coordinamos profesionales responsables según las
+necesidades de tu empresa. Procesos organizados, comunicación directa
+y gestión documental estructurada.
+</p>
+<a href="empresas.html" class="block-button">
+IR A EMPRESAS
+</a>
+</div>
+<div class="image">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Empresa construcción">
+</div>
+</div>
+
 </section>
 
 <a href="https://wa.me/34600111222" class="whatsapp-float" target="_blank">
@@ -213,10 +286,10 @@ CONTACTAR POR WHATSAPP
 </a>
 
 <script>
-const toggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav");
+const toggle=document.getElementById("menu-toggle");
+const nav=document.getElementById("nav");
 
-toggle.addEventListener("click", () => {
+toggle.addEventListener("click",()=>{
 nav.classList.toggle("active");
 });
 </script>
