@@ -1,96 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestión Profesional de Personal</title>
+<title>Gestión Profesional de Mano de Obra</title>
+
+<!-- Fuente moderna sólida -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
     color: #222;
 }
 
 header {
-    background-color: #000000;
-    color: white;
-    padding: 60px 20px;
     text-align: center;
+    padding: 60px 20px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 34px;
-    letter-spacing: 1px;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 800px;
+    margin: auto;
 }
 
 section {
-    padding: 80px 20px;
-    max-width: 1200px;
+    padding: 60px 20px;
+    max-width: 1100px;
     margin: auto;
 }
 
 h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.7;
-    max-width: 700px;
 }
 
-.bloque-flex {
-    display: flex;
-    flex-direction: column;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
+    align-items: center;
 }
 
-.bloque {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.bloque img {
+img {
     width: 100%;
-    max-width: 600px;
     border-radius: 10px;
 }
 
-.boton {
+.button {
     display: inline-block;
-    padding: 16px 32px;
-    background-color: #000000;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background-color: #111;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: 600;
     border-radius: 6px;
     transition: 0.3s;
-    width: fit-content;
 }
 
-.boton:hover {
-    background-color: #333333;
+.button:hover {
+    background-color: #333;
 }
 
-.contacto {
-    background-color: #000000;
-    color: white;
+.contact {
     text-align: center;
-    padding: 70px 20px;
+    padding: 60px 20px;
 }
 
-.whatsapp {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #777;
 }
 </style>
 </head>
@@ -98,49 +101,59 @@ p {
 <body>
 
 <header>
-<h1>TRAMITACIÓN Y GESTIÓN PROFESIONAL DE PERSONAL CUALIFICADO</h1>
+    <h1>GESTIONAMOS MANO DE OBRA ESPAÑOLA PARA SUIZA</h1>
+    <p>Tramitación profesional de trabajadores cualificados para empresas suizas. Conectamos talento con oportunidad.</p>
 </header>
 
 <section>
-<h2>¿Quiénes somos?</h2>
-<p>
-Somos una empresa especializada en la gestión y tramitación de personal cualificado entre España y Suiza. 
-Ofrecemos un servicio profesional, transparente y eficiente tanto para trabajadores como para empresas 
-que buscan soluciones laborales fiables.
-</p>
+    <h2>QUIÉNES SOMOS</h2>
+    <p>
+        Somos una empresa especializada en la gestión y tramitación de mano de obra española para el mercado suizo.
+        Nos encargamos de todo el proceso: selección, documentación, coordinación y seguimiento.
+    </p>
 </section>
 
-<section class="bloque-flex">
-
-<div class="bloque">
-<h2>¿Buscas empleo?</h2>
-<img src="trabajadores.jpg" alt="Trabajadores">
-<p>
-Gestionamos oportunidades laborales en Suiza para profesionales cualificados. 
-Te acompañamos en todo el proceso: asesoramiento, documentación y contacto directo con empresas.
-</p>
-<a href="trabajadores.html" class="boton">BUSCO EMPLEO</a>
-</div>
-
-<div class="bloque">
-<h2>¿Buscas personal?</h2>
-<img src="empresa.jpg" alt="Empresa">
-<p>
-Seleccionamos personal preparado desde España para cubrir las necesidades de tu empresa en Suiza. 
-Nos encargamos de la gestión completa para que recibas candidatos listos para incorporarse.
-</p>
-<a href="empresas.html" class="boton">BUSCO PERSONAL</a>
-</div>
-
+<section>
+    <div class="grid">
+        <div>
+            <h2>¿BUSCAS EMPLEO EN SUIZA?</h2>
+            <p>
+                Si eres trabajador cualificado y quieres trabajar en Suiza,
+                gestionamos tu incorporación de manera profesional y segura.
+            </p>
+            <a href="trabajadores.html" class="button">SOY TRABAJADOR</a>
+        </div>
+        <div>
+            <img src="trabajadores.jpg" alt="Trabajadores en obra">
+        </div>
+    </div>
 </section>
 
-<section class="contacto">
-<h2>CONTACTAR</h2>
-<p>Teléfono y WhatsApp directo</p>
-<a class="whatsapp" href="https://wa.me/41767401541" target="_blank">
-+41 76 740 15 41
-</a>
+<section>
+    <div class="grid">
+        <div>
+            <img src="empresa.jpg" alt="Empresa construcción">
+        </div>
+        <div>
+            <h2>¿BUSCAS PERSONAL PARA TU EMPRESA?</h2>
+            <p>
+                Ofrecemos trabajadores cualificados listos para incorporarse
+                en construcción, industria y otros sectores técnicos.
+            </p>
+            <a href="empresas.html" class="button">SOY EMPRESA</a>
+        </div>
+    </div>
 </section>
+
+<section class="contact">
+    <h2>CONTACTO</h2>
+    <p>📞 +41 76 740 15 41</p>
+    <a href="https://wa.me/41767401541" class="button">ESCRIBIR POR WHATSAPP</a>
+</section>
+
+<footer>
+    © 2026 Gestión Profesional de Mano de Obra
+</footer>
 
 </body>
 </html>
