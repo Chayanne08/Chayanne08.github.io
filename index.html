@@ -3,377 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHL Constructora | Construcción, Reformas y Personal para Suiza</title>
+<title>CHL Constructora | Construcción y Reformas</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-
 html{scroll-behavior:smooth;}
-
-body{
-font-family:'Montserrat',sans-serif;
-background:#080808;
-color:#fff;
-overflow-x:hidden;
-}
+body{font-family:'Montserrat',sans-serif;background:#080808;color:#fff;overflow-x:hidden;}
 
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:74px;
-background:rgba(0,0,0,0.92);
-backdrop-filter:blur(12px);
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 8%;
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.08);
+position:fixed;top:0;left:0;width:100%;height:74px;
+background:rgba(0,0,0,0.92);backdrop-filter:blur(12px);
+display:flex;justify-content:space-between;align-items:center;
+padding:0 8%;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-.logo{
-font-weight:700;
-letter-spacing:2.5px;
-font-size:14px;
-}
-
-.header-right{
-display:flex;
-align-items:center;
-gap:22px;
-}
-
-.lang-switch{
-cursor:pointer;
-font-size:13px;
-letter-spacing:1.5px;
-color:#d6b46d;
-font-weight:600;
-}
-
-.menu-toggle{
-font-size:25px;
-cursor:pointer;
-}
+.logo{font-weight:700;letter-spacing:2.5px;font-size:14px;}
+.header-right{display:flex;align-items:center;gap:22px;}
+.lang-switch{cursor:pointer;font-size:13px;letter-spacing:1.5px;color:#d6b46d;font-weight:600;}
+.menu-toggle{font-size:25px;cursor:pointer;}
 
 nav{
-position:fixed;
-top:74px;
-right:-100%;
-width:290px;
-height:calc(100vh - 74px);
-background:#070707;
-display:flex;
-flex-direction:column;
-align-items:center;
-padding-top:48px;
-transition:0.35s ease;
-box-shadow:-15px 0 40px rgba(0,0,0,0.9);
-z-index:999;
+position:fixed;top:74px;right:-100%;width:290px;height:calc(100vh - 74px);
+background:#070707;display:flex;flex-direction:column;align-items:center;
+padding-top:48px;transition:0.35s ease;box-shadow:-15px 0 40px rgba(0,0,0,0.9);z-index:999;
 }
-
 nav.active{right:0;}
-
 nav a{
-color:#fff;
-text-decoration:none;
-margin:15px 0;
-font-size:13px;
-letter-spacing:1.4px;
-text-transform:uppercase;
-opacity:0.78;
-transition:0.3s;
+color:#fff;text-decoration:none;margin:15px 0;font-size:13px;
+letter-spacing:1.4px;text-transform:uppercase;opacity:0.78;transition:0.3s;
 }
-
-nav a:hover{
-opacity:1;
-color:#d6b46d;
-}
+nav a:hover{opacity:1;color:#d6b46d;}
 
 .hero{
 min-height:100vh;
-background:
-linear-gradient(90deg,rgba(0,0,0,0.88),rgba(0,0,0,0.55),rgba(0,0,0,0.78)),
+background:linear-gradient(90deg,rgba(0,0,0,0.9),rgba(0,0,0,0.55),rgba(0,0,0,0.78)),
 url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1900&q=85') center/cover no-repeat;
-display:flex;
-align-items:center;
-padding:130px 8% 80px;
+display:flex;align-items:center;padding:130px 8% 80px;
 }
-
-.hero-content{
-max-width:950px;
-}
-
-.tag{
-color:#d6b46d;
-font-size:13px;
-font-weight:700;
-letter-spacing:2.7px;
-text-transform:uppercase;
-margin-bottom:18px;
-}
-
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:58px;
-line-height:1.08;
-margin-bottom:24px;
-max-width:900px;
-}
-
-.hero p{
-font-size:17px;
-line-height:1.8;
-color:#e2e2e2;
-max-width:790px;
-}
-
-.hero-buttons{
-display:flex;
-gap:16px;
-flex-wrap:wrap;
-margin-top:35px;
-}
+.hero-content{max-width:950px;}
+.tag{color:#d6b46d;font-size:13px;font-weight:700;letter-spacing:2.7px;text-transform:uppercase;margin-bottom:18px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:58px;line-height:1.08;margin-bottom:24px;max-width:900px;}
+.hero p{font-size:17px;line-height:1.8;color:#e2e2e2;max-width:790px;}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:35px;}
 
 .btn{
-display:inline-block;
-padding:14px 26px;
-background:#25D366;
-color:#fff;
-text-decoration:none;
-border-radius:4px;
-font-weight:700;
-font-size:14px;
-transition:0.3s;
+display:inline-block;padding:14px 26px;background:#25D366;color:#fff;
+text-decoration:none;border-radius:4px;font-weight:700;font-size:14px;transition:0.3s;
 }
-
 .btn:hover{background:#1ebe5d;}
+.btn-outline{background:transparent;border:1px solid #d6b46d;color:#d6b46d;}
+.btn-outline:hover{background:#d6b46d;color:#000;}
 
-.btn-outline{
-background:transparent;
-border:1px solid #d6b46d;
-color:#d6b46d;
-}
+.section{padding:90px 8%;}
+.section-dark{background:#0d0d0d;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);}
+.section-title{font-family:'Playfair Display',serif;font-size:40px;line-height:1.2;margin-bottom:18px;}
+.section-intro{color:#cfcfcf;line-height:1.8;font-size:16px;max-width:850px;margin-bottom:45px;}
 
-.btn-outline:hover{
-background:#d6b46d;
-color:#000;
-}
-
-.section{
-padding:90px 8%;
-}
-
-.section-dark{
-background:#0d0d0d;
-border-top:1px solid rgba(255,255,255,0.06);
-border-bottom:1px solid rgba(255,255,255,0.06);
-}
-
-.section-title{
-font-family:'Playfair Display',serif;
-font-size:40px;
-line-height:1.2;
-margin-bottom:18px;
-}
-
-.section-intro{
-color:#cfcfcf;
-line-height:1.8;
-font-size:16px;
-max-width:850px;
-margin-bottom:45px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-}
-
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .card{
 background:linear-gradient(180deg,#171717,#0f0f0f);
 border:1px solid rgba(255,255,255,0.08);
-padding:34px;
-border-radius:14px;
-box-shadow:0 20px 45px rgba(0,0,0,0.45);
-transition:0.3s;
+padding:34px;border-radius:14px;box-shadow:0 20px 45px rgba(0,0,0,0.45);transition:0.3s;
 }
+.card:hover{transform:translateY(-5px);border-color:rgba(214,180,109,0.45);}
+.card span{display:block;color:#d6b46d;font-size:13px;font-weight:700;letter-spacing:1.5px;margin-bottom:15px;}
+.card h3{font-size:20px;margin-bottom:15px;}
+.card p{color:#c9c9c9;line-height:1.7;font-size:14.5px;}
 
-.card:hover{
-transform:translateY(-5px);
-border-color:rgba(214,180,109,0.45);
-}
-
-.card span{
-display:block;
-color:#d6b46d;
-font-size:13px;
-font-weight:700;
-letter-spacing:1.5px;
-margin-bottom:15px;
-}
-
-.card h3{
-font-size:20px;
-margin-bottom:15px;
-}
-
-.card p{
-color:#c9c9c9;
-line-height:1.7;
-font-size:14.5px;
-}
-
-.split{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:38px;
-align-items:center;
-}
-
+.split{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center;}
 .image-box{
-min-height:460px;
-border-radius:16px;
-background:
-linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.25)),
+min-height:460px;border-radius:16px;
+background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.25)),
 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat;
 box-shadow:0 25px 60px rgba(0,0,0,0.6);
 }
-
 .info-box{
 background:linear-gradient(180deg,#171717,#101010);
 border:1px solid rgba(255,255,255,0.08);
-padding:44px;
-border-radius:16px;
-box-shadow:0 20px 45px rgba(0,0,0,0.45);
+padding:44px;border-radius:16px;box-shadow:0 20px 45px rgba(0,0,0,0.45);
 }
+.info-box p{color:#cfcfcf;line-height:1.8;margin-bottom:16px;}
+.gold{color:#d6b46d;font-weight:700;}
 
-.info-box p{
-color:#cfcfcf;
-line-height:1.8;
-margin-bottom:16px;
-}
-
-.gold{
-color:#d6b46d;
-font-weight:700;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
 .stat{
-background:#151515;
-border:1px solid rgba(255,255,255,0.08);
-border-radius:14px;
-padding:30px 20px;
-text-align:center;
+background:#151515;border:1px solid rgba(255,255,255,0.08);
+border-radius:14px;padding:30px 20px;text-align:center;
 }
+.stat strong{display:block;font-size:32px;color:#d6b46d;margin-bottom:10px;font-family:'Playfair Display',serif;}
+.stat p{color:#cfcfcf;font-size:13.5px;line-height:1.5;}
 
-.stat strong{
-display:block;
-font-size:32px;
-color:#d6b46d;
-margin-bottom:10px;
-font-family:'Playfair Display',serif;
-}
-
-.stat p{
-color:#cfcfcf;
-font-size:13.5px;
-line-height:1.5;
-}
-
-.process{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
-}
-
-.step{
-padding:28px;
-background:#141414;
-border:1px solid rgba(255,255,255,0.08);
-border-radius:14px;
-}
-
-.step small{
-color:#d6b46d;
-font-weight:700;
-letter-spacing:1.3px;
-}
-
-.step h3{
-margin:14px 0 12px;
-font-size:18px;
-}
-
-.step p{
-color:#c9c9c9;
-font-size:14px;
-line-height:1.7;
-}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.step{padding:28px;background:#141414;border:1px solid rgba(255,255,255,0.08);border-radius:14px;}
+.step small{color:#d6b46d;font-weight:700;letter-spacing:1.3px;}
+.step h3{margin:14px 0 12px;font-size:18px;}
+.step p{color:#c9c9c9;font-size:14px;line-height:1.7;}
 
 .contact{
 padding:95px 8%;
-background:
-linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.9)),
+background:linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.9)),
 url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;
 text-align:center;
 }
-
 .contact-box{
-max-width:680px;
-margin:auto;
-background:rgba(12,12,12,0.92);
-border:1px solid rgba(255,255,255,0.1);
-border-radius:18px;
-padding:50px 38px;
-box-shadow:0 25px 60px rgba(0,0,0,0.65);
-backdrop-filter:blur(8px);
+max-width:760px;margin:auto;background:rgba(12,12,12,0.92);
+border:1px solid rgba(255,255,255,0.1);border-radius:18px;
+padding:50px 38px;box-shadow:0 25px 60px rgba(0,0,0,0.65);backdrop-filter:blur(8px);
 }
+.contact-box h2{font-family:'Playfair Display',serif;font-size:40px;margin-bottom:16px;}
+.contact-box p{color:#d0d0d0;line-height:1.8;margin-bottom:28px;}
 
-.contact-box h2{
-font-family:'Playfair Display',serif;
-font-size:40px;
-margin-bottom:16px;
+.contact-options{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px;}
+.contact-card{
+background:#151515;border:1px solid rgba(255,255,255,0.08);
+border-radius:14px;padding:28px 20px;
 }
-
-.contact-box p{
-color:#d0d0d0;
-line-height:1.8;
-margin-bottom:24px;
-}
-
-.contact-number{
-font-size:20px;
-font-weight:700;
-margin-bottom:24px;
-color:#d6b46d;
-}
+.contact-card h3{font-size:18px;margin-bottom:10px;}
+.contact-card .number{color:#d6b46d;font-weight:700;margin-bottom:18px;font-size:17px;}
 
 footer{
-background:#000;
-padding:28px 8%;
-text-align:center;
-color:#777;
-font-size:12px;
-letter-spacing:1px;
-border-top:1px solid rgba(255,255,255,0.08);
+background:#000;padding:28px 8%;text-align:center;color:#777;
+font-size:12px;letter-spacing:1px;border-top:1px solid rgba(255,255,255,0.08);
 }
 
 @media(max-width:1000px){
 .hero h1{font-size:44px;}
 .grid,.split,.process{grid-template-columns:1fr;}
-.stats{grid-template-columns:1fr 1fr;}
+.stats,.contact-options{grid-template-columns:1fr 1fr;}
 .image-box{min-height:360px;}
 }
 
@@ -385,7 +143,7 @@ nav{top:70px;height:calc(100vh - 70px);}
 .hero p{font-size:15.5px;}
 .section,.contact{padding:70px 6%;}
 .section-title{font-size:32px;}
-.grid,.stats,.process{grid-template-columns:1fr;}
+.grid,.stats,.process,.contact-options{grid-template-columns:1fr;}
 .card,.info-box{padding:28px;}
 }
 </style>
@@ -403,30 +161,30 @@ nav{top:70px;height:calc(100vh - 70px);}
 
 <nav id="menu">
 <a href="#reformas" data-i="menu1">Reformas y Obras</a>
-<a href="#suiza" data-i="menu2">Personal para Suiza</a>
-<a href="#servicios" data-i="menu3">Servicios</a>
-<a href="#proceso" data-i="menu4">Proceso</a>
+<a href="#servicios" data-i="menu2">Servicios</a>
+<a href="#proceso" data-i="menu3">Proceso</a>
+<a href="#internacional" data-i="menu4">División Internacional</a>
 <a href="#contacto" data-i="menu5">Contacto</a>
 </nav>
 
 <section class="hero">
 <div class="hero-content">
-<div class="tag" data-i="tag">Construcción · Reformas · Coordinación Profesional</div>
-<h1 data-i="titulo">Construcción, reformas y soluciones profesionales para España y Suiza</h1>
+<div class="tag" data-i="tag">Construcción · Reformas · Gestión Profesional</div>
+<h1 data-i="titulo">Construcción y reformas con una gestión seria, clara y profesional</h1>
 <p data-i="subtitulo">
-CHL Constructora es una empresa enfocada en reformas, obras y soluciones técnicas en España, con una división especializada en la coordinación de mano de obra cualificada para empresas del sector construcción en Suiza.
+CHL Constructora desarrolla proyectos de reforma, obra y acondicionamiento para viviendas, locales comerciales y empresas, ofreciendo una ejecución organizada, trato directo y soluciones adaptadas a cada necesidad.
 </p>
 <div class="hero-buttons">
 <a href="#contacto" class="btn" data-i="btn1">Solicitar presupuesto</a>
-<a href="#suiza" class="btn btn-outline" data-i="btn2">Personal para Suiza</a>
+<a href="#servicios" class="btn btn-outline" data-i="btn2">Ver servicios</a>
 </div>
 </div>
 </section>
 
 <section class="section" id="reformas">
-<h2 class="section-title" data-i="reformas_t">Reformas y Obras en España</h2>
+<h2 class="section-title" data-i="reformas_t">Reformas y Obras</h2>
 <p class="section-intro" data-i="reformas_p">
-Realizamos trabajos de reforma, construcción y acondicionamiento para viviendas, locales comerciales y proyectos profesionales. Nos enfocamos en una ejecución seria, organizada y con comunicación directa.
+Trabajamos en proyectos de reforma, construcción y acondicionamiento con una visión práctica: planificación, coordinación, ejecución y seguimiento profesional.
 </p>
 
 <div class="grid">
@@ -439,7 +197,7 @@ Realizamos trabajos de reforma, construcción y acondicionamiento para viviendas
 <div class="card">
 <span>02</span>
 <h3 data-i="r2_t">Locales comerciales</h3>
-<p data-i="r2_p">Acondicionamiento de bares, restaurantes, oficinas y negocios para dejarlos listos para operar.</p>
+<p data-i="r2_p">Acondicionamiento de bares, restaurantes, oficinas y negocios para dejarlos preparados para operar.</p>
 </div>
 
 <div class="card">
@@ -454,118 +212,87 @@ Realizamos trabajos de reforma, construcción y acondicionamiento para viviendas
 <div class="split">
 <div class="image-box"></div>
 <div class="info-box">
-<h2 class="section-title" data-i="vision_t">Una constructora con visión internacional</h2>
-<p data-i="vision_p1">CHL Constructora combina experiencia real en obra con conocimiento práctico del mercado español y suizo.</p>
-<p data-i="vision_p2">Trabajamos para particulares, negocios y empresas que necesitan una solución profesional, clara y bien coordinada.</p>
-<p class="gold" data-i="vision_p3">España · Suiza · Reformas · Construcción · Personal especializado</p>
+<h2 class="section-title" data-i="vision_t">Una constructora orientada a resultados</h2>
+<p data-i="vision_p1">Nuestro trabajo se basa en la organización, la seriedad y la comunicación directa con cada cliente.</p>
+<p data-i="vision_p2">Nos enfocamos en proyectos donde la ejecución, los tiempos y los acabados son parte fundamental del resultado final.</p>
+<p class="gold" data-i="vision_p3">Reformas · Obra · Locales comerciales · Viviendas · Soluciones técnicas</p>
 </div>
 </div>
 </section>
 
 <section class="section">
 <div class="stats">
-<div class="stat">
-<strong>01</strong>
-<p data-i="stat1">Gestión clara y profesional</p>
-</div>
-<div class="stat">
-<strong>02</strong>
-<p data-i="stat2">Experiencia real en obra</p>
-</div>
-<div class="stat">
-<strong>03</strong>
-<p data-i="stat3">Soluciones para empresas</p>
-</div>
-<div class="stat">
-<strong>04</strong>
-<p data-i="stat4">Conexión España y Suiza</p>
-</div>
+<div class="stat"><strong>01</strong><p data-i="stat1">Gestión clara y profesional</p></div>
+<div class="stat"><strong>02</strong><p data-i="stat2">Experiencia real en obra</p></div>
+<div class="stat"><strong>03</strong><p data-i="stat3">Soluciones para particulares y empresas</p></div>
+<div class="stat"><strong>04</strong><p data-i="stat4">Ejecución organizada</p></div>
 </div>
 </section>
 
-<section class="section section-dark" id="suiza">
-<h2 class="section-title" data-i="suiza_t">Mano de Obra Cualificada para Suiza</h2>
-<p class="section-intro" data-i="suiza_p">
-Además de nuestros servicios de construcción y reformas, coordinamos perfiles cualificados para empresas suizas del sector construcción, ayudando en la selección, documentación e incorporación profesional.
-</p>
-
-<div class="grid">
-<div class="card">
-<span>01</span>
-<h3 data-i="s1_t">Selección de trabajadores</h3>
-<p data-i="s1_p">Filtramos perfiles de albañiles, oficiales, peones y profesionales técnicos según las necesidades de cada proyecto.</p>
-</div>
-
-<div class="card">
-<span>02</span>
-<h3 data-i="s2_t">Documentación y coordinación</h3>
-<p data-i="s2_p">Apoyo en currículums, permisos, documentación, entrevistas y preparación administrativa para la incorporación.</p>
-</div>
-
-<div class="card">
-<span>03</span>
-<h3 data-i="s3_t">Acompañamiento profesional</h3>
-<p data-i="s3_p">Seguimiento del proceso, comunicación con empresas y orientación para una incorporación seria y ordenada.</p>
-</div>
-</div>
-</section>
-
-<section class="section" id="servicios">
+<section class="section section-dark" id="servicios">
 <h2 class="section-title" data-i="serv_t">Servicios Profesionales</h2>
 <p class="section-intro" data-i="serv_p">
-Una estructura pensada para cubrir tanto proyectos de obra en España como necesidades de personal especializado para empresas en Suiza.
+Ofrecemos soluciones para proyectos de reforma, construcción, acondicionamiento y mejora de espacios, tanto para particulares como para negocios.
 </p>
 
 <div class="grid">
 <div class="card">
-<span>ESPAÑA</span>
-<h3 data-i="serv1_t">Construcción y reformas</h3>
-<p data-i="serv1_p">Reformas integrales, obra menor, locales comerciales, viviendas, pladur, pintura, suelos y acabados.</p>
+<span>OBRA</span>
+<h3 data-i="serv1_t">Construcción y reforma</h3>
+<p data-i="serv1_p">Reformas integrales, obra menor, redistribución de espacios, tabiquería, pladur y trabajos técnicos.</p>
+</div>
+
+<div class="card">
+<span>ACABADOS</span>
+<h3 data-i="serv2_t">Acabados interiores</h3>
+<p data-i="serv2_p">Pintura, suelos, revestimientos, detalles finales y mejoras estéticas para viviendas y locales.</p>
 </div>
 
 <div class="card">
 <span>EMPRESAS</span>
-<h3 data-i="serv2_t">Soluciones para proyectos</h3>
-<p data-i="serv2_p">Organización, coordinación de trabajos y apoyo profesional para proyectos de construcción y acondicionamiento.</p>
-</div>
-
-<div class="card">
-<span>SUIZA</span>
-<h3 data-i="serv3_t">Personal especializado</h3>
-<p data-i="serv3_p">Coordinación de perfiles técnicos y mano de obra cualificada para empresas suizas del sector construcción.</p>
+<h3 data-i="serv3_t">Locales y negocios</h3>
+<p data-i="serv3_p">Acondicionamiento de espacios comerciales, restaurantes, bares, oficinas y proyectos profesionales.</p>
 </div>
 </div>
 </section>
 
-<section class="section section-dark" id="proceso">
+<section class="section" id="proceso">
 <h2 class="section-title" data-i="proceso_t">Nuestro Proceso</h2>
 <p class="section-intro" data-i="proceso_p">
 Trabajamos con una metodología clara para evitar improvisaciones y mantener el control del proyecto desde el primer contacto.
 </p>
 
 <div class="process">
-<div class="step">
-<small>01</small>
-<h3 data-i="p1_t">Análisis</h3>
-<p data-i="p1_p">Escuchamos la necesidad, revisamos el proyecto y definimos el objetivo real del trabajo.</p>
+<div class="step"><small>01</small><h3 data-i="p1_t">Análisis</h3><p data-i="p1_p">Escuchamos la necesidad, revisamos el proyecto y definimos el objetivo real del trabajo.</p></div>
+<div class="step"><small>02</small><h3 data-i="p2_t">Planificación</h3><p data-i="p2_p">Organizamos tiempos, fases, materiales y condiciones de ejecución.</p></div>
+<div class="step"><small>03</small><h3 data-i="p3_t">Ejecución</h3><p data-i="p3_p">Coordinamos el trabajo con seguimiento, comunicación directa y control de avances.</p></div>
+<div class="step"><small>04</small><h3 data-i="p4_t">Entrega</h3><p data-i="p4_p">Revisamos el resultado final y buscamos una entrega seria, limpia y profesional.</p></div>
+</div>
+</section>
+
+<section class="section section-dark" id="internacional">
+<h2 class="section-title" data-i="intl_t">División Internacional</h2>
+<p class="section-intro" data-i="intl_p">
+Además de nuestra actividad principal en construcción y reformas, CHL Constructora cuenta con una línea especializada en la coordinación de personal cualificado para empresas del sector construcción en Suiza.
+</p>
+
+<div class="grid">
+<div class="card">
+<span>01</span>
+<h3 data-i="i1_t">Selección de perfiles</h3>
+<p data-i="i1_p">Filtrado de albañiles, oficiales, peones y perfiles técnicos según las necesidades de cada empresa.</p>
 </div>
 
-<div class="step">
-<small>02</small>
-<h3 data-i="p2_t">Planificación</h3>
-<p data-i="p2_p">Organizamos tiempos, fases, materiales, perfiles necesarios y condiciones de ejecución.</p>
+<div class="card">
+<span>02</span>
+<h3 data-i="i2_t">Documentación</h3>
+<p data-i="i2_p">Apoyo en currículums, permisos, documentación, entrevistas y preparación administrativa.</p>
 </div>
 
-<div class="step">
-<small>03</small>
-<h3 data-i="p3_t">Ejecución</h3>
-<p data-i="p3_p">Coordinamos el trabajo con seguimiento, comunicación directa y control de avances.</p>
-</div>
-
-<div class="step">
-<small>04</small>
-<h3 data-i="p4_t">Entrega</h3>
-<p data-i="p4_p">Revisamos el resultado final y buscamos una entrega seria, limpia y profesional.</p>
+<div class="card">
+<span>03</span>
+<h3 data-i="i3_t">Incorporación</h3>
+<p data-i="i3_p">Seguimiento del proceso, comunicación con empresas y orientación para una incorporación ordenada.</p>
 </div>
 </div>
 </section>
@@ -573,9 +300,9 @@ Trabajamos con una metodología clara para evitar improvisaciones y mantener el 
 <section class="section" id="quienes">
 <div class="info-box">
 <h2 class="section-title" data-i="qs_t">Quiénes Somos</h2>
-<p data-i="qs_p1">CHL Constructora nace de la experiencia directa en el sector construcción y de una visión profesional entre España y Suiza.</p>
-<p data-i="qs_p2">Nuestro objetivo es ofrecer soluciones reales: reformas, obras, coordinación de proyectos y gestión de personal cualificado para empresas.</p>
-<p data-i="qs_p3">Trabajamos con seriedad, trato directo y compromiso en cada proceso.</p>
+<p data-i="qs_p1">CHL Constructora nace de la experiencia directa en el sector construcción y de una forma de trabajar basada en seriedad, organización y trato directo.</p>
+<p data-i="qs_p2">Nuestro objetivo es ofrecer soluciones reales para reformas, obras, acondicionamiento de espacios y coordinación profesional de proyectos.</p>
+<p data-i="qs_p3">Cada trabajo se aborda con compromiso, transparencia y responsabilidad.</p>
 </div>
 </section>
 
@@ -583,15 +310,27 @@ Trabajamos con una metodología clara para evitar improvisaciones y mantener el 
 <div class="contact-box">
 <h2 data-i="contact_t">Contacto</h2>
 <p data-i="contact_p">
-Para presupuestos de reformas, obras o información sobre personal para Suiza, puede contactarnos directamente por WhatsApp.
+Para presupuestos de reformas, obras o información profesional, puede contactarnos directamente por WhatsApp.
 </p>
-<div class="contact-number">+41 76 740 15 41</div>
-<a href="https://wa.me/41767401541?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20CHL%20Constructora" class="btn" target="_blank" data-i="contact_btn">Contactar por WhatsApp</a>
+
+<div class="contact-options">
+<div class="contact-card">
+<h3 data-i="contact_es">WhatsApp España</h3>
+<div class="number">+34 662 04 27 35</div>
+<a href="https://wa.me/34662042735?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20CHL%20Constructora" class="btn" target="_blank" data-i="contact_btn_es">Contactar</a>
+</div>
+
+<div class="contact-card">
+<h3 data-i="contact_ch">WhatsApp Suiza</h3>
+<div class="number">+41 76 740 15 41</div>
+<a href="https://wa.me/41767401541?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20CHL%20Constructora" class="btn" target="_blank" data-i="contact_btn_ch">Contactar</a>
+</div>
+</div>
 </div>
 </section>
 
 <footer>
-CHL CONSTRUCTORA · Construcción · Reformas · Coordinación Profesional · España y Suiza
+CHL CONSTRUCTORA · Construcción · Reformas · Gestión Profesional
 </footer>
 
 <script>
@@ -607,126 +346,84 @@ let currentLang="es";
 
 const translations={
 es:{
-menu1:"Reformas y Obras",
-menu2:"Personal para Suiza",
-menu3:"Servicios",
-menu4:"Proceso",
-menu5:"Contacto",
-tag:"Construcción · Reformas · Coordinación Profesional",
-titulo:"Construcción, reformas y soluciones profesionales para España y Suiza",
-subtitulo:"CHL Constructora es una empresa enfocada en reformas, obras y soluciones técnicas en España, con una división especializada en la coordinación de mano de obra cualificada para empresas del sector construcción en Suiza.",
-btn1:"Solicitar presupuesto",
-btn2:"Personal para Suiza",
-reformas_t:"Reformas y Obras en España",
-reformas_p:"Realizamos trabajos de reforma, construcción y acondicionamiento para viviendas, locales comerciales y proyectos profesionales. Nos enfocamos en una ejecución seria, organizada y con comunicación directa.",
-r1_t:"Reformas integrales",
-r1_p:"Transformación completa de viviendas, locales y espacios comerciales, cuidando planificación, ejecución y acabados.",
-r2_t:"Locales comerciales",
-r2_p:"Acondicionamiento de bares, restaurantes, oficinas y negocios para dejarlos listos para operar.",
-r3_t:"Albañilería y acabados",
-r3_p:"Trabajos de albañilería, pladur, pintura, suelos, revestimientos y soluciones técnicas de obra.",
-vision_t:"Una constructora con visión internacional",
-vision_p1:"CHL Constructora combina experiencia real en obra con conocimiento práctico del mercado español y suizo.",
-vision_p2:"Trabajamos para particulares, negocios y empresas que necesitan una solución profesional, clara y bien coordinada.",
-vision_p3:"España · Suiza · Reformas · Construcción · Personal especializado",
-stat1:"Gestión clara y profesional",
-stat2:"Experiencia real en obra",
-stat3:"Soluciones para empresas",
-stat4:"Conexión España y Suiza",
-suiza_t:"Mano de Obra Cualificada para Suiza",
-suiza_p:"Además de nuestros servicios de construcción y reformas, coordinamos perfiles cualificados para empresas suizas del sector construcción, ayudando en la selección, documentación e incorporación profesional.",
-s1_t:"Selección de trabajadores",
-s1_p:"Filtramos perfiles de albañiles, oficiales, peones y profesionales técnicos según las necesidades de cada proyecto.",
-s2_t:"Documentación y coordinación",
-s2_p:"Apoyo en currículums, permisos, documentación, entrevistas y preparación administrativa para la incorporación.",
-s3_t:"Acompañamiento profesional",
-s3_p:"Seguimiento del proceso, comunicación con empresas y orientación para una incorporación seria y ordenada.",
+menu1:"Reformas y Obras",menu2:"Servicios",menu3:"Proceso",menu4:"División Internacional",menu5:"Contacto",
+tag:"Construcción · Reformas · Gestión Profesional",
+titulo:"Construcción y reformas con una gestión seria, clara y profesional",
+subtitulo:"CHL Constructora desarrolla proyectos de reforma, obra y acondicionamiento para viviendas, locales comerciales y empresas, ofreciendo una ejecución organizada, trato directo y soluciones adaptadas a cada necesidad.",
+btn1:"Solicitar presupuesto",btn2:"Ver servicios",
+reformas_t:"Reformas y Obras",
+reformas_p:"Trabajamos en proyectos de reforma, construcción y acondicionamiento con una visión práctica: planificación, coordinación, ejecución y seguimiento profesional.",
+r1_t:"Reformas integrales",r1_p:"Transformación completa de viviendas, locales y espacios comerciales, cuidando planificación, ejecución y acabados.",
+r2_t:"Locales comerciales",r2_p:"Acondicionamiento de bares, restaurantes, oficinas y negocios para dejarlos preparados para operar.",
+r3_t:"Albañilería y acabados",r3_p:"Trabajos de albañilería, pladur, pintura, suelos, revestimientos y soluciones técnicas de obra.",
+vision_t:"Una constructora orientada a resultados",
+vision_p1:"Nuestro trabajo se basa en la organización, la seriedad y la comunicación directa con cada cliente.",
+vision_p2:"Nos enfocamos en proyectos donde la ejecución, los tiempos y los acabados son parte fundamental del resultado final.",
+vision_p3:"Reformas · Obra · Locales comerciales · Viviendas · Soluciones técnicas",
+stat1:"Gestión clara y profesional",stat2:"Experiencia real en obra",stat3:"Soluciones para particulares y empresas",stat4:"Ejecución organizada",
 serv_t:"Servicios Profesionales",
-serv_p:"Una estructura pensada para cubrir tanto proyectos de obra en España como necesidades de personal especializado para empresas en Suiza.",
-serv1_t:"Construcción y reformas",
-serv1_p:"Reformas integrales, obra menor, locales comerciales, viviendas, pladur, pintura, suelos y acabados.",
-serv2_t:"Soluciones para proyectos",
-serv2_p:"Organización, coordinación de trabajos y apoyo profesional para proyectos de construcción y acondicionamiento.",
-serv3_t:"Personal especializado",
-serv3_p:"Coordinación de perfiles técnicos y mano de obra cualificada para empresas suizas del sector construcción.",
+serv_p:"Ofrecemos soluciones para proyectos de reforma, construcción, acondicionamiento y mejora de espacios, tanto para particulares como para negocios.",
+serv1_t:"Construcción y reforma",serv1_p:"Reformas integrales, obra menor, redistribución de espacios, tabiquería, pladur y trabajos técnicos.",
+serv2_t:"Acabados interiores",serv2_p:"Pintura, suelos, revestimientos, detalles finales y mejoras estéticas para viviendas y locales.",
+serv3_t:"Locales y negocios",serv3_p:"Acondicionamiento de espacios comerciales, restaurantes, bares, oficinas y proyectos profesionales.",
 proceso_t:"Nuestro Proceso",
 proceso_p:"Trabajamos con una metodología clara para evitar improvisaciones y mantener el control del proyecto desde el primer contacto.",
-p1_t:"Análisis",
-p1_p:"Escuchamos la necesidad, revisamos el proyecto y definimos el objetivo real del trabajo.",
-p2_t:"Planificación",
-p2_p:"Organizamos tiempos, fases, materiales, perfiles necesarios y condiciones de ejecución.",
-p3_t:"Ejecución",
-p3_p:"Coordinamos el trabajo con seguimiento, comunicación directa y control de avances.",
-p4_t:"Entrega",
-p4_p:"Revisamos el resultado final y buscamos una entrega seria, limpia y profesional.",
+p1_t:"Análisis",p1_p:"Escuchamos la necesidad, revisamos el proyecto y definimos el objetivo real del trabajo.",
+p2_t:"Planificación",p2_p:"Organizamos tiempos, fases, materiales y condiciones de ejecución.",
+p3_t:"Ejecución",p3_p:"Coordinamos el trabajo con seguimiento, comunicación directa y control de avances.",
+p4_t:"Entrega",p4_p:"Revisamos el resultado final y buscamos una entrega seria, limpia y profesional.",
+intl_t:"División Internacional",
+intl_p:"Además de nuestra actividad principal en construcción y reformas, CHL Constructora cuenta con una línea especializada en la coordinación de personal cualificado para empresas del sector construcción en Suiza.",
+i1_t:"Selección de perfiles",i1_p:"Filtrado de albañiles, oficiales, peones y perfiles técnicos según las necesidades de cada empresa.",
+i2_t:"Documentación",i2_p:"Apoyo en currículums, permisos, documentación, entrevistas y preparación administrativa.",
+i3_t:"Incorporación",i3_p:"Seguimiento del proceso, comunicación con empresas y orientación para una incorporación ordenada.",
 qs_t:"Quiénes Somos",
-qs_p1:"CHL Constructora nace de la experiencia directa en el sector construcción y de una visión profesional entre España y Suiza.",
-qs_p2:"Nuestro objetivo es ofrecer soluciones reales: reformas, obras, coordinación de proyectos y gestión de personal cualificado para empresas.",
-qs_p3:"Trabajamos con seriedad, trato directo y compromiso en cada proceso.",
+qs_p1:"CHL Constructora nace de la experiencia directa en el sector construcción y de una forma de trabajar basada en seriedad, organización y trato directo.",
+qs_p2:"Nuestro objetivo es ofrecer soluciones reales para reformas, obras, acondicionamiento de espacios y coordinación profesional de proyectos.",
+qs_p3:"Cada trabajo se aborda con compromiso, transparencia y responsabilidad.",
 contact_t:"Contacto",
-contact_p:"Para presupuestos de reformas, obras o información sobre personal para Suiza, puede contactarnos directamente por WhatsApp.",
-contact_btn:"Contactar por WhatsApp"
+contact_p:"Para presupuestos de reformas, obras o información profesional, puede contactarnos directamente por WhatsApp.",
+contact_es:"WhatsApp España",contact_ch:"WhatsApp Suiza",contact_btn_es:"Contactar",contact_btn_ch:"Contactar"
 },
 de:{
-menu1:"Renovierungen und Bauarbeiten",
-menu2:"Personal für die Schweiz",
-menu3:"Dienstleistungen",
-menu4:"Ablauf",
-menu5:"Kontakt",
-tag:"Bau · Renovierung · Professionelle Koordination",
-titulo:"Bau, Renovierung und professionelle Lösungen für Spanien und die Schweiz",
-subtitulo:"CHL Constructora ist auf Renovierungen, Bauarbeiten und technische Lösungen in Spanien spezialisiert und verfügt zusätzlich über eine Abteilung für die Koordination qualifizierter Fachkräfte für Schweizer Bauunternehmen.",
-btn1:"Offerte anfragen",
-btn2:"Personal für die Schweiz",
-reformas_t:"Renovierungen und Bauarbeiten in Spanien",
-reformas_p:"Wir führen Renovierungs-, Bau- und Ausbauarbeiten für Wohnungen, Geschäftslokale und professionelle Projekte aus. Unser Fokus liegt auf seriöser Ausführung, Organisation und direkter Kommunikation.",
-r1_t:"Komplettrenovierungen",
-r1_p:"Komplette Umgestaltung von Wohnungen, Lokalen und Gewerbeflächen mit Fokus auf Planung, Ausführung und Endergebnis.",
-r2_t:"Geschäftslokale",
-r2_p:"Ausbau von Bars, Restaurants, Büros und Geschäftsräumen, damit diese betriebsbereit übergeben werden können.",
-r3_t:"Maurerarbeiten und Ausbau",
-r3_p:"Maurerarbeiten, Trockenbau, Malerarbeiten, Böden, Verkleidungen und technische Baulösungen.",
-vision_t:"Ein Bauunternehmen mit internationaler Vision",
-vision_p1:"CHL Constructora verbindet praktische Bauerfahrung mit Kenntnissen des spanischen und schweizerischen Marktes.",
-vision_p2:"Wir arbeiten für Privatkunden, Unternehmen und Betriebe, die eine professionelle, klare und gut koordinierte Lösung benötigen.",
-vision_p3:"Spanien · Schweiz · Renovierung · Bau · Fachpersonal",
-stat1:"Klare und professionelle Abwicklung",
-stat2:"Praktische Bauerfahrung",
-stat3:"Lösungen für Unternehmen",
-stat4:"Verbindung Spanien und Schweiz",
-suiza_t:"Qualifizierte Fachkräfte für die Schweiz",
-suiza_p:"Neben unseren Bau- und Renovierungsdienstleistungen koordinieren wir qualifizierte Profile für Schweizer Bauunternehmen und unterstützen bei Auswahl, Dokumentation und professioneller Integration.",
-s1_t:"Auswahl von Fachkräften",
-s1_p:"Wir filtern Maurer, Facharbeiter, Bauhelfer und technische Profile nach den Anforderungen jedes Projekts.",
-s2_t:"Dokumentation und Koordination",
-s2_p:"Unterstützung bei Lebensläufen, Bewilligungen, Dokumenten, Interviews und administrativer Vorbereitung.",
-s3_t:"Professionelle Begleitung",
-s3_p:"Begleitung des Prozesses, Kommunikation mit Unternehmen und Orientierung für eine seriöse und strukturierte Integration.",
+menu1:"Renovierungen und Bauarbeiten",menu2:"Dienstleistungen",menu3:"Ablauf",menu4:"Internationale Abteilung",menu5:"Kontakt",
+tag:"Bau · Renovierung · Professionelle Abwicklung",
+titulo:"Bau und Renovierung mit seriöser, klarer und professioneller Abwicklung",
+subtitulo:"CHL Constructora realisiert Renovierungs-, Bau- und Ausbauprojekte für Wohnungen, Geschäftslokale und Unternehmen mit organisierter Ausführung, direktem Kontakt und passenden Lösungen.",
+btn1:"Offerte anfragen",btn2:"Dienstleistungen ansehen",
+reformas_t:"Renovierungen und Bauarbeiten",
+reformas_p:"Wir arbeiten an Renovierungs-, Bau- und Ausbauprojekten mit einem praktischen Ansatz: Planung, Koordination, Ausführung und professionelle Nachverfolgung.",
+r1_t:"Komplettrenovierungen",r1_p:"Komplette Umgestaltung von Wohnungen, Lokalen und Gewerbeflächen mit Fokus auf Planung, Ausführung und Endergebnis.",
+r2_t:"Geschäftslokale",r2_p:"Ausbau von Bars, Restaurants, Büros und Geschäftsräumen, damit diese betriebsbereit übergeben werden können.",
+r3_t:"Maurerarbeiten und Ausbau",r3_p:"Maurerarbeiten, Trockenbau, Malerarbeiten, Böden, Verkleidungen und technische Baulösungen.",
+vision_t:"Ein Bauunternehmen mit Fokus auf Ergebnisse",
+vision_p1:"Unsere Arbeit basiert auf Organisation, Seriosität und direkter Kommunikation mit jedem Kunden.",
+vision_p2:"Wir konzentrieren uns auf Projekte, bei denen Ausführung, Zeitplanung und Endergebnis entscheidend sind.",
+vision_p3:"Renovierung · Bau · Geschäftslokale · Wohnungen · Technische Lösungen",
+stat1:"Klare und professionelle Abwicklung",stat2:"Praktische Bauerfahrung",stat3:"Lösungen für Privatkunden und Unternehmen",stat4:"Organisierte Ausführung",
 serv_t:"Professionelle Dienstleistungen",
-serv_p:"Eine Struktur, die sowohl Bauprojekte in Spanien als auch den Bedarf an qualifiziertem Personal für Unternehmen in der Schweiz abdeckt.",
-serv1_t:"Bau und Renovierung",
-serv1_p:"Komplettrenovierungen, kleinere Bauarbeiten, Geschäftslokale, Wohnungen, Trockenbau, Malerarbeiten, Böden und Ausbau.",
-serv2_t:"Lösungen für Projekte",
-serv2_p:"Organisation, Arbeitskoordination und professionelle Unterstützung für Bau- und Ausbauprojekte.",
-serv3_t:"Spezialisiertes Personal",
-serv3_p:"Koordination technischer Profile und qualifizierter Arbeitskräfte für Schweizer Bauunternehmen.",
+serv_p:"Wir bieten Lösungen für Renovierungs-, Bau-, Ausbau- und Verbesserungsprojekte für Privatkunden und Unternehmen.",
+serv1_t:"Bau und Renovierung",serv1_p:"Komplettrenovierungen, kleinere Bauarbeiten, Raumaufteilung, Trockenbau und technische Arbeiten.",
+serv2_t:"Innenausbau",serv2_p:"Malerarbeiten, Böden, Verkleidungen, Enddetails und ästhetische Verbesserungen für Wohnungen und Lokale.",
+serv3_t:"Lokale und Unternehmen",serv3_p:"Ausbau von Geschäftsräumen, Restaurants, Bars, Büros und professionellen Projekten.",
 proceso_t:"Unser Ablauf",
 proceso_p:"Wir arbeiten mit einer klaren Methode, um Improvisationen zu vermeiden und den Prozess von Anfang an unter Kontrolle zu halten.",
-p1_t:"Analyse",
-p1_p:"Wir hören den Bedarf, prüfen das Projekt und definieren das tatsächliche Ziel der Arbeit.",
-p2_t:"Planung",
-p2_p:"Wir organisieren Zeiten, Phasen, Materialien, notwendige Profile und Ausführungsbedingungen.",
-p3_t:"Ausführung",
-p3_p:"Wir koordinieren die Arbeit mit Nachverfolgung, direkter Kommunikation und Fortschrittskontrolle.",
-p4_t:"Übergabe",
-p4_p:"Wir prüfen das Endergebnis und streben eine seriöse, saubere und professionelle Übergabe an.",
+p1_t:"Analyse",p1_p:"Wir hören den Bedarf, prüfen das Projekt und definieren das tatsächliche Ziel der Arbeit.",
+p2_t:"Planung",p2_p:"Wir organisieren Zeiten, Phasen, Materialien und Ausführungsbedingungen.",
+p3_t:"Ausführung",p3_p:"Wir koordinieren die Arbeit mit Nachverfolgung, direkter Kommunikation und Fortschrittskontrolle.",
+p4_t:"Übergabe",p4_p:"Wir prüfen das Endergebnis und streben eine seriöse, saubere und professionelle Übergabe an.",
+intl_t:"Internationale Abteilung",
+intl_p:"Neben unserer Haupttätigkeit im Bereich Bau und Renovierung verfügt CHL Constructora über eine spezialisierte Linie für die Koordination qualifizierter Fachkräfte für Schweizer Bauunternehmen.",
+i1_t:"Auswahl von Profilen",i1_p:"Vorauswahl von Maurern, Facharbeitern, Bauhelfern und technischen Profilen nach den Anforderungen jedes Unternehmens.",
+i2_t:"Dokumentation",i2_p:"Unterstützung bei Lebensläufen, Bewilligungen, Dokumenten, Interviews und administrativer Vorbereitung.",
+i3_t:"Integration",i3_p:"Begleitung des Prozesses, Kommunikation mit Unternehmen und Orientierung für eine strukturierte Integration.",
 qs_t:"Über uns",
-qs_p1:"CHL Constructora entstand aus direkter Erfahrung im Bausektor und einer professionellen Vision zwischen Spanien und der Schweiz.",
-qs_p2:"Unser Ziel ist es, echte Lösungen anzubieten: Renovierungen, Bauarbeiten, Projektkoordination und Vermittlung qualifizierter Fachkräfte für Unternehmen.",
-qs_p3:"Wir arbeiten seriös, direkt und engagiert in jedem Prozess.",
+qs_p1:"CHL Constructora entstand aus direkter Erfahrung im Bausektor und einer Arbeitsweise, die auf Seriosität, Organisation und direktem Kontakt basiert.",
+qs_p2:"Unser Ziel ist es, echte Lösungen für Renovierungen, Bauarbeiten, Ausbauprojekte und professionelle Projektkoordination anzubieten.",
+qs_p3:"Jede Arbeit wird mit Engagement, Transparenz und Verantwortung durchgeführt.",
 contact_t:"Kontakt",
-contact_p:"Für Offerten, Bauprojekte oder Informationen über Personal für die Schweiz können Sie uns direkt per WhatsApp kontaktieren.",
-contact_btn:"Über WhatsApp kontaktieren"
+contact_p:"Für Offerten, Bauprojekte oder professionelle Informationen können Sie uns direkt per WhatsApp kontaktieren.",
+contact_es:"WhatsApp Spanien",contact_ch:"WhatsApp Schweiz",contact_btn_es:"Kontaktieren",contact_btn_ch:"Kontaktieren"
 }
 };
 
@@ -734,9 +431,7 @@ function toggleLanguage(){
 currentLang=currentLang==="es"?"de":"es";
 document.querySelectorAll("[data-i]").forEach(el=>{
 const key=el.getAttribute("data-i");
-if(translations[currentLang][key]){
-el.innerHTML=translations[currentLang][key];
-}
+if(translations[currentLang][key]){el.innerHTML=translations[currentLang][key];}
 });
 }
 </script>
