@@ -49,32 +49,12 @@ nav a:hover{opacity:1;color:#c9a45c;}
 .section-title{font-family:'Playfair Display',serif;font-size:42px;margin-bottom:18px;line-height:1.2;}
 .section-intro{max-width:880px;font-size:16px;line-height:1.8;color:#cccccc;margin-bottom:50px;}
 
-.executive-block{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;margin-bottom:46px;align-items:stretch;}
-.executive-main{background:linear-gradient(180deg,#171717,#0d0d0d);border:1px solid rgba(201,164,92,.28);border-radius:20px;padding:36px;box-shadow:0 22px 55px rgba(0,0,0,.45);}
-.executive-main h3{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:16px;}
-.executive-main p{color:#d8d8d8;line-height:1.8;font-size:15.5px;}
-.executive-side{display:grid;gap:14px;}
-.executive-point{background:#111;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;}
-.executive-point strong{display:block;color:#c9a45c;margin-bottom:8px;font-size:14px;}
-.executive-point p{color:#fff;line-height:1.55;font-size:13.5px;}
-
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .card{background:linear-gradient(180deg,#171717,#0f0f0f);padding:35px;border-radius:16px;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 45px rgba(0,0,0,.45);transition:.3s;}
 .card:hover{transform:translateY(-5px);border-color:rgba(201,164,92,.45);}
 .card span{display:block;color:#c9a45c;font-size:13px;font-weight:700;letter-spacing:1.5px;margin-bottom:16px;}
 .card h3{font-size:20px;margin-bottom:15px;}
 .card p{font-size:14.5px;line-height:1.7;color:#c8c8c8;}
-
-.feature-services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:42px;}
-.feature-box{background:linear-gradient(180deg,#191919,#0f0f0f);border:1px solid rgba(201,164,92,.30);border-radius:16px;padding:24px 20px;box-shadow:0 18px 42px rgba(0,0,0,.35);}
-.feature-box strong{display:block;color:#c9a45c;font-size:15px;margin-bottom:8px;}
-.feature-box p{font-size:13.5px;color:#ffffff;line-height:1.55;}
-
-.services-list{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:35px;}
-.service-item{background:#111;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px 18px;transition:.3s;}
-.service-item:hover{border-color:rgba(201,164,92,.45);transform:translateY(-3px);}
-.service-item strong{display:block;color:#c9a45c;font-size:15px;margin-bottom:8px;}
-.service-item p{color:#ffffff;font-size:13px;line-height:1.5;}
 
 .split{display:grid;grid-template-columns:1fr 1.1fr;gap:42px;align-items:center;}
 .image-box{min-height:470px;border-radius:18px;background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat;box-shadow:0 25px 60px rgba(0,0,0,.65);}
@@ -87,6 +67,12 @@ nav a:hover{opacity:1;color:#c9a45c;}
 .value-icon{font-size:34px;color:#c9a45c;margin-bottom:14px;}
 .value h3{font-size:14px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
 .value p{font-size:13.5px;color:#c8c8c8;line-height:1.6;}
+
+.services-list{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.service-item{background:#111;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px 18px;transition:.3s;}
+.service-item:hover{border-color:rgba(201,164,92,.45);transform:translateY(-3px);}
+.service-item strong{display:block;color:#c9a45c;font-size:15px;margin-bottom:8px;}
+.service-item p{color:#ffffff;font-size:13px;line-height:1.5;}
 
 .projects{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
 .project{position:relative;height:270px;border-radius:16px;overflow:hidden;}
@@ -111,7 +97,6 @@ nav a:hover{opacity:1;color:#c9a45c;}
 .phone-card{background:#111;border:1px solid rgba(201,164,92,.28);border-radius:18px;padding:28px;text-align:center;}
 .phone-card h3{font-size:17px;margin-bottom:14px;color:#c9a45c;text-transform:uppercase;letter-spacing:1.3px;}
 .phone-card a{color:#ffffff;text-decoration:none;font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center;gap:10px;}
-.wa-icon{width:25px;height:25px;fill:#25D366;flex-shrink:0;}
 
 .contact-form{background:#151515;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:34px;max-width:700px;margin:auto;}
 .contact-form label{display:block;text-align:left;margin-bottom:14px;color:#c9a45c;font-weight:700;font-size:14px;letter-spacing:1px;}
@@ -123,8 +108,7 @@ footer{padding:30px 8%;background:black;text-align:center;font-size:12px;letter-
 
 @media(max-width:1000px){
 .hero h1{font-size:62px;}
-.grid,.split,.projects,.process,.values,.executive-block{grid-template-columns:1fr;}
-.feature-services{grid-template-columns:1fr 1fr;}
+.grid,.split,.projects,.process,.values{grid-template-columns:1fr;}
 .services-list{grid-template-columns:1fr 1fr;}
 .phone-row,.contact-actions{grid-template-columns:1fr 1fr;}
 .image-box{min-height:360px;}
@@ -139,9 +123,7 @@ header{padding:0 6%;}
 .hero h2{font-size:20px;}
 .hero p{font-size:15.5px;}
 .section-title{font-size:34px;}
-.executive-main{padding:28px;}
-.executive-main h3{font-size:27px;}
-.feature-services,.services-list{grid-template-columns:1fr;}
+.services-list{grid-template-columns:1fr;}
 .phone-row,.contact-actions{grid-template-columns:1fr;}
 .contact-box{padding:44px 24px;}
 .contact-box h2{font-size:34px;}
@@ -161,11 +143,12 @@ header{padding:0 6%;}
 </header>
 
 <nav id="menu">
-<a href="#reformas" data-i="menu1">Reformas</a>
+<a href="#reformas" data-i="menu1">Empresa</a>
 <a href="#servicios" data-i="menu2">Servicios</a>
 <a href="#proyectos" data-i="menu3">Proyectos</a>
-<a href="#internacional" data-i="menu4">División Internacional</a>
-<a href="#contacto" data-i="menu5">Contacto</a>
+<a href="#proceso" data-i="menu4">Proceso</a>
+<a href="#internacional" data-i="menu5">División Internacional</a>
+<a href="#contacto" data-i="menu6">Contacto</a>
 </nav>
 
 <section class="hero">
@@ -193,21 +176,14 @@ header{padding:0 6%;}
 </section>
 
 <section class="section" id="reformas">
-<span class="section-label" data-i="ref_label">Especialistas en obra y reformas</span>
-<h2 class="section-title" data-i="ref_title">Reformas, construcción y servicios integrales</h2>
-<p class="section-intro" data-i="ref_text">Trabajamos proyectos de reforma, construcción y acondicionamiento con una visión clara: planificación, coordinación, control de tiempos y acabados de calidad. Integramos albañilería, fontanería, electricidad, pladur, pintura, suelos y acabados para entregar un servicio completo.</p>
-
-<div class="feature-services">
-<div class="feature-box"><strong data-i="f1_t">Reformas completas</strong><p data-i="f1_p">Viviendas, locales, oficinas y espacios profesionales.</p></div>
-<div class="feature-box"><strong data-i="f2_t">Instalaciones</strong><p data-i="f2_p">Fontanería, electricidad, iluminación y preparación técnica.</p></div>
-<div class="feature-box"><strong data-i="f3_t">Interiores</strong><p data-i="f3_p">Pladur, tabiquería, pintura, suelos y revestimientos.</p></div>
-<div class="feature-box"><strong data-i="f4_t">Obra y coordinación</strong><p data-i="f4_p">Organización, seguimiento y control de cada fase.</p></div>
-</div>
+<span class="section-label" data-i="ref_label">CHL Constructora</span>
+<h2 class="section-title" data-i="ref_title">Construcción, reformas y ejecución profesional</h2>
+<p class="section-intro" data-i="ref_text">CHL Constructora desarrolla proyectos de construcción, reformas y acondicionamiento de espacios con una metodología basada en organización, comunicación directa y control de ejecución. Nuestro objetivo es ofrecer un servicio profesional, funcional y visualmente cuidado, adaptado tanto a viviendas como a espacios comerciales y proyectos profesionales.</p>
 
 <div class="grid">
-<div class="card"><span>01</span><h3 data-i="card1_title">Reformas integrales</h3><p data-i="card1_text">Transformación completa de espacios, desde la planificación inicial hasta la entrega final.</p></div>
-<div class="card"><span>02</span><h3 data-i="card2_title">Instalaciones y preparación</h3><p data-i="card2_text">Fontanería, electricidad, iluminación, puntos técnicos y preparación del espacio.</p></div>
-<div class="card"><span>03</span><h3 data-i="card3_title">Ejecución profesional</h3><p data-i="card3_text">Coordinación de trabajos, seguimiento del proceso y control de acabados.</p></div>
+<div class="card"><span>01</span><h3 data-i="card1_title">Gestión clara del proyecto</h3><p data-i="card1_text">Organización de trabajos, coordinación de fases y seguimiento continuo durante toda la ejecución.</p></div>
+<div class="card"><span>02</span><h3 data-i="card2_title">Ejecución técnica</h3><p data-i="card2_text">Desarrollo de reformas, instalaciones y trabajos de construcción con enfoque práctico y profesional.</p></div>
+<div class="card"><span>03</span><h3 data-i="card3_title">Acabado e imagen final</h3><p data-i="card3_text">Atención al detalle, acabados cuidados y adaptación visual del espacio según el objetivo del proyecto.</p></div>
 </div>
 </section>
 
@@ -217,8 +193,8 @@ header{padding:0 6%;}
 <div class="info-box">
 <span class="section-label" data-i="about_label">Sobre CHL Constructora</span>
 <h2 class="section-title" data-i="vision_title">Una constructora orientada a resultados</h2>
-<p data-i="vision_1">CHL Constructora nace con una forma de trabajar basada en seriedad, comunicación directa y control del proyecto.</p>
-<p data-i="vision_2">Nuestro objetivo es ofrecer soluciones reales para reformas, obras y proyectos profesionales, cuidando tanto la ejecución técnica como la imagen final del espacio.</p>
+<p data-i="vision_1">Trabajamos con una visión práctica: entender la necesidad del cliente, organizar la obra con claridad y ejecutar cada fase con responsabilidad.</p>
+<p data-i="vision_2">La imagen final del espacio es tan importante como la parte técnica. Por eso cuidamos tanto la ejecución como los acabados y la comunicación durante el proceso.</p>
 <p class="highlight" data-i="vision_3">Reformas · Construcción · Fontanería · Electricidad · Pladur · Pintura · Acabados</p>
 
 <div class="values">
@@ -232,35 +208,23 @@ header{padding:0 6%;}
 </section>
 
 <section class="section" id="servicios">
-<span class="section-label" data-i="serv_label">Área técnica y ejecución de obra</span>
-<h2 class="section-title" data-i="serv_title">Soluciones integrales para reformas y construcción</h2>
-<p class="section-intro" data-i="serv_text">CHL Constructora centraliza los principales trabajos necesarios para ejecutar una reforma u obra de forma ordenada: preparación del espacio, instalaciones, albañilería, interiores, acabados y coordinación general del proyecto.</p>
-
-<div class="executive-block">
-<div class="executive-main">
-<h3 data-i="exec_title">Un solo equipo para coordinar toda la obra</h3>
-<p data-i="exec_text">Nuestro enfoque permite reducir desorden, retrasos y falta de comunicación entre gremios. Organizamos cada fase del proyecto con una visión práctica: entender la necesidad, preparar el espacio, ejecutar los trabajos técnicos y entregar un acabado limpio, funcional y profesional.</p>
-</div>
-<div class="executive-side">
-<div class="executive-point"><strong data-i="exec1_t">Planificación</strong><p data-i="exec1_p">Definición clara de fases, prioridades y necesidades del proyecto.</p></div>
-<div class="executive-point"><strong data-i="exec2_t">Coordinación</strong><p data-i="exec2_p">Organización de trabajos técnicos, interiores y acabados.</p></div>
-<div class="executive-point"><strong data-i="exec3_t">Entrega</strong><p data-i="exec3_p">Revisión final con atención al detalle y resultado profesional.</p></div>
-</div>
-</div>
+<span class="section-label" data-i="serv_label">Servicios técnicos</span>
+<h2 class="section-title" data-i="serv_title">Áreas de trabajo y ejecución</h2>
+<p class="section-intro" data-i="serv_text">Integramos distintos trabajos técnicos y de acondicionamiento para desarrollar reformas y proyectos de construcción de forma organizada y eficiente.</p>
 
 <div class="services-list">
-<div class="service-item"><strong data-i="s1_t">Reformas integrales</strong><p data-i="s1_p">Renovación completa de viviendas, locales y espacios profesionales.</p></div>
-<div class="service-item"><strong data-i="s2_t">Demoliciones interiores</strong><p data-i="s2_p">Retirada de suelos, tabiques, techos y preparación del espacio.</p></div>
-<div class="service-item"><strong data-i="s3_t">Albañilería</strong><p data-i="s3_p">Trabajos técnicos, reparaciones, levantamiento y preparación de obra.</p></div>
-<div class="service-item"><strong data-i="s4_t">Fontanería</strong><p data-i="s4_p">Instalaciones, cambios, reparaciones y adaptación de puntos de agua.</p></div>
-<div class="service-item"><strong data-i="s5_t">Electricidad</strong><p data-i="s5_p">Instalaciones, puntos de luz, enchufes y preparación técnica.</p></div>
-<div class="service-item"><strong data-i="s6_t">Iluminación</strong><p data-i="s6_p">Soluciones de luz para viviendas, locales y negocios.</p></div>
-<div class="service-item"><strong data-i="s7_t">Pladur y tabiquería</strong><p data-i="s7_p">Distribución interior, techos, paredes y división de espacios.</p></div>
-<div class="service-item"><strong data-i="s8_t">Pintura y acabados</strong><p data-i="s8_p">Preparación, pintura interior y detalles finales de calidad.</p></div>
-<div class="service-item"><strong data-i="s9_t">Suelos y revestimientos</strong><p data-i="s9_p">Renovación, colocación y acabado de superficies.</p></div>
-<div class="service-item"><strong data-i="s10_t">Insonorización</strong><p data-i="s10_p">Aislamiento acústico y preparación técnica para locales.</p></div>
-<div class="service-item"><strong data-i="s11_t">Construcción y obra nueva</strong><p data-i="s11_p">Ejecución y coordinación de proyectos de construcción.</p></div>
-<div class="service-item"><strong data-i="s12_t">Coordinación de obra</strong><p data-i="s12_p">Planificación, seguimiento, control y organización de gremios.</p></div>
+<div class="service-item"><strong data-i="s1_t">Reformas integrales</strong><p data-i="s1_p">Transformación completa de viviendas, locales y espacios profesionales.</p></div>
+<div class="service-item"><strong data-i="s2_t">Demoliciones interiores</strong><p data-i="s2_p">Retirada de suelos, techos, tabiques y preparación técnica del espacio.</p></div>
+<div class="service-item"><strong data-i="s3_t">Albañilería</strong><p data-i="s3_p">Trabajos estructurales, reparaciones y preparación de obra.</p></div>
+<div class="service-item"><strong data-i="s4_t">Fontanería</strong><p data-i="s4_p">Instalaciones, reparaciones y adaptación de puntos de agua.</p></div>
+<div class="service-item"><strong data-i="s5_t">Electricidad</strong><p data-i="s5_p">Instalaciones eléctricas, iluminación y preparación técnica.</p></div>
+<div class="service-item"><strong data-i="s6_t">Pladur y tabiquería</strong><p data-i="s6_p">Distribución interior, techos y división de espacios.</p></div>
+<div class="service-item"><strong data-i="s7_t">Pintura y acabados</strong><p data-i="s7_p">Preparación, pintura interior y acabados visuales profesionales.</p></div>
+<div class="service-item"><strong data-i="s8_t">Suelos y revestimientos</strong><p data-i="s8_p">Renovación y colocación de superficies y materiales.</p></div>
+<div class="service-item"><strong data-i="s9_t">Insonorización</strong><p data-i="s9_p">Aislamiento acústico y acondicionamiento técnico de espacios.</p></div>
+<div class="service-item"><strong data-i="s10_t">Construcción y obra nueva</strong><p data-i="s10_p">Ejecución y coordinación de proyectos de construcción.</p></div>
+<div class="service-item"><strong data-i="s11_t">Espacios comerciales</strong><p data-i="s11_p">Adaptación de locales, oficinas y negocios.</p></div>
+<div class="service-item"><strong data-i="s12_t">Coordinación de obra</strong><p data-i="s12_p">Supervisión y organización de fases, materiales y ejecución.</p></div>
 </div>
 </section>
 
@@ -373,7 +337,7 @@ window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(mensajes[tipo]),"
 let currentLang="es";
 const translations={
 de:{
-menu1:"Renovierungen",menu2:"Dienstleistungen",menu3:"Projekte",menu4:"Internationale Abteilung",menu5:"Kontakt",
+menu1:"Unternehmen",menu2:"Dienstleistungen",menu3:"Projekte",menu4:"Prozess",menu5:"Internationale Abteilung",menu6:"Kontakt",
 tag:"Bau · Renovierung · Komplette Dienstleistungen",
 hero_subtitle:"Seriös. Modern. Zuverlässig.",
 hero_text:"Bau, Komplettrenovierungen, Sanitärarbeiten, Elektrik, Trockenbau, Malerarbeiten, Ausführungen und Ausbauprojekte mit klarer Abwicklung, direkter Betreuung und professioneller Ausführung.",
@@ -385,23 +349,17 @@ hero_s5:"Malerarbeiten",
 hero_s6:"Bau",
 btn_budget:"Offerte anfragen",btn_services:"Dienstleistungen ansehen",
 
-ref_label:"Spezialisten für Bau und Renovierung",
-ref_title:"Renovierungen, Bau und komplette Dienstleistungen",
-ref_text:"Wir arbeiten an Renovierungs-, Bau- und Ausbauprojekten mit klarer Struktur: Planung, Koordination, Zeitkontrolle und hochwertige Ausführung. Wir integrieren Maurerarbeiten, Sanitär, Elektrik, Trockenbau, Malerarbeiten, Böden und Ausführungen für einen vollständigen Service.",
-
-f1_t:"Komplettrenovierungen",f1_p:"Wohnungen, Lokale, Büros und professionelle Räume.",
-f2_t:"Installationen",f2_p:"Sanitär, Elektrik, Beleuchtung und technische Vorbereitung.",
-f3_t:"Innenausbau",f3_p:"Trockenbau, Trennwände, Malerarbeiten, Böden und Verkleidungen.",
-f4_t:"Bau und Koordination",f4_p:"Organisation, Nachverfolgung und Kontrolle jeder Phase.",
-
-card1_title:"Komplettrenovierungen",card1_text:"Komplette Umgestaltung von Räumen von der ersten Planung bis zur finalen Übergabe.",
-card2_title:"Installationen und Vorbereitung",card2_text:"Sanitär, Elektrik, Beleuchtung, technische Punkte und Vorbereitung des Raumes.",
-card3_title:"Professionelle Ausführung",card3_text:"Koordination der Arbeiten, Prozessbegleitung und Kontrolle der Ausführung.",
+ref_label:"CHL Constructora",
+ref_title:"Bau, Renovierung und professionelle Ausführung",
+ref_text:"CHL Constructora entwickelt Bau-, Renovierungs- und Ausbauprojekte mit einer Methodik, die auf Organisation, direkter Kommunikation und Ausführungskontrolle basiert. Unser Ziel ist ein professioneller, funktionaler und visuell hochwertiger Service für Wohnungen, Geschäftsräume und professionelle Projekte.",
+card1_title:"Klare Projektführung",card1_text:"Organisation der Arbeiten, Koordination der Phasen und laufende Begleitung während der gesamten Ausführung.",
+card2_title:"Technische Ausführung",card2_text:"Durchführung von Renovierungen, Installationen und Bauarbeiten mit praktischem und professionellem Ansatz.",
+card3_title:"Ausführung und Endbild",card3_text:"Liebe zum Detail, saubere Ausführungen und visuelle Anpassung des Raumes an das Projektziel.",
 
 about_label:"Über CHL Constructora",
 vision_title:"Ein Bauunternehmen mit Fokus auf Ergebnisse",
-vision_1:"CHL Constructora arbeitet mit Seriosität, direkter Kommunikation und klarer Projektkontrolle.",
-vision_2:"Unser Ziel ist es, echte Lösungen für Renovierungen, Bauarbeiten und professionelle Projekte anzubieten.",
+vision_1:"Wir arbeiten mit einer praktischen Vision: den Bedarf des Kunden verstehen, die Baustelle klar organisieren und jede Phase verantwortungsvoll ausführen.",
+vision_2:"Das Endbild des Raumes ist genauso wichtig wie die technische Seite. Deshalb achten wir auf Ausführung, Details und Kommunikation während des Prozesses.",
 vision_3:"Renovierungen · Bau · Sanitär · Elektrik · Trockenbau · Malerarbeiten · Ausführungen",
 
 v1_t:"Seriosität",v1_p:"Klare Kommunikation und Verlässlichkeit.",
@@ -409,28 +367,21 @@ v2_t:"Qualität",v2_p:"Saubere und professionelle Ausführung.",
 v3_t:"Direkter Kontakt",v3_p:"Begleitung während des Prozesses.",
 v4_t:"Organisation",v4_p:"Planung und Nachverfolgung.",
 
-serv_label:"Technischer Bereich und Bauausführung",
-serv_title:"Komplette Lösungen für Renovierung und Bau",
-serv_text:"CHL Constructora zentralisiert die wichtigsten Arbeiten für eine geordnete Renovierung oder Baustelle: Vorbereitung des Raumes, Installationen, Maurerarbeiten, Innenausbau, Ausführungen und allgemeine Projektkoordination.",
-
-exec_title:"Ein Team zur Koordination der gesamten Baustelle",
-exec_text:"Unser Ansatz reduziert Unordnung, Verzögerungen und fehlende Kommunikation zwischen Gewerken. Wir organisieren jede Projektphase mit einer praktischen Vision: Bedarf verstehen, Raum vorbereiten, technische Arbeiten ausführen und ein sauberes, funktionales und professionelles Ergebnis liefern.",
-exec1_t:"Planung",exec1_p:"Klare Definition von Phasen, Prioritäten und Projektanforderungen.",
-exec2_t:"Koordination",exec2_p:"Organisation von technischen Arbeiten, Innenausbau und Ausführungen.",
-exec3_t:"Übergabe",exec3_p:"Endkontrolle mit Liebe zum Detail und professionellem Ergebnis.",
-
-s1_t:"Komplettrenovierungen",s1_p:"Komplette Erneuerung von Wohnungen, Lokalen und professionellen Räumen.",
-s2_t:"Innenabbruch",s2_p:"Entfernung von Böden, Wänden, Decken und Vorbereitung des Raumes.",
-s3_t:"Maurerarbeiten",s3_p:"Technische Arbeiten, Reparaturen und Bauvorbereitung.",
-s4_t:"Sanitärarbeiten",s4_p:"Installationen, Änderungen, Reparaturen und Wasseranschlüsse.",
-s5_t:"Elektrik",s5_p:"Installationen, Lichtpunkte, Steckdosen und technische Vorbereitung.",
-s6_t:"Beleuchtung",s6_p:"Lichtlösungen für Wohnungen, Lokale und Betriebe.",
-s7_t:"Trockenbau und Trennwände",s7_p:"Innenaufteilung, Decken, Wände und Raumtrennung.",
-s8_t:"Malerarbeiten und Ausführungen",s8_p:"Vorbereitung, Innenanstrich und hochwertige Enddetails.",
-s9_t:"Böden und Verkleidungen",s9_p:"Erneuerung, Verlegung und Ausführung von Oberflächen.",
-s10_t:"Schalldämmung",s10_p:"Akustische Dämmung und technische Vorbereitung für Lokale.",
-s11_t:"Bau und Neubau",s11_p:"Ausführung und Koordination von Bauprojekten.",
-s12_t:"Baukoordination",s12_p:"Planung, Nachverfolgung, Kontrolle und Organisation der Gewerke.",
+serv_label:"Technische Dienstleistungen",
+serv_title:"Arbeitsbereiche und Ausführung",
+serv_text:"Wir integrieren verschiedene technische Arbeiten und Ausbauleistungen, um Renovierungen und Bauprojekte organisiert und effizient umzusetzen.",
+s1_t:"Komplettrenovierungen",s1_p:"Komplette Umgestaltung von Wohnungen, Lokalen und professionellen Räumen.",
+s2_t:"Innenabbruch",s2_p:"Entfernung von Böden, Decken, Wänden und technische Vorbereitung des Raumes.",
+s3_t:"Maurerarbeiten",s3_p:"Strukturelle Arbeiten, Reparaturen und Bauvorbereitung.",
+s4_t:"Sanitärarbeiten",s4_p:"Installationen, Reparaturen und Anpassung von Wasseranschlüssen.",
+s5_t:"Elektrik",s5_p:"Elektroinstallationen, Beleuchtung und technische Vorbereitung.",
+s6_t:"Trockenbau und Trennwände",s6_p:"Innenaufteilung, Decken und Raumtrennung.",
+s7_t:"Malerarbeiten und Ausführungen",s7_p:"Vorbereitung, Innenanstrich und professionelle Endausführungen.",
+s8_t:"Böden und Verkleidungen",s8_p:"Erneuerung und Verlegung von Oberflächen und Materialien.",
+s9_t:"Schalldämmung",s9_p:"Akustische Dämmung und technischer Ausbau von Räumen.",
+s10_t:"Bau und Neubau",s10_p:"Ausführung und Koordination von Bauprojekten.",
+s11_t:"Geschäftsräume",s11_p:"Anpassung von Lokalen, Büros und Betrieben.",
+s12_t:"Baukoordination",s12_p:"Überwachung und Organisation von Phasen, Materialien und Ausführung.",
 
 proj_label:"Projektarten",
 proj_title:"Projekte, die wir realisieren",
