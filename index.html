@@ -31,8 +31,11 @@ nav a:hover{opacity:1;color:#c9a45c;}
 .hero-line{width:110px;height:1px;background:#c9a45c;margin:28px 0;}
 .hero h2{font-size:24px;font-weight:500;margin-bottom:14px;letter-spacing:.5px;}
 .hero p{font-size:17px;line-height:1.8;color:#e2e2e2;max-width:760px;}
+
 .hero-services{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
-.hero-services span{border:1px solid rgba(201,164,92,.38);color:#e8e8e8;background:rgba(10,10,10,.55);padding:9px 13px;border-radius:50px;font-size:12.5px;font-weight:600;}
+.hero-services a{border:1px solid rgba(201,164,92,.38);color:#fff;background:rgba(10,10,10,.62);padding:10px 15px;border-radius:50px;font-size:12.5px;font-weight:700;text-decoration:none;transition:.3s;}
+.hero-services a:hover{background:#c9a45c;color:black;transform:translateY(-2px);}
+
 .hero-buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px;}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;background:#128C35;color:white;text-decoration:none;border-radius:4px;font-weight:700;font-size:14px;transition:.3s;border:none;cursor:pointer;}
@@ -45,6 +48,15 @@ nav a:hover{opacity:1;color:#c9a45c;}
 .section-label{color:#c9a45c;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;display:block;}
 .section-title{font-family:'Playfair Display',serif;font-size:42px;margin-bottom:18px;line-height:1.2;}
 .section-intro{max-width:880px;font-size:16px;line-height:1.8;color:#cccccc;margin-bottom:50px;}
+
+.executive-block{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;margin-bottom:46px;align-items:stretch;}
+.executive-main{background:linear-gradient(180deg,#171717,#0d0d0d);border:1px solid rgba(201,164,92,.28);border-radius:20px;padding:36px;box-shadow:0 22px 55px rgba(0,0,0,.45);}
+.executive-main h3{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:16px;}
+.executive-main p{color:#d8d8d8;line-height:1.8;font-size:15.5px;}
+.executive-side{display:grid;gap:14px;}
+.executive-point{background:#111;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;}
+.executive-point strong{display:block;color:#c9a45c;margin-bottom:8px;font-size:14px;}
+.executive-point p{color:#fff;line-height:1.55;font-size:13.5px;}
 
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .card{background:linear-gradient(180deg,#171717,#0f0f0f);padding:35px;border-radius:16px;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 45px rgba(0,0,0,.45);transition:.3s;}
@@ -111,7 +123,7 @@ footer{padding:30px 8%;background:black;text-align:center;font-size:12px;letter-
 
 @media(max-width:1000px){
 .hero h1{font-size:62px;}
-.grid,.split,.projects,.process,.values{grid-template-columns:1fr;}
+.grid,.split,.projects,.process,.values,.executive-block{grid-template-columns:1fr;}
 .feature-services{grid-template-columns:1fr 1fr;}
 .services-list{grid-template-columns:1fr 1fr;}
 .phone-row,.contact-actions{grid-template-columns:1fr 1fr;}
@@ -127,6 +139,8 @@ header{padding:0 6%;}
 .hero h2{font-size:20px;}
 .hero p{font-size:15.5px;}
 .section-title{font-size:34px;}
+.executive-main{padding:28px;}
+.executive-main h3{font-size:27px;}
 .feature-services,.services-list{grid-template-columns:1fr;}
 .phone-row,.contact-actions{grid-template-columns:1fr;}
 .contact-box{padding:44px 24px;}
@@ -163,12 +177,12 @@ header{padding:0 6%;}
 <p data-i="hero_text">Construcción, reformas integrales, fontanería, electricidad, pladur, pintura, acabados y acondicionamiento de espacios con una gestión clara, trato directo y ejecución profesional.</p>
 
 <div class="hero-services">
-<span data-i="hero_s1">Reformas integrales</span>
-<span data-i="hero_s2">Fontanería</span>
-<span data-i="hero_s3">Electricidad</span>
-<span data-i="hero_s4">Pladur</span>
-<span data-i="hero_s5">Pintura</span>
-<span data-i="hero_s6">Construcción</span>
+<a href="#servicios" data-i="hero_s1">Reformas integrales</a>
+<a href="#servicios" data-i="hero_s2">Fontanería</a>
+<a href="#servicios" data-i="hero_s3">Electricidad</a>
+<a href="#servicios" data-i="hero_s4">Pladur</a>
+<a href="#servicios" data-i="hero_s5">Pintura</a>
+<a href="#servicios" data-i="hero_s6">Construcción</a>
 </div>
 
 <div class="hero-buttons">
@@ -218,9 +232,21 @@ header{padding:0 6%;}
 </section>
 
 <section class="section" id="servicios">
-<span class="section-label" data-i="serv_label">Servicios de construcción y reformas</span>
-<h2 class="section-title" data-i="serv_title">Todo lo que hacemos</h2>
-<p class="section-intro" data-i="serv_text">Soluciones completas para viviendas, espacios profesionales y proyectos de construcción. Desde la demolición inicial hasta la fontanería, electricidad, pladur, pintura, suelos, revestimientos y acabados finales.</p>
+<span class="section-label" data-i="serv_label">Área técnica y ejecución de obra</span>
+<h2 class="section-title" data-i="serv_title">Soluciones integrales para reformas y construcción</h2>
+<p class="section-intro" data-i="serv_text">CHL Constructora centraliza los principales trabajos necesarios para ejecutar una reforma u obra de forma ordenada: preparación del espacio, instalaciones, albañilería, interiores, acabados y coordinación general del proyecto.</p>
+
+<div class="executive-block">
+<div class="executive-main">
+<h3 data-i="exec_title">Un solo equipo para coordinar toda la obra</h3>
+<p data-i="exec_text">Nuestro enfoque permite reducir desorden, retrasos y falta de comunicación entre gremios. Organizamos cada fase del proyecto con una visión práctica: entender la necesidad, preparar el espacio, ejecutar los trabajos técnicos y entregar un acabado limpio, funcional y profesional.</p>
+</div>
+<div class="executive-side">
+<div class="executive-point"><strong data-i="exec1_t">Planificación</strong><p data-i="exec1_p">Definición clara de fases, prioridades y necesidades del proyecto.</p></div>
+<div class="executive-point"><strong data-i="exec2_t">Coordinación</strong><p data-i="exec2_p">Organización de trabajos técnicos, interiores y acabados.</p></div>
+<div class="executive-point"><strong data-i="exec3_t">Entrega</strong><p data-i="exec3_p">Revisión final con atención al detalle y resultado profesional.</p></div>
+</div>
+</div>
 
 <div class="services-list">
 <div class="service-item"><strong data-i="s1_t">Reformas integrales</strong><p data-i="s1_p">Renovación completa de viviendas, locales y espacios profesionales.</p></div>
@@ -286,18 +312,12 @@ header{padding:0 6%;}
 <div class="phone-row">
 <div class="phone-card">
 <h3 data-i="phone_es_title">España</h3>
-<a href="https://wa.me/34662042735" target="_blank">
-<svg class="wa-icon" viewBox="0 0 32 32"><path d="M16.04 3C9.4 3 4 8.34 4 14.9c0 2.63.87 5.05 2.34 7.02L4.8 29l7.28-1.9c1.91 1.05 4.1 1.65 6.43 1.65 6.64 0 12.04-5.34 12.04-11.9S22.68 3 16.04 3zm6.98 17.08c-.3.84-1.76 1.6-2.43 1.7-.62.1-1.4.15-2.26-.14-.52-.17-1.18-.38-2.04-.75-3.6-1.55-5.95-5.13-6.13-5.37-.17-.23-1.47-1.94-1.47-3.7s.93-2.63 1.26-2.98c.32-.35.7-.44.94-.44h.67c.22 0 .5-.08.78.6.3.72 1.02 2.5 1.1 2.69.08.18.14.4.03.63-.1.23-.16.37-.32.57-.16.2-.34.44-.49.59-.16.16-.33.33-.14.68.18.35.82 1.34 1.76 2.17 1.21 1.07 2.23 1.4 2.58 1.55.35.18.55.15.75-.08.23-.26.87-1.02 1.1-1.37.23-.35.46-.3.78-.18.32.12 2.04.96 2.4 1.14.35.17.58.26.67.4.08.15.08.87-.22 1.7z"/></svg>
-+34 662 04 27 35
-</a>
+<a href="https://wa.me/34662042735" target="_blank">+34 662 04 27 35</a>
 </div>
 
 <div class="phone-card">
 <h3 data-i="phone_ch_title">Suiza</h3>
-<a href="https://wa.me/41767401541" target="_blank">
-<svg class="wa-icon" viewBox="0 0 32 32"><path d="M16.04 3C9.4 3 4 8.34 4 14.9c0 2.63.87 5.05 2.34 7.02L4.8 29l7.28-1.9c1.91 1.05 4.1 1.65 6.43 1.65 6.64 0 12.04-5.34 12.04-11.9S22.68 3 16.04 3zm6.98 17.08c-.3.84-1.76 1.6-2.43 1.7-.62.1-1.4.15-2.26-.14-.52-.17-1.18-.38-2.04-.75-3.6-1.55-5.95-5.13-6.13-5.37-.17-.23-1.47-1.94-1.47-3.7s.93-2.63 1.26-2.98c.32-.35.7-.44.94-.44h.67c.22 0 .5-.08.78.6.3.72 1.02 2.5 1.1 2.69.08.18.14.4.03.63-.1.23-.16.37-.32.57-.16.2-.34.44-.49.59-.16.16-.33.33-.14.68.18.35.82 1.34 1.76 2.17 1.21 1.07 2.23 1.4 2.58 1.55.35.18.55.15.75-.08.23-.26.87-1.02 1.1-1.37.23-.35.46-.3.78-.18.32.12 2.04.96 2.4 1.14.35.17.58.26.67.4.08.15.08.87-.22 1.7z"/></svg>
-+41 76 740 15 41
-</a>
+<a href="https://wa.me/41767401541" target="_blank">+41 76 740 15 41</a>
 </div>
 </div>
 
@@ -389,9 +409,15 @@ v2_t:"Qualität",v2_p:"Saubere und professionelle Ausführung.",
 v3_t:"Direkter Kontakt",v3_p:"Begleitung während des Prozesses.",
 v4_t:"Organisation",v4_p:"Planung und Nachverfolgung.",
 
-serv_label:"Bau- und Renovierungsleistungen",
-serv_title:"Alles, was wir ausführen",
-serv_text:"Komplette Lösungen für Wohnungen, professionelle Räume und Bauprojekte. Vom ersten Abbruch bis zu Sanitär, Elektrik, Trockenbau, Malerarbeiten, Böden, Verkleidungen und finalen Ausführungen.",
+serv_label:"Technischer Bereich und Bauausführung",
+serv_title:"Komplette Lösungen für Renovierung und Bau",
+serv_text:"CHL Constructora zentralisiert die wichtigsten Arbeiten für eine geordnete Renovierung oder Baustelle: Vorbereitung des Raumes, Installationen, Maurerarbeiten, Innenausbau, Ausführungen und allgemeine Projektkoordination.",
+
+exec_title:"Ein Team zur Koordination der gesamten Baustelle",
+exec_text:"Unser Ansatz reduziert Unordnung, Verzögerungen und fehlende Kommunikation zwischen Gewerken. Wir organisieren jede Projektphase mit einer praktischen Vision: Bedarf verstehen, Raum vorbereiten, technische Arbeiten ausführen und ein sauberes, funktionales und professionelles Ergebnis liefern.",
+exec1_t:"Planung",exec1_p:"Klare Definition von Phasen, Prioritäten und Projektanforderungen.",
+exec2_t:"Koordination",exec2_p:"Organisation von technischen Arbeiten, Innenausbau und Ausführungen.",
+exec3_t:"Übergabe",exec3_p:"Endkontrolle mit Liebe zum Detail und professionellem Ergebnis.",
 
 s1_t:"Komplettrenovierungen",s1_p:"Komplette Erneuerung von Wohnungen, Lokalen und professionellen Räumen.",
 s2_t:"Innenabbruch",s2_p:"Entfernung von Böden, Wänden, Decken und Vorbereitung des Raumes.",
@@ -459,4 +485,4 @@ if(currentLang==="es"&&originalTexts[key]){el.innerHTML=originalTexts[key];}
 </script>
 
 </body>
-  </html>
+</html>
