@@ -31,23 +31,90 @@ nav.active{right:0;}
 nav a{color:white;text-decoration:none;margin:15px 0;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;opacity:.8;transition:.3s;}
 nav a:hover{opacity:1;color:var(--gold);text-shadow:0 0 18px rgba(201,164,92,.35);}
 
-.hero{min-height:100vh;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.58),rgba(0,0,0,.82)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1900&q=85') center/cover no-repeat;display:flex;align-items:center;padding:135px 8% 90px;}
-.hero-content{max-width:880px;animation:fadeUp 1s ease both;}
-.hero-tag{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:22px;}
-.hero h1{font-family:'Playfair Display',serif;font-size:86px;line-height:.95;margin-bottom:24px;letter-spacing:1px;text-shadow:0 12px 35px rgba(0,0,0,.85),0 0 28px rgba(201,164,92,.22);}
-.hero-line{width:110px;height:1px;background:var(--gold);margin:28px 0;box-shadow:0 0 18px rgba(201,164,92,.8);}
-.hero h2{font-size:24px;font-weight:500;margin-bottom:14px;letter-spacing:.5px;}
-.hero p{font-size:17px;line-height:1.8;color:#e2e2e2;max-width:760px;}
+.hero{
+min-height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+padding:130px 8% 80px;
+overflow:hidden;
+background:
+linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 42%,rgba(0,0,0,.32) 100%),
+linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.88)),
+url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=90') center/cover no-repeat;
+}
 
-.hero-services{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
-.hero-services a{border:1px solid rgba(201,164,92,.38);color:#fff;background:rgba(10,10,10,.62);padding:10px 15px;border-radius:50px;font-size:12.5px;font-weight:700;text-decoration:none;transition:.3s;box-shadow:0 10px 28px rgba(0,0,0,.25);}
-.hero-services a:hover{background:var(--gold);color:black;transform:translateY(-4px) scale(1.03);box-shadow:0 18px 38px rgba(201,164,92,.25);}
+.hero:after{
+content:"";
+position:absolute;
+left:8%;
+right:8%;
+bottom:34px;
+height:1px;
+background:linear-gradient(90deg,transparent,rgba(201,164,92,.55),transparent);
+}
 
-.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px;}
+.hero-content{position:relative;z-index:2;max-width:850px;animation:fadeUp 1s ease both;}
+.hero-tag{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:34px;line-height:1.7;}
+
+.hero-mini-logo{margin-bottom:28px;display:inline-block;}
+.hero-mini-mark{font-size:40px;font-weight:700;letter-spacing:6px;color:var(--gold);line-height:1;text-shadow:0 0 24px rgba(201,164,92,.22);}
+.hero-mini-name{font-size:10px;letter-spacing:6px;margin-top:10px;color:white;}
+.hero-mini-line{width:74px;height:1px;background:var(--gold);margin-top:14px;box-shadow:0 0 14px rgba(201,164,92,.7);}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:82px;
+line-height:.96;
+font-weight:700;
+margin-bottom:28px;
+letter-spacing:.5px;
+text-shadow:0 14px 42px rgba(0,0,0,.85),0 0 20px rgba(201,164,92,.10);
+}
+.hero h1 span{color:var(--gold);}
+
+.hero p{font-size:17px;line-height:1.85;color:#eeeeee;max-width:690px;margin-bottom:32px;}
+
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;margin-bottom:54px;}
+
+.hero-services{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:0;
+max-width:900px;
+border-top:1px solid rgba(201,164,92,.30);
+border-bottom:1px solid rgba(201,164,92,.30);
+padding:22px 0;
+}
+
+.hero-service{
+text-decoration:none;
+color:white;
+text-align:center;
+padding:0 12px;
+border-right:1px solid rgba(201,164,92,.32);
+transition:.35s;
+}
+.hero-service:last-child{border-right:none;}
+.hero-service:hover{transform:translateY(-6px);}
+.hero-icon{font-size:29px;margin-bottom:9px;color:var(--gold);text-shadow:0 0 18px rgba(201,164,92,.35);}
+.hero-service span{display:block;font-size:11px;line-height:1.35;text-transform:uppercase;letter-spacing:.8px;}
+
+.hero-claim{
+margin-top:44px;
+display:flex;
+align-items:center;
+gap:18px;
+color:var(--gold);
+font-size:12px;
+letter-spacing:4px;
+text-transform:uppercase;
+}
+.hero-claim:before,.hero-claim:after{content:"";width:86px;height:1px;background:var(--gold);opacity:.7;}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;background:#128C35;color:white;text-decoration:none;border-radius:4px;font-weight:700;font-size:14px;transition:.3s;border:none;cursor:pointer;box-shadow:0 14px 30px rgba(0,0,0,.35);}
 .btn:hover{background:#0f7a2e;transform:translateY(-4px);box-shadow:0 20px 44px rgba(18,140,53,.28);}
-.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold);}
+.btn-outline{background:rgba(0,0,0,.35);border:1px solid var(--gold);color:var(--gold);}
 .btn-outline:hover{background:var(--gold);color:black;box-shadow:0 20px 44px rgba(201,164,92,.28);}
 
 .section{padding:95px 8%;}
@@ -129,21 +196,34 @@ to{opacity:1;transform:translateY(0);}
 }
 
 @media(max-width:1000px){
-.hero h1{font-size:62px;}
+.hero h1{font-size:66px;}
 .grid,.split,.projects,.process,.values{grid-template-columns:1fr;}
 .services-list{grid-template-columns:1fr 1fr;}
 .phone-row,.contact-actions{grid-template-columns:1fr 1fr;}
 .image-box{min-height:360px;}
+.hero-services{grid-template-columns:repeat(3,1fr);}
+.hero-service:nth-child(3){border-right:none;}
+.hero-service:nth-child(n+4){border-top:1px solid rgba(201,164,92,.25);padding-top:18px;margin-top:18px;}
 }
 
 @media(max-width:600px){
 header{padding:0 6%;}
 .logo{font-size:13px;letter-spacing:3px;}
-.hero{padding:118px 6% 72px;}
+.hero{padding:118px 6% 72px;background-position:center;}
 .section,.contact{padding:75px 6%;}
-.hero h1{font-size:58px;}
-.hero h2{font-size:20px;}
+.hero-tag{font-size:12px;letter-spacing:3px;margin-bottom:28px;}
+.hero-mini-mark{font-size:34px;}
+.hero h1{font-size:54px;}
 .hero p{font-size:15.5px;}
+.hero-buttons{margin-bottom:42px;}
+.hero-services{grid-template-columns:repeat(2,1fr);}
+.hero-service{padding:16px 8px;border-top:1px solid rgba(201,164,92,.18);}
+.hero-service:nth-child(odd){border-right:1px solid rgba(201,164,92,.28);}
+.hero-service:nth-child(even){border-right:none;}
+.hero-service:nth-child(n+4){margin-top:0;}
+.hero-icon{font-size:26px;}
+.hero-claim{font-size:10px;letter-spacing:3px;justify-content:center;}
+.hero-claim:before,.hero-claim:after{width:44px;}
 .section-title{font-size:34px;}
 .services-list{grid-template-columns:1fr;}
 .phone-row,.contact-actions{grid-template-columns:1fr;}
@@ -176,24 +256,32 @@ header{padding:0 6%;}
 <section class="hero">
 <div class="hero-content">
 <div class="hero-tag" data-i="tag">Construcción · Reformas · Servicios Integrales</div>
-<h1>CHL</h1>
-<div class="hero-line"></div>
-<h2 data-i="hero_subtitle">Seriedad. Diseño. Ejecución.</h2>
-<p data-i="hero_text">Construcción, reformas integrales, fontanería, electricidad, pladur, pintura, acabados y acondicionamiento de espacios con una gestión clara, trato directo y ejecución profesional.</p>
 
-<div class="hero-services">
-<a href="#servicios" data-i="hero_s1">Reformas integrales</a>
-<a href="#servicios" data-i="hero_s2">Fontanería</a>
-<a href="#servicios" data-i="hero_s3">Electricidad</a>
-<a href="#servicios" data-i="hero_s4">Pladur</a>
-<a href="#servicios" data-i="hero_s5">Pintura</a>
-<a href="#servicios" data-i="hero_s6">Construcción</a>
+<div class="hero-mini-logo">
+<div class="hero-mini-mark">CHL</div>
+<div class="hero-mini-name">CONSTRUCTORA</div>
+<div class="hero-mini-line"></div>
 </div>
+
+<h1 data-i="hero_title">Seriedad.<br>Diseño.<br>Ejecución<span>.</span></h1>
+
+<p data-i="hero_text">Construcción, reformas integrales, fontanería, electricidad, albañilería, pintura y acondicionamiento profesional de espacios con una gestión clara, trato directo y ejecución profesional.</p>
 
 <div class="hero-buttons">
-<a href="#contacto" class="btn" data-i="btn_budget">Solicitar presupuesto</a>
+<a href="#contacto" class="btn" data-i="btn_budget">Solicitar información</a>
 <a href="#servicios" class="btn btn-outline" data-i="btn_services">Ver servicios</a>
 </div>
+
+<div class="hero-services">
+<a href="#servicios" class="hero-service"><div class="hero-icon">⌂</div><span data-i="hero_s1">Reformas integrales</span></a>
+<a href="#servicios" class="hero-service"><div class="hero-icon">♒</div><span data-i="hero_s2">Fontanería</span></a>
+<a href="#servicios" class="hero-service"><div class="hero-icon">⚡</div><span data-i="hero_s3">Electricidad</span></a>
+<a href="#servicios" class="hero-service"><div class="hero-icon">▧</div><span data-i="hero_s4">Albañilería</span></a>
+<a href="#servicios" class="hero-service"><div class="hero-icon">▰</div><span data-i="hero_s5">Pintura</span></a>
+<a href="#servicios" class="hero-service"><div class="hero-icon">⌬</div><span data-i="hero_s6">Construcción</span></a>
+</div>
+
+<div class="hero-claim" data-i="hero_claim">Construimos espacios · Creamos valor</div>
 </div>
 </section>
 
@@ -376,15 +464,16 @@ const translations={
 de:{
 menu1:"Unternehmen",menu2:"Dienstleistungen",menu3:"Projekte",menu4:"Prozess",menu5:"Internationale Abteilung",menu6:"Kontakt",
 tag:"Bau · Renovierung · Komplette Dienstleistungen",
-hero_subtitle:"Seriös. Modern. Zuverlässig.",
-hero_text:"Bau, Komplettrenovierungen, Sanitärarbeiten, Elektrik, Trockenbau, Malerarbeiten, Ausführungen und Ausbauprojekte mit klarer Abwicklung, direkter Betreuung und professioneller Ausführung.",
+hero_title:"Seriosität.<br>Design.<br>Ausführung<span>.</span>",
+hero_text:"Bau, Komplettrenovierungen, Sanitärarbeiten, Elektrik, Maurerarbeiten, Malerarbeiten und professioneller Ausbau von Räumen mit klarer Abwicklung, direkter Betreuung und professioneller Ausführung.",
 hero_s1:"Komplettrenovierungen",
 hero_s2:"Sanitärarbeiten",
 hero_s3:"Elektrik",
-hero_s4:"Trockenbau",
+hero_s4:"Maurerarbeiten",
 hero_s5:"Malerarbeiten",
 hero_s6:"Bau",
-btn_budget:"Offerte anfragen",btn_services:"Dienstleistungen ansehen",
+hero_claim:"Wir bauen Räume · Wir schaffen Wert",
+btn_budget:"Information anfordern",btn_services:"Dienstleistungen ansehen",
 
 ref_label:"CHL Constructora",
 ref_title:"Bau, Renovierung und professionelle Ausführung",
