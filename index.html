@@ -44,16 +44,7 @@ linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.88)),
 url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=90') center/cover no-repeat;
 }
 
-.hero:after{
-content:"";
-position:absolute;
-left:8%;
-right:8%;
-bottom:34px;
-height:1px;
-background:linear-gradient(90deg,transparent,rgba(201,164,92,.55),transparent);
-}
-
+.hero:after{content:"";position:absolute;left:8%;right:8%;bottom:34px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,164,92,.55),transparent);}
 .hero-content{position:relative;z-index:2;max-width:850px;animation:fadeUp 1s ease both;}
 .hero-tag{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:34px;line-height:1.7;}
 
@@ -62,54 +53,21 @@ background:linear-gradient(90deg,transparent,rgba(201,164,92,.55),transparent);
 .hero-mini-name{font-size:10px;letter-spacing:6px;margin-top:10px;color:white;}
 .hero-mini-line{width:74px;height:1px;background:var(--gold);margin-top:14px;box-shadow:0 0 14px rgba(201,164,92,.7);}
 
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:82px;
-line-height:.96;
-font-weight:700;
-margin-bottom:28px;
-letter-spacing:.5px;
-text-shadow:0 14px 42px rgba(0,0,0,.85),0 0 20px rgba(201,164,92,.10);
-}
+.hero h1{font-family:'Playfair Display',serif;font-size:82px;line-height:.96;font-weight:700;margin-bottom:28px;letter-spacing:.5px;text-shadow:0 14px 42px rgba(0,0,0,.85),0 0 20px rgba(201,164,92,.10);}
 .hero h1 span{color:var(--gold);}
-
 .hero p{font-size:17px;line-height:1.85;color:#eeeeee;max-width:690px;margin-bottom:32px;}
 
 .hero-buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;margin-bottom:54px;}
 
-.hero-services{
-display:grid;
-grid-template-columns:repeat(6,1fr);
-gap:0;
-max-width:900px;
-border-top:1px solid rgba(201,164,92,.30);
-border-bottom:1px solid rgba(201,164,92,.30);
-padding:22px 0;
-}
-
-.hero-service{
-text-decoration:none;
-color:white;
-text-align:center;
-padding:0 12px;
-border-right:1px solid rgba(201,164,92,.32);
-transition:.35s;
-}
+.hero-services{display:grid;grid-template-columns:repeat(6,1fr);gap:0;max-width:900px;border-top:1px solid rgba(201,164,92,.30);border-bottom:1px solid rgba(201,164,92,.30);padding:22px 0;}
+.hero-service{text-decoration:none;color:white;text-align:center;padding:0 12px;border-right:1px solid rgba(201,164,92,.32);transition:.35s;}
 .hero-service:last-child{border-right:none;}
 .hero-service:hover{transform:translateY(-6px);}
-.hero-icon{font-size:29px;margin-bottom:9px;color:var(--gold);text-shadow:0 0 18px rgba(201,164,92,.35);}
+.hero-icon{height:34px;margin-bottom:9px;color:var(--gold);display:flex;align-items:center;justify-content:center;}
+.hero-icon svg{width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(201,164,92,.25));}
 .hero-service span{display:block;font-size:11px;line-height:1.35;text-transform:uppercase;letter-spacing:.8px;}
 
-.hero-claim{
-margin-top:44px;
-display:flex;
-align-items:center;
-gap:18px;
-color:var(--gold);
-font-size:12px;
-letter-spacing:4px;
-text-transform:uppercase;
-}
+.hero-claim{margin-top:44px;display:flex;align-items:center;gap:18px;color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;}
 .hero-claim:before,.hero-claim:after{content:"";width:86px;height:1px;background:var(--gold);opacity:.7;}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;background:#128C35;color:white;text-decoration:none;border-radius:4px;font-weight:700;font-size:14px;transition:.3s;border:none;cursor:pointer;box-shadow:0 14px 30px rgba(0,0,0,.35);}
@@ -151,7 +109,7 @@ text-transform:uppercase;
 .value p{font-size:13.5px;color:#c8c8c8;line-height:1.6;}
 
 .services-list{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.service-item{background:#111;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px 18px;transition:.35s;position:relative;overflow:hidden;box-shadow:0 16px 34px rgba(0,0,0,.25);}
+.service-item{scroll-margin-top:100px;background:#111;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px 18px;transition:.35s;position:relative;overflow:hidden;box-shadow:0 16px 34px rgba(0,0,0,.25);}
 .service-item:hover{border-color:rgba(201,164,92,.55);transform:translateY(-7px);box-shadow:0 25px 55px rgba(0,0,0,.55),0 0 24px rgba(201,164,92,.12);}
 .service-item strong{display:block;color:var(--gold);font-size:15px;margin-bottom:8px;}
 .service-item p{color:#ffffff;font-size:13px;line-height:1.5;}
@@ -221,7 +179,7 @@ header{padding:0 6%;}
 .hero-service:nth-child(odd){border-right:1px solid rgba(201,164,92,.28);}
 .hero-service:nth-child(even){border-right:none;}
 .hero-service:nth-child(n+4){margin-top:0;}
-.hero-icon{font-size:26px;}
+.hero-icon svg{width:30px;height:30px;}
 .hero-claim{font-size:10px;letter-spacing:3px;justify-content:center;}
 .hero-claim:before,.hero-claim:after{width:44px;}
 .section-title{font-size:34px;}
@@ -273,12 +231,35 @@ header{padding:0 6%;}
 </div>
 
 <div class="hero-services">
-<a href="#servicios" class="hero-service"><div class="hero-icon">⌂</div><span data-i="hero_s1">Reformas integrales</span></a>
-<a href="#servicios" class="hero-service"><div class="hero-icon">♒</div><span data-i="hero_s2">Fontanería</span></a>
-<a href="#servicios" class="hero-service"><div class="hero-icon">⚡</div><span data-i="hero_s3">Electricidad</span></a>
-<a href="#servicios" class="hero-service"><div class="hero-icon">▧</div><span data-i="hero_s4">Albañilería</span></a>
-<a href="#servicios" class="hero-service"><div class="hero-icon">▰</div><span data-i="hero_s5">Pintura</span></a>
-<a href="#servicios" class="hero-service"><div class="hero-icon">⌬</div><span data-i="hero_s6">Construcción</span></a>
+<a href="#srv-reformas" class="hero-service">
+<div class="hero-icon"><svg viewBox="0 0 64 64"><path d="M10 31 L32 13 L54 31"></path><path d="M17 29 V54 H47 V29"></path><path d="M27 54 V40 H37 V54"></path></svg></div>
+<span data-i="hero_s1">Reformas integrales</span>
+</a>
+
+<a href="#srv-fontaneria" class="hero-service">
+<div class="hero-icon"><svg viewBox="0 0 64 64"><path d="M18 21 H38"></path><path d="M38 21 C46 21 50 25 50 32 V36"></path><path d="M44 36 H56"></path><path d="M27 14 V28"></path><path d="M22 14 H32"></path><path d="M22 28 H32"></path><path d="M50 41 C46 46 45 49 45 52 C45 56 48 59 52 59 C56 59 59 56 59 52 C59 49 57 46 53 41 Z"></path></svg></div>
+<span data-i="hero_s2">Fontanería</span>
+</a>
+
+<a href="#srv-electricidad" class="hero-service">
+<div class="hero-icon"><svg viewBox="0 0 64 64"><path d="M36 6 L16 35 H31 L25 58 L49 25 H34 Z"></path></svg></div>
+<span data-i="hero_s3">Electricidad</span>
+</a>
+
+<a href="#srv-albanileria" class="hero-service">
+<div class="hero-icon"><svg viewBox="0 0 64 64"><path d="M10 44 H54"></path><path d="M10 32 H54"></path><path d="M10 20 H54"></path><path d="M10 20 V44"></path><path d="M54 20 V44"></path><path d="M25 20 V32"></path><path d="M39 32 V44"></path></svg></div>
+<span data-i="hero_s4">Albañilería</span>
+</a>
+
+<a href="#srv-pintura" class="hero-service">
+<div class="hero-icon"><svg viewBox="0 0 64 64"><path d="M14 18 H46 C50 18 53 21 53 25 C53 29 50 32 46 32 H14 Z"></path><path d="M24 32 V42"></path><path d="M20 42 H28 V58 H20 Z"></path></svg></div>
+<span data-i="hero_s5">Pintura</span>
+</a>
+
+<a href="#srv-construccion" class="hero-service">
+<div class="hero-icon"><svg viewBox="0 0 64 64"><path d="M14 52 H50"></path><path d="M20 52 V22"></path><path d="M44 52 V22"></path><path d="M16 22 H48"></path><path d="M32 22 V10"></path><path d="M32 10 H52"></path><path d="M52 10 V18"></path><path d="M52 18 L47 25 L57 25 Z"></path></svg></div>
+<span data-i="hero_s6">Construcción</span>
+</a>
 </div>
 
 <div class="hero-claim" data-i="hero_claim">Construimos espacios · Creamos valor</div>
@@ -323,18 +304,18 @@ header{padding:0 6%;}
 <p class="section-intro" data-i="serv_text">Integramos distintos trabajos técnicos y de acondicionamiento para desarrollar reformas y proyectos de construcción de forma organizada y eficiente.</p>
 
 <div class="services-list">
-<div class="service-item"><strong data-i="s1_t">Reformas integrales</strong><p data-i="s1_p">Transformación completa de viviendas, locales y espacios profesionales.</p></div>
-<div class="service-item"><strong data-i="s2_t">Demoliciones interiores</strong><p data-i="s2_p">Retirada de suelos, techos, tabiques y preparación técnica del espacio.</p></div>
-<div class="service-item"><strong data-i="s3_t">Albañilería</strong><p data-i="s3_p">Trabajos estructurales, reparaciones y preparación de obra.</p></div>
-<div class="service-item"><strong data-i="s4_t">Fontanería</strong><p data-i="s4_p">Instalaciones, reparaciones y adaptación de puntos de agua.</p></div>
-<div class="service-item"><strong data-i="s5_t">Electricidad</strong><p data-i="s5_p">Instalaciones eléctricas, iluminación y preparación técnica.</p></div>
-<div class="service-item"><strong data-i="s6_t">Pladur y tabiquería</strong><p data-i="s6_p">Distribución interior, techos y división de espacios.</p></div>
-<div class="service-item"><strong data-i="s7_t">Pintura y acabados</strong><p data-i="s7_p">Preparación, pintura interior y acabados visuales profesionales.</p></div>
-<div class="service-item"><strong data-i="s8_t">Suelos y revestimientos</strong><p data-i="s8_p">Renovación y colocación de superficies y materiales.</p></div>
-<div class="service-item"><strong data-i="s9_t">Insonorización</strong><p data-i="s9_p">Aislamiento acústico y acondicionamiento técnico de espacios.</p></div>
-<div class="service-item"><strong data-i="s10_t">Construcción y obra nueva</strong><p data-i="s10_p">Ejecución y coordinación de proyectos de construcción.</p></div>
-<div class="service-item"><strong data-i="s11_t">Espacios comerciales</strong><p data-i="s11_p">Adaptación de locales, oficinas y negocios.</p></div>
-<div class="service-item"><strong data-i="s12_t">Coordinación de obra</strong><p data-i="s12_p">Supervisión y organización de fases, materiales y ejecución.</p></div>
+<div class="service-item" id="srv-reformas"><strong data-i="s1_t">Reformas integrales</strong><p data-i="s1_p">Transformación completa de viviendas, locales y espacios profesionales.</p></div>
+<div class="service-item" id="srv-fontaneria"><strong data-i="s4_t">Fontanería</strong><p data-i="s4_p">Instalaciones, reparaciones y adaptación de puntos de agua.</p></div>
+<div class="service-item" id="srv-electricidad"><strong data-i="s5_t">Electricidad</strong><p data-i="s5_p">Instalaciones eléctricas, iluminación y preparación técnica.</p></div>
+<div class="service-item" id="srv-albanileria"><strong data-i="s3_t">Albañilería</strong><p data-i="s3_p">Trabajos estructurales, reparaciones y preparación de obra.</p></div>
+<div class="service-item" id="srv-pintura"><strong data-i="s7_t">Pintura y acabados</strong><p data-i="s7_p">Preparación, pintura interior y acabados visuales profesionales.</p></div>
+<div class="service-item" id="srv-construccion"><strong data-i="s10_t">Construcción y obra nueva</strong><p data-i="s10_p">Ejecución y coordinación de proyectos de construcción.</p></div>
+<div class="service-item" id="srv-demoliciones"><strong data-i="s2_t">Demoliciones interiores</strong><p data-i="s2_p">Retirada de suelos, techos, tabiques y preparación técnica del espacio.</p></div>
+<div class="service-item" id="srv-pladur"><strong data-i="s6_t">Pladur y tabiquería</strong><p data-i="s6_p">Distribución interior, techos y división de espacios.</p></div>
+<div class="service-item" id="srv-suelos"><strong data-i="s8_t">Suelos y revestimientos</strong><p data-i="s8_p">Renovación y colocación de superficies y materiales.</p></div>
+<div class="service-item" id="srv-insonorizacion"><strong data-i="s9_t">Insonorización</strong><p data-i="s9_p">Aislamiento acústico y acondicionamiento técnico de espacios.</p></div>
+<div class="service-item" id="srv-espacios"><strong data-i="s11_t">Espacios comerciales</strong><p data-i="s11_p">Adaptación de locales, oficinas y negocios.</p></div>
+<div class="service-item" id="srv-coordinacion"><strong data-i="s12_t">Coordinación de obra</strong><p data-i="s12_p">Supervisión y organización de fases, materiales y ejecución.</p></div>
 </div>
 </section>
 
@@ -562,4 +543,4 @@ if(currentLang==="es"&&originalTexts[key]){el.innerHTML=originalTexts[key];}
 </script>
 
 </body>
-</html>
+  </html>
