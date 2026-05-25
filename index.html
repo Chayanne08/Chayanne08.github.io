@@ -38,22 +38,21 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-height:76px;
+height:74px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:0 8%;
-background:rgba(0,0,0,0.9);
-backdrop-filter:blur(14px);
+background:rgba(0,0,0,0.88);
+backdrop-filter:blur(12px);
 z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.08);
+border-bottom:1px solid rgba(255,255,255,0.06);
 }
 
 .logo{
-font-size:15px;
+font-size:14px;
 font-weight:700;
 letter-spacing:4px;
-text-shadow:0 0 18px rgba(201,164,92,.25);
 }
 
 .logo span{
@@ -63,13 +62,13 @@ color:var(--gold);
 .header-right{
 display:flex;
 align-items:center;
-gap:24px;
+gap:22px;
 }
 
 .lang-switch{
-font-size:13px;
+font-size:12px;
 font-weight:700;
-letter-spacing:1.7px;
+letter-spacing:1.5px;
 color:var(--gold);
 cursor:pointer;
 }
@@ -81,18 +80,17 @@ cursor:pointer;
 
 nav{
 position:fixed;
-top:76px;
+top:74px;
 right:-100%;
-width:300px;
-height:calc(100vh - 76px);
+width:280px;
+height:calc(100vh - 74px);
 background:#080808;
 display:flex;
 flex-direction:column;
 align-items:center;
-padding-top:52px;
+padding-top:50px;
 transition:.35s ease;
 z-index:999;
-box-shadow:-12px 0 45px rgba(0,0,0,.9);
 }
 
 nav.active{
@@ -106,12 +104,11 @@ margin:15px 0;
 font-size:13px;
 letter-spacing:1.5px;
 text-transform:uppercase;
-opacity:.8;
+opacity:.85;
 transition:.3s;
 }
 
 nav a:hover{
-opacity:1;
 color:var(--gold);
 }
 
@@ -123,26 +120,23 @@ align-items:center;
 padding:120px 8% 60px;
 overflow:hidden;
 background:
-linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 42%,rgba(0,0,0,.32) 100%),
-linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.88)),
+linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.78) 45%,rgba(0,0,0,.35) 100%),
 url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=90') center/cover no-repeat;
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:850px;
-animation:fadeUp 1s ease both;
+max-width:820px;
 }
 
 .hero-tag{
 color:var(--gold);
-font-size:13px;
+font-size:12px;
 font-weight:700;
 letter-spacing:4px;
 text-transform:uppercase;
-margin-bottom:28px;
-line-height:1.7;
+margin-bottom:24px;
 }
 
 .hero-mini-logo{
@@ -151,18 +145,16 @@ display:inline-block;
 }
 
 .hero-mini-mark{
-font-size:40px;
+font-size:38px;
 font-weight:700;
 letter-spacing:6px;
 color:var(--gold);
-line-height:1;
 }
 
 .hero-mini-name{
 font-size:10px;
 letter-spacing:6px;
 margin-top:10px;
-color:white;
 }
 
 .hero-mini-line{
@@ -174,10 +166,9 @@ margin-top:14px;
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:82px;
-line-height:.96;
-font-weight:700;
-margin-bottom:28px;
+font-size:78px;
+line-height:.95;
+margin-bottom:24px;
 }
 
 .hero h1 span{
@@ -185,33 +176,31 @@ color:var(--gold);
 }
 
 .hero p{
-font-size:17px;
+font-size:16px;
 line-height:1.8;
-color:#eeeeee;
-max-width:690px;
-margin-bottom:28px;
+max-width:680px;
+margin-bottom:30px;
+color:#efefef;
 }
 
 .hero-buttons{
 display:flex;
-gap:16px;
+gap:14px;
 flex-wrap:wrap;
-margin-top:20px;
-margin-bottom:42px;
+margin-bottom:38px;
 }
 
 .btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-gap:10px;
-padding:15px 28px;
+padding:14px 26px;
 background:#128C35;
 color:white;
 text-decoration:none;
 border-radius:4px;
-font-weight:700;
 font-size:14px;
+font-weight:700;
 transition:.3s;
 border:none;
 cursor:pointer;
@@ -223,7 +212,7 @@ transform:translateY(-4px);
 }
 
 .btn-outline{
-background:rgba(0,0,0,.35);
+background:transparent;
 border:1px solid var(--gold);
 color:var(--gold);
 }
@@ -236,10 +225,9 @@ color:black;
 .hero-services{
 display:grid;
 grid-template-columns:repeat(6,1fr);
-gap:0;
 max-width:900px;
-border-top:1px solid rgba(201,164,92,.30);
-border-bottom:1px solid rgba(201,164,92,.30);
+border-top:1px solid rgba(201,164,92,.25);
+border-bottom:1px solid rgba(201,164,92,.25);
 padding:20px 0;
 }
 
@@ -247,9 +235,9 @@ padding:20px 0;
 text-decoration:none;
 color:white;
 text-align:center;
-padding:0 12px;
-border-right:1px solid rgba(201,164,92,.32);
-transition:.35s;
+padding:0 10px;
+border-right:1px solid rgba(201,164,92,.25);
+transition:.3s;
 }
 
 .hero-service:last-child{
@@ -257,12 +245,12 @@ border-right:none;
 }
 
 .hero-service:hover{
-transform:translateY(-6px);
+transform:translateY(-5px);
 }
 
 .hero-icon{
 height:34px;
-margin-bottom:9px;
+margin-bottom:10px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -281,19 +269,16 @@ stroke-linejoin:round;
 .hero-service span{
 display:block;
 font-size:11px;
-line-height:1.35;
 text-transform:uppercase;
-letter-spacing:.8px;
+line-height:1.4;
 }
 
 .section{
-padding:75px 8%;
+padding:65px 8%;
 }
 
 .section-dark{
 background:#0d0d0d;
-border-top:1px solid rgba(255,255,255,.06);
-border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .section-label{
@@ -302,124 +287,23 @@ font-size:12px;
 font-weight:700;
 letter-spacing:3px;
 text-transform:uppercase;
-margin-bottom:16px;
+margin-bottom:14px;
 display:block;
 }
 
 .section-title{
 font-family:'Playfair Display',serif;
-font-size:42px;
-margin-bottom:18px;
+font-size:40px;
+margin-bottom:16px;
 line-height:1.2;
 }
 
 .section-intro{
-max-width:880px;
-font-size:16px;
+max-width:840px;
+font-size:15px;
 line-height:1.8;
-color:var(--soft);
-margin-bottom:38px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-}
-
-.card{
-background:linear-gradient(180deg,#171717,#0f0f0f);
-padding:35px;
-border-radius:16px;
-border:1px solid rgba(255,255,255,.08);
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:rgba(201,164,92,.55);
-}
-
-.card span{
-display:block;
-color:var(--gold);
-font-size:13px;
-font-weight:700;
-margin-bottom:16px;
-}
-
-.card h3{
-font-size:20px;
-margin-bottom:15px;
-}
-
-.card p{
-font-size:14.5px;
-line-height:1.7;
-color:#c8c8c8;
-}
-
-.split{
-display:grid;
-grid-template-columns:1fr 1.1fr;
-gap:32px;
-align-items:center;
-}
-
-.image-box{
-min-height:420px;
-border-radius:18px;
-background:
-linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.45)),
-url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat;
-}
-
-.info-box{
-background:linear-gradient(180deg,#171717,#101010);
-padding:40px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.info-box p{
-color:#cccccc;
-line-height:1.8;
-margin-bottom:16px;
-}
-
-.values{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
-margin-top:28px;
-}
-
-.value{
-text-align:center;
-padding:20px;
-border-radius:16px;
-transition:.35s;
-}
-
-.value:hover{
-background:#111;
-transform:translateY(-5px);
-}
-
-.value-icon{
-font-size:34px;
-color:var(--gold);
-margin-bottom:12px;
-}
-
-.value h3{
-font-size:14px;
-margin-bottom:10px;
-}
-
-.value p{
-font-size:13px;
-line-height:1.6;
+color:#cfcfcf;
+margin-bottom:34px;
 }
 
 .services-list{
@@ -435,18 +319,18 @@ border:1px solid rgba(255,255,255,.08);
 border-radius:14px;
 padding:22px 18px;
 transition:.35s;
-position:relative;
-overflow:hidden;
 cursor:pointer;
+overflow:hidden;
 }
 
 .service-item:hover{
-border-color:rgba(201,164,92,.55);
-transform:translateY(-7px);
+transform:translateY(-6px);
+border-color:rgba(201,164,92,.45);
 }
 
 .service-item.targeted{
-border-color:rgba(201,164,92,.9);
+border-color:rgba(201,164,92,.95);
+box-shadow:0 0 25px rgba(201,164,92,.15);
 }
 
 .service-item strong{
@@ -457,16 +341,16 @@ margin-bottom:8px;
 }
 
 .service-item p{
-color:#ffffff;
 font-size:13px;
-line-height:1.5;
+line-height:1.6;
+color:#d8d8d8;
 }
 
 .service-extra{
 max-height:0;
 overflow:hidden;
-transition:.4s;
 opacity:0;
+transition:.4s;
 }
 
 .service-item.active .service-extra{
@@ -498,20 +382,20 @@ transform:translateY(-3px);
 .process{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:18px;
+gap:16px;
 }
 
 .step{
 background:#141414;
-padding:24px;
-border-radius:16px;
+padding:22px;
+border-radius:14px;
 border:1px solid rgba(255,255,255,.08);
-transition:.35s;
+transition:.3s;
 }
 
 .step:hover{
-transform:translateY(-7px);
-border-color:rgba(201,164,92,.45);
+transform:translateY(-5px);
+border-color:rgba(201,164,92,.35);
 }
 
 .step small{
@@ -520,57 +404,57 @@ font-weight:700;
 }
 
 .step h3{
-margin:14px 0 12px;
-font-size:19px;
+margin:12px 0 10px;
+font-size:18px;
 }
 
 .step p{
-font-size:14px;
+font-size:13px;
 line-height:1.7;
-color:#c9c9c9;
+color:#d0d0d0;
 }
 
 .swiss-box{
+max-width:720px;
+margin:auto;
 background:linear-gradient(180deg,#171717,#101010);
 padding:34px;
 border-radius:18px;
 border:1px solid rgba(255,255,255,.08);
-max-width:700px;
-margin:auto;
 text-align:center;
 }
 
 .swiss-box h3{
-font-size:28px;
+font-size:30px;
 margin-bottom:14px;
 font-family:'Playfair Display',serif;
 }
 
 .swiss-box p{
-color:#cccccc;
 line-height:1.8;
+color:#cfcfcf;
 margin-bottom:22px;
 }
 
 .contact{
-padding:70px 8%;
+padding:60px 8%;
 background:#0d0d0d;
 text-align:center;
 }
 
 .contact-box{
-max-width:760px;
+max-width:720px;
 margin:auto;
-background:rgba(10,10,10,.94);
-padding:42px 34px;
-border-radius:24px;
+background:#101010;
+padding:38px 30px;
+border-radius:20px;
 border:1px solid rgba(255,255,255,.08);
 }
 
 .contact-box h2{
 font-family:'Playfair Display',serif;
-font-size:38px;
-margin-bottom:16px;
+font-size:36px;
+margin-bottom:14px;
 }
 
 .contact-box p{
@@ -579,14 +463,8 @@ line-height:1.8;
 margin-bottom:24px;
 }
 
-.contact-actions{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-}
-
 footer{
-padding:30px 8%;
+padding:26px 8%;
 background:black;
 text-align:center;
 font-size:12px;
@@ -595,25 +473,14 @@ color:#777;
 border-top:1px solid rgba(255,255,255,.08);
 }
 
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(35px);}
-to{opacity:1;transform:translateY(0);}
-}
-
 @media(max-width:1000px){
 
 .hero h1{
-font-size:66px;
+font-size:64px;
 }
 
-.grid,
-.split,
-.process,
-.values{
-grid-template-columns:1fr;
-}
-
-.services-list{
+.services-list,
+.process{
 grid-template-columns:1fr 1fr;
 }
 
@@ -630,16 +497,16 @@ padding:0 6%;
 }
 
 .hero{
-padding:118px 6% 72px;
+padding:110px 6% 60px;
 }
 
 .section,
 .contact{
-padding:65px 6%;
+padding:55px 6%;
 }
 
 .hero h1{
-font-size:54px;
+font-size:52px;
 }
 
 .hero-services{
@@ -647,7 +514,7 @@ grid-template-columns:repeat(2,1fr);
 }
 
 .services-list,
-.contact-actions{
+.process{
 grid-template-columns:1fr;
 }
 
@@ -676,7 +543,6 @@ font-size:34px;
 </header>
 
 <nav id="menu">
-<a href="#reformas">Empresa</a>
 <a href="#servicios">Servicios</a>
 <a href="#proceso">Proceso</a>
 <a href="#internacional">España · Suiza</a>
@@ -708,8 +574,13 @@ Construcción, reformas integrales, fontanería, electricidad, albañilería, pi
 </p>
 
 <div class="hero-buttons">
-<a href="#contacto" class="btn">Solicitar información</a>
-<a href="#servicios" class="btn btn-outline">Ver servicios</a>
+<a href="#contacto" class="btn">
+Solicitar información
+</a>
+
+<a href="#servicios" class="btn btn-outline">
+Ver servicios
+</a>
 </div>
 
 <div class="hero-services">
@@ -762,44 +633,6 @@ Construcción, reformas integrales, fontanería, electricidad, albañilería, pi
 
 </section>
 
-<section class="section reveal" id="reformas">
-
-<span class="section-label">
-CHL Constructora
-</span>
-
-<h2 class="section-title">
-Construcción, reformas y ejecución profesional
-</h2>
-
-<p class="section-intro">
-CHL Constructora desarrolla proyectos de construcción y reformas con una metodología basada en organización, comunicación directa y control de ejecución.
-</p>
-
-<div class="grid">
-
-<div class="card">
-<span>01</span>
-<h3>Gestión clara del proyecto</h3>
-<p>Organización de trabajos y seguimiento continuo durante toda la ejecución.</p>
-</div>
-
-<div class="card">
-<span>02</span>
-<h3>Ejecución técnica</h3>
-<p>Desarrollo de reformas, instalaciones y trabajos de construcción.</p>
-</div>
-
-<div class="card">
-<span>03</span>
-<h3>Acabados profesionales</h3>
-<p>Atención al detalle y adaptación visual del espacio.</p>
-</div>
-
-</div>
-
-</section>
-
 <section class="section reveal" id="servicios">
 
 <span class="section-label">
@@ -822,7 +655,9 @@ Servicios organizados y profesionales para viviendas y proyectos de construcció
 
 <div class="service-extra">
 <p>Planificación, demolición, instalaciones y acabados.</p>
-<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20reformas." target="_blank" class="service-btn">Solicitar información</a>
+<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20reformas." target="_blank" class="service-btn">
+Solicitar información
+</a>
 </div>
 </div>
 
@@ -832,7 +667,9 @@ Servicios organizados y profesionales para viviendas y proyectos de construcció
 
 <div class="service-extra">
 <p>Reparaciones, instalación y adaptación profesional.</p>
-<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20fontanería." target="_blank" class="service-btn">Solicitar información</a>
+<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20fontanería." target="_blank" class="service-btn">
+Solicitar información
+</a>
 </div>
 </div>
 
@@ -842,7 +679,9 @@ Servicios organizados y profesionales para viviendas y proyectos de construcció
 
 <div class="service-extra">
 <p>Iluminación, mecanismos y preparación técnica.</p>
-<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20electricidad." target="_blank" class="service-btn">Solicitar información</a>
+<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20electricidad." target="_blank" class="service-btn">
+Solicitar información
+</a>
 </div>
 </div>
 
@@ -852,37 +691,45 @@ Servicios organizados y profesionales para viviendas y proyectos de construcció
 
 <div class="service-extra">
 <p>Preparación técnica, reparaciones y distribución.</p>
-<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20albañilería." target="_blank" class="service-btn">Solicitar información</a>
+<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20albañilería." target="_blank" class="service-btn">
+Solicitar información
+</a>
 </div>
 </div>
 
 <div class="service-item" id="srv-pintura">
 <strong>Pintura y acabados</strong>
-<p>Acabados visuales modernos y profesionales.</p>
+<p>Acabados modernos y profesionales.</p>
 
 <div class="service-extra">
-<p>Pintura interior, acabados y detalles visuales.</p>
-<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20pintura." target="_blank" class="service-btn">Solicitar información</a>
+<p>Pintura interior y acabados visuales.</p>
+<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20pintura." target="_blank" class="service-btn">
+Solicitar información
+</a>
 </div>
 </div>
 
 <div class="service-item" id="srv-construccion">
 <strong>Construcción y obra nueva</strong>
-<p>Coordinación y ejecución de proyectos.</p>
+<p>Coordinación y ejecución profesional.</p>
 
 <div class="service-extra">
-<p>Organización y ejecución profesional de obra nueva.</p>
-<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20construcción." target="_blank" class="service-btn">Solicitar información</a>
+<p>Organización y ejecución de proyectos.</p>
+<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20construcción." target="_blank" class="service-btn">
+Solicitar información
+</a>
 </div>
 </div>
 
 <div class="service-item" id="srv-pladur">
 <strong>Pladur y tabiquería</strong>
-<p>Distribución interior y adaptación de espacios.</p>
+<p>Distribución interior y adaptación.</p>
 
 <div class="service-extra">
 <p>Techos, tabiquería y diseño interior.</p>
-<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20pladur." target="_blank" class="service-btn">Solicitar información</a>
+<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20pladur." target="_blank" class="service-btn">
+Solicitar información
+</a>
 </div>
 </div>
 
@@ -892,7 +739,9 @@ Servicios organizados y profesionales para viviendas y proyectos de construcció
 
 <div class="service-extra">
 <p>Colocación de materiales y renovación visual.</p>
-<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20suelos." target="_blank" class="service-btn">Solicitar información</a>
+<a href="https://wa.me/34662042735?text=Hola,%20quisiera%20información%20sobre%20suelos." target="_blank" class="service-btn">
+Solicitar información
+</a>
 </div>
 </div>
 
@@ -945,17 +794,17 @@ Nuestro Proceso
 <div class="swiss-box">
 
 <h3>
-España · Suiza
+Gestión España · Suiza
 </h3>
 
 <p>
-Gestión y coordinación de personal cualificado para empresas del sector construcción en Suiza.
+Coordinación de personal cualificado para empresas del sector construcción en Suiza.
 </p>
 
 <a href="https://wa.me/41767401541?text=Hola,%20quisiera%20información%20sobre%20gestión%20laboral%20para%20Suiza."
 target="_blank"
 class="btn">
-Información Suiza
+Información
 </a>
 
 </div>
@@ -975,20 +824,14 @@ Solicite información
 </h2>
 
 <p>
-Contáctenos directamente por WhatsApp.
+Contáctenos directamente por WhatsApp España.
 </p>
 
-<div class="contact-actions">
-
-<a href="https://wa.me/34662042735" target="_blank" class="btn">
+<a href="https://wa.me/34662042735"
+target="_blank"
+class="btn">
 WhatsApp España
 </a>
-
-<a href="https://wa.me/41767401541" target="_blank" class="btn btn-outline">
-WhatsApp Suiza
-</a>
-
-</div>
 
 </div>
 
